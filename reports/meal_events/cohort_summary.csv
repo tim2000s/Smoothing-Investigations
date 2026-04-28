@@ -1,0 +1,5 @@
+smoother,n_meals,median_delta_first_cross_min,median_accel_first_cross_min,median_peak_delta,median_peak_accel,median_delta_latency_vs_raw,median_peak_delta_retention
+aaps_average,45,20.0,22.5,2.733,0.267,0.0,0.867
+aaps_exponential,45,25.0,20.0,3.4,0.36,0.0,0.905
+trio_sgolay,45,20.0,20.0,2.6,0.2,0.0,0.769
+ukf,45,20.0,20.0,2.547,0.186,0.0,0.747

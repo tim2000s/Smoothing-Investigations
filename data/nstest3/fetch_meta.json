@@ -1,0 +1,9 @@
+{
+  "base_url": "https://nstest3.crabdance.com",
+  "since": "2026-01-01T00:00:00Z",
+  "until": null,
+  "fetched_at_utc": "2026-04-28T20:05:34.387523+00:00",
+  "n_treatments_total": 24307,
+  "n_treatments_meal_tagged": 45,
+  "n_entries_sgv": 33683
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "members": [
+    {
+      "table": "oref_v5",
+      "user_id": "U000",
+      "rows": 26406,
+      "span_days": 92.03215277777778,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v5",
+      "user_id": "U002",
+      "rows": 192822,
+      "span_days": 539.990613425926,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v5",
+      "user_id": "U005",
+      "rows": 143664,
+      "span_days": 539.9898726851852,
+      "mode_gap_s": 301,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v6",
+      "user_id": "U029",
+      "rows": 53859,
+      "span_days": 421.8946875,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v6",
+      "user_id": "U031",
+      "rows": 54029,
+      "span_days": 195.52969907407407,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v6",
+      "user_id": "U033",
+      "rows": 51620,
+      "span_days": 215.8681134259259,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v6",
+      "user_id": "U047",
+      "rows": 92823,
+      "span_days": 412.77561342592594,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v6",
+      "user_id": "U053",
+      "rows": 46985,
+      "span_days": 179.47127314814816,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U073",
+      "rows": 28172,
+      "span_days": 136.43434027777778,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U122",
+      "rows": 28320,
+      "span_days": 128.28811342592593,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U130",
+      "rows": 67415,
+      "span_days": 234.1553587962963,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U132",
+      "rows": 47425,
+      "span_days": 237.76104166666667,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U135",
+      "rows": 48870,
+      "span_days": 391.76210648148145,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U138",
+      "rows": 452523,
+      "span_days": 2515.1936111111113,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U139",
+      "rows": 31242,
+      "span_days": 366.93628472222224,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U141",
+      "rows": 36214,
+      "span_days": 141.99657407407406,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U142",
+      "rows": 47430,
+      "span_days": 168.67498842592593,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U143",
+      "rows": 42626,
+      "span_days": 199.99631944444445,
+      "mode_gap_s": 300,
+      "density": 1.0
+    },
+    {
+      "table": "oref_v7",
+      "user_id": "U144",
+      "rows": 100725,
+      "span_days": 574.4934143518518,
+      "mode_gap_s": 300,
+      "density": 1.0
+    }
+  ]
+}

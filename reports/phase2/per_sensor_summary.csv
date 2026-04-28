@@ -1,0 +1,9 @@
+sensor_type,algorithm,noise_reduction_ratio,phase_shift_delay_min,xcorr_lag_min,step_response_median_delay_min,attenuation_signal_band,hypo_preserved_pct,hypo_amp_delta,outlier_absorbed_pct,peak_event_accel_retention
+G6,aaps_average,0.661,-0.005,0.009,-2.0,0.974,87.313,1.667,54.545,0.407
+G6,aaps_exponential,0.794,-2.023,2.639,0.417,1.045,90.0,0.0,50.0,0.474
+G6,trio_sgolay,0.528,-0.002,0.002,-2.292,0.991,82.09,2.0,100.0,0.286
+G6,ukf,0.574,-0.041,0.112,-1.508,0.986,82.639,2.206,68.75,0.281
+G7,aaps_average,0.591,-0.003,0.009,-2.239,0.974,83.257,2.0,32.312,0.374
+G7,aaps_exponential,0.731,-2.041,2.759,0.556,1.042,86.604,0.0,55.0,0.439
+G7,trio_sgolay,0.47,-0.002,-0.002,-1.979,0.991,76.455,2.0,93.82,0.236
+G7,ukf,0.462,-0.06,0.177,-1.024,0.985,76.78,2.656,60.125,0.222

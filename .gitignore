@@ -1,0 +1,34 @@
+# Derived parquet trace files (~100 MB+ each, reproducible from `make all`)
+runs/
+
+# Python build/cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local virtualenv
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Kotlin / Gradle
+backtest/reference/kotlin_driver/.gradle/
+backtest/reference/kotlin_driver/build/
+
+# Local plans / agent files (not part of this study)
+.claude/
+
+# Auto-rendered notebook outputs (large; reproducible)
+reports/analysis_rendered.ipynb
+
+# Persistent figure cache that shouldn't go to git
+**/_thumb_*.jpg
+cgm-sensor-integrity/

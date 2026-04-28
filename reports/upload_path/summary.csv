@@ -1,0 +1,3 @@
+n_pairs,n_unique_a,n_unique_b,label_a,label_b,exact_agreement_pct,within_1_pct,within_5_pct,within_10_pct,median_abs_delta,mean_abs_delta,max_abs_delta,median_dt_s,mean_dt_s,max_dt_s,n_a_only_39_b_40,n_b_only_39_a_40,n_disagree_above_5,user_id
+4875,4875,4875,"xDrip+ (no device string, filtered/unfiltered cols)",Trio iOS (org.nightscout.K9BZJ3BP33.trio),100.0,100.0,100.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,User_D
+51856,51856,51825,Dexcom Share2 (legacy API),Dexcom G7 native (Trio / Loop),99.89586547361925,99.94214748534404,99.94793273680963,99.95564640543041,0.0,0.01650725084850355,87.0,6.67,7.046975181271213,124.11,21,0,27,User_L

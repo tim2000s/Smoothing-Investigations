@@ -31,15 +31,15 @@ We extracted readings from a Phase 2 sensor-tagging table (`oref_phase2_sites_v2
 
 Total: 13 (user, sensor) pairs across 9 unique users.
 
-For users with both sensors we did not require the segments to be contiguous; we only required the rows to be cleanly attributed to one sensor or the other. Where the same physical sensor was reported via two upload paths (e.g., Trio iOS and xDrip+ both polling the Dexcom transmitter), we used a deduplicated ingest that keeps a single representative row per timestamp; the dual-upload effects are studied separately in companion paper 4.
+For users with both sensors we did not require the segments to be contiguous; we only required the rows to be cleanly attributed to one sensor or the other. Where the same physical sensor was reported via two upload paths (e.g., Trio iOS and xDrip+ both polling the Dexcom transmitter), we used a deduplicated ingest that keeps a single representative row per timestamp.
 
 ### 2.2 Algorithm execution
 
-For each (user, sensor) segment we ran each smoother in production-realistic online sliding-window mode: at each chronological reading t the algorithm is asked the value the AID dose engine would see at decision time t. The Python ports were validated against the upstream Kotlin source to bit-exactness for AAPS Average and AAPS Exponential and within 0.5 mg/dL for the UKF; see companion paper 1 for the parity protocol. Per-segment trace columns went to `runs/phase2/<user>__<sensor>/<algorithm>.parquet`.
+For each (user, sensor) segment we ran each smoother in production-realistic online sliding-window mode: at each chronological reading t the algorithm is asked the value the AID dose engine would see at decision time t. The Python ports were validated against the upstream Kotlin source to bit-exactness for AAPS Average and AAPS Exponential and within 0.5 mg/dL for the UKF. Per-segment trace columns went to `runs/phase2/<user>__<sensor>/<algorithm>.parquet`.
 
 ### 2.3 Per-sensor metrics
 
-For each (user, sensor, algorithm) trace we computed the same per-user metrics used in the cohort backtest (companion paper 1):
+For each (user, sensor, algorithm) trace we computed the following per-user metrics:
 
 * Noise reduction ratio (5–10 minute band)
 * Phase shift delay (minutes; negative = smoothed lags raw)
@@ -80,7 +80,7 @@ For the three users with both sensors, we computed the per-algorithm Δ(G7 − G
 | Peak-event acceleration retention | G6 | 1.000 | 0.474 | 0.623 |
 |                                     | G7 | 1.000 | 0.439 | 0.587 |
 
-The picture across the median is consistent across sensors. AAPS Average reduces to no-op (it is a no-op at the leading edge by design — see companion paper 1) regardless of sensor. AAPS Exponential and the UKF reduce slightly more noise on G7 than on G6 (UKF: 78 % → 74 %), with phase delay essentially unchanged across sensors (variation of 0.05 minutes). Hypoglycaemia preservation is 3–4 percentage points worse on G7 for both adaptive smoothers (UKF: 96 % → 94 %; AAPS Exp: 90 % → 87 %), consistent with G7 having slightly more low-glucose excursions per sensor-day in this sub-cohort. Outlier absorption rises modestly on G7 — both adaptive smoothers absorb a slightly larger fraction of single-reading spikes — consistent with G7 producing slightly more single-reading transmission artefacts in our data.
+The picture across the median is consistent across sensors. AAPS Average reduces to no-op (the production loop never sets a smoothed value for the newest reading, so the dose engine reads the raw input) regardless of sensor. AAPS Exponential and the UKF reduce slightly more noise on G7 than on G6 (UKF: 78 % → 74 %), with phase delay essentially unchanged across sensors (variation of 0.05 minutes). Hypoglycaemia preservation is 3–4 percentage points worse on G7 for both adaptive smoothers (UKF: 96 % → 94 %; AAPS Exp: 90 % → 87 %), consistent with G7 having slightly more low-glucose excursions per sensor-day in this sub-cohort. Outlier absorption rises modestly on G7 — both adaptive smoothers absorb a slightly larger fraction of single-reading spikes — consistent with G7 producing slightly more single-reading transmission artefacts in our data.
 
 Peak-event acceleration retention is the most differentiating metric: the UKF preserves 62 % of peak acceleration on G6 and 59 % on G7, whereas AAPS Exponential preserves only 47 % on G6 and 44 % on G7. The UKF is therefore a less aggressive damper on rapid second-derivative changes than AAPS Exponential, on both sensors.
 
@@ -143,4 +143,4 @@ The phase delay's near-insensitivity to sensor is reassuring: it tells us the sm
 
 ## 5. Conclusion
 
-Within a sensor-tagged sub-cohort of 13 (user × sensor) pairs and three within-user G6→G7 transitions, the three production CGM smoothers used by oref0-derived AID systems show second-order sensitivity to which Dexcom transmitter generation is feeding them. AAPS Average remains operationally a no-op at the leading edge regardless of sensor. AAPS Exponential and the UKF show 4–7 percentage point shifts in noise reduction across sensors, with similar (≤ 0.15 min) phase delay. The within-user paired comparison shows three users with consistently small deltas, one of whom reversed sign on every metric — consistent with three-user variance rather than a systematic G7 effect. Phase delay, the single metric most relevant to dose-engine timing, is essentially identical across sensors for each smoother. We therefore do not recommend a sensor-conditional smoother choice for AID systems; algorithm choice on its operating-point trade-off (see companion paper 1) takes precedence over the G6 vs G7 distinction.
+Within a sensor-tagged sub-cohort of 13 (user × sensor) pairs and three within-user G6→G7 transitions, the three production CGM smoothers used by oref0-derived AID systems show second-order sensitivity to which Dexcom transmitter generation is feeding them. AAPS Average remains operationally a no-op at the leading edge regardless of sensor. AAPS Exponential and the UKF show 4–7 percentage point shifts in noise reduction across sensors, with similar (≤ 0.15 min) phase delay. The within-user paired comparison shows three users with consistently small deltas, one of whom reversed sign on every metric — consistent with three-user variance rather than a systematic G7 effect. Phase delay, the single metric most relevant to dose-engine timing, is essentially identical across sensors for each smoother. We therefore do not recommend a sensor-conditional smoother choice for AID systems; algorithm choice on its noise-versus-delay operating-point trade-off takes precedence over the G6 vs G7 distinction.

@@ -103,7 +103,7 @@ For User_D the dedup is required only to correct the per-user weight; for User_L
 
 ### 3.4 Pre-database dedup protocol
 
-The deduplicated ingest used in companion papers 1, 2 and 3 keeps a single canonical row per `(user, rounded-timestamp)` pair according to a fixed precedence (Trio-iOS > Dexcom-native > xDrip+ > Share2 > unknown). After dedup, the User_D and User_L records contain 4 875 and 51 856 rows respectively (one row per physical reading), which is the correct per-user count for downstream sensor-tagged analysis.
+A pre-database deduplicated ingest keeps a single canonical row per `(user, rounded-timestamp)` pair according to a fixed precedence (Trio-iOS > Dexcom-native > xDrip+ > Share2 > unknown). After dedup, the User_D and User_L records contain 4 875 and 51 856 rows respectively (one row per physical reading), which is the correct per-user count for downstream sensor-tagged analysis.
 
 ## 4. Discussion
 

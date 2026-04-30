@@ -25,16 +25,6 @@ def _load_smoothed(user: str, algo: str, runs_dir: Path) -> tuple[np.ndarray, np
     if not pq.exists():
         return None
     df = pd.read_parquet(pq)
-    if algo == "trio_sgolay":
-        # Pass-3's input_glucose is pass-2's output, NOT the original raw.
-        # End-to-end metrics need raw = pass1.input and smoothed = pass3.output.
-        pass1 = df[df.step_name == "pass1"].sort_values("reading_idx")
-        pass3 = df[df.step_name == "pass3"].sort_values("reading_idx")
-        return (
-            pass1.ts_sec.to_numpy(),
-            pass1.input_glucose.to_numpy(),
-            pass3.output_glucose.to_numpy(),
-        )
     df = df.sort_values("reading_idx")
     return (
         df.ts_sec.to_numpy(),
@@ -77,7 +67,7 @@ def _plot_windows(user: str, runs_dir: Path, fig_dir: Path) -> None:
         return
 
     smoothed_by_algo: dict[str, np.ndarray] = {}
-    for algo in ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf"):
+    for algo in ("aaps_average", "aaps_exponential", "ukf"):
         loaded = _load_smoothed(user, algo, runs_dir)
         if loaded is not None:
             smoothed_by_algo[algo] = loaded[2]
@@ -91,7 +81,6 @@ def _plot_windows(user: str, runs_dir: Path, fig_dir: Path) -> None:
         for algo, color in (
             ("aaps_average", "tab:blue"),
             ("aaps_exponential", "tab:orange"),
-            ("trio_sgolay", "tab:green"),
             ("ukf", "tab:red"),
         ):
             if algo in smoothed_by_algo and len(smoothed_by_algo[algo]) >= sl.stop:
@@ -121,7 +110,7 @@ def main(argv=None) -> int:
     cohort_payload = json.loads(Path(args.cohort).read_text())
     rows = []
     for member in cohort_payload["members"]:
-        for algo in ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf"):
+        for algo in ("aaps_average", "aaps_exponential", "ukf"):
             loaded = _load_smoothed(member["user_id"], algo, runs_dir)
             if loaded is None:
                 continue

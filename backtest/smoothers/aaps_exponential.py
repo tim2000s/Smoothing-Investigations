@@ -35,8 +35,17 @@ class AapsExponential:
         *,
         instrument: bool = False,
     ) -> SmootherResult:
+        """Production-realistic sliding window: at each chronological t,
+        runs the dual-EMA over the trailing 24-reading window and emits the
+        leading-edge smoothed value. This is what the AAPS dose engine
+        actually sees at decision time t, so `process()` and the online
+        sliding window are the same operation for AAPS Exponential.
+        """
         ts_ms = (ts_sec.astype("int64") * 1000)
         return _exp_smooth(glucose, ts_ms, instrument=instrument)
+
+    # Alias for API consistency with the other two smoothers.
+    online_process = process
 
 
 def _exp_window(vn: list[float], tn: list[float]) -> tuple[list[float], dict]:

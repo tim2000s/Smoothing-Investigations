@@ -34,10 +34,6 @@ ALGO_COLS = {
         "o2_d_anchor", "o2_d_final",
         "blended",
     ),
-    "trio_sgolay": (
-        "pass_idx", "window_values_json",
-        "weighted_sum_num", "pre_clamp", "post_clamp",
-    ),
     "ukf": (
         "segment_idx", "dt_min",
         "x_pred_g", "x_pred_r", "P_pred_gg", "P_pred_rr", "P_pred_gr",

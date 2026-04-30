@@ -20,7 +20,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-ALGOS = ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf")
+ALGOS = ("aaps_average", "aaps_exponential", "ukf")
 RANKED_METRICS = (
     "xcorr_lag_min",
     "step_response_median_delay_min",
@@ -85,8 +85,7 @@ def _paired_tests(per_user: pd.DataFrame, metric: str) -> list[dict]:
 
 def _pareto_figure(per_user: pd.DataFrame, out_path: Path) -> None:
     fig, ax = plt.subplots(figsize=(8, 6))
-    colors = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange",
-              "trio_sgolay": "tab:green", "ukf": "tab:red"}
+    colors = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange", "ukf": "tab:red"}
     markers = {"oref_v5": "o", "oref_v6": "s", "oref_v7": "^"}
     for algo in ALGOS:
         for table in ("oref_v5", "oref_v6", "oref_v7"):

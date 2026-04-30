@@ -1,0 +1,3454 @@
+{
+  "step" : {
+    "n" : 200,
+    "trace" : [ {
+      "reading_idx" : 0,
+      "ts_ms" : 0,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 1,
+      "ts_ms" : 300000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0000000000008
+    }, {
+      "reading_idx" : 2,
+      "ts_ms" : 600000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.67718373360678
+    }, {
+      "reading_idx" : 3,
+      "ts_ms" : 900000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.33153302143666
+    }, {
+      "reading_idx" : 4,
+      "ts_ms" : 1200000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.46830205935251
+    }, {
+      "reading_idx" : 5,
+      "ts_ms" : 1500000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.32647385645514
+    }, {
+      "reading_idx" : 6,
+      "ts_ms" : 1800000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.10634135378483
+    }, {
+      "reading_idx" : 7,
+      "ts_ms" : 2100000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.32494450004259
+    }, {
+      "reading_idx" : 8,
+      "ts_ms" : 2400000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 100.35448711639489
+    }, {
+      "reading_idx" : 9,
+      "ts_ms" : 2700000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.99271235259596
+    }, {
+      "reading_idx" : 10,
+      "ts_ms" : 3000000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 98.20231271269722
+    }, {
+      "reading_idx" : 11,
+      "ts_ms" : 3300000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 99.18991546640066
+    }, {
+      "reading_idx" : 12,
+      "ts_ms" : 3600000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 96.57584524201148
+    }, {
+      "reading_idx" : 13,
+      "ts_ms" : 3900000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 98.43387701064039
+    }, {
+      "reading_idx" : 14,
+      "ts_ms" : 4200000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.26694450225699
+    }, {
+      "reading_idx" : 15,
+      "ts_ms" : 4500000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 98.76620942243039
+    }, {
+      "reading_idx" : 16,
+      "ts_ms" : 4800000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.00001289921838
+    }, {
+      "reading_idx" : 17,
+      "ts_ms" : 5100000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.06973729771303
+    }, {
+      "reading_idx" : 18,
+      "ts_ms" : 5400000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.36259740189527
+    }, {
+      "reading_idx" : 19,
+      "ts_ms" : 5700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 101.62815466353915
+    }, {
+      "reading_idx" : 20,
+      "ts_ms" : 6000000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.83668828143264
+    }, {
+      "reading_idx" : 21,
+      "ts_ms" : 6300000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.25172052349716
+    }, {
+      "reading_idx" : 22,
+      "ts_ms" : 6600000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 100.33197251005137
+    }, {
+      "reading_idx" : 23,
+      "ts_ms" : 6900000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.5849394248698
+    }, {
+      "reading_idx" : 24,
+      "ts_ms" : 7200000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 101.46726092103602
+    }, {
+      "reading_idx" : 25,
+      "ts_ms" : 7500000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.61114828560115
+    }, {
+      "reading_idx" : 26,
+      "ts_ms" : 7800000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.47814426277226
+    }, {
+      "reading_idx" : 27,
+      "ts_ms" : 8100000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.3136386212286
+    }, {
+      "reading_idx" : 28,
+      "ts_ms" : 8400000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 98.51752706022725
+    }, {
+      "reading_idx" : 29,
+      "ts_ms" : 8700000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 99.41650505824099
+    }, {
+      "reading_idx" : 30,
+      "ts_ms" : 9000000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.57515480424978
+    }, {
+      "reading_idx" : 31,
+      "ts_ms" : 9300000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 99.43786910385684
+    }, {
+      "reading_idx" : 32,
+      "ts_ms" : 9600000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 99.89764370819907
+    }, {
+      "reading_idx" : 33,
+      "ts_ms" : 9900000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.73010484004634
+    }, {
+      "reading_idx" : 34,
+      "ts_ms" : 10200000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.4071817357839
+    }, {
+      "reading_idx" : 35,
+      "ts_ms" : 10500000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.8239152259778
+    }, {
+      "reading_idx" : 36,
+      "ts_ms" : 10800000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.68216434993538
+    }, {
+      "reading_idx" : 37,
+      "ts_ms" : 11100000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 99.76243193661048
+    }, {
+      "reading_idx" : 38,
+      "ts_ms" : 11400000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 101.20268269687044
+    }, {
+      "reading_idx" : 39,
+      "ts_ms" : 11700000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.57819630542652
+    }, {
+      "reading_idx" : 40,
+      "ts_ms" : 12000000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 99.14731641859093
+    }, {
+      "reading_idx" : 41,
+      "ts_ms" : 12300000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 101.33940610349285
+    }, {
+      "reading_idx" : 42,
+      "ts_ms" : 12600000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.59288152668115
+    }, {
+      "reading_idx" : 43,
+      "ts_ms" : 12900000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.43985563330025
+    }, {
+      "reading_idx" : 44,
+      "ts_ms" : 13200000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.56596257923032
+    }, {
+      "reading_idx" : 45,
+      "ts_ms" : 13500000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.77570595428932
+    }, {
+      "reading_idx" : 46,
+      "ts_ms" : 13800000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 101.62710756081746
+    }, {
+      "reading_idx" : 47,
+      "ts_ms" : 14100000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 103.33782868366892
+    }, {
+      "reading_idx" : 48,
+      "ts_ms" : 14400000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.07521232168631
+    }, {
+      "reading_idx" : 49,
+      "ts_ms" : 14700000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.59290778856332
+    }, {
+      "reading_idx" : 50,
+      "ts_ms" : 15000000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.90396594622248
+    }, {
+      "reading_idx" : 51,
+      "ts_ms" : 15300000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 99.09007461547992
+    }, {
+      "reading_idx" : 52,
+      "ts_ms" : 15600000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 99.20362640048661
+    }, {
+      "reading_idx" : 53,
+      "ts_ms" : 15900000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.2011383530313
+    }, {
+      "reading_idx" : 54,
+      "ts_ms" : 16200000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 98.13243198380215
+    }, {
+      "reading_idx" : 55,
+      "ts_ms" : 16500000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 99.76894687616299
+    }, {
+      "reading_idx" : 56,
+      "ts_ms" : 16800000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.70130300608447
+    }, {
+      "reading_idx" : 57,
+      "ts_ms" : 17100000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.07968486288986
+    }, {
+      "reading_idx" : 58,
+      "ts_ms" : 17400000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 99.16631081460476
+    }, {
+      "reading_idx" : 59,
+      "ts_ms" : 17700000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 98.84378738261313
+    }, {
+      "reading_idx" : 60,
+      "ts_ms" : 18000000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 98.81144164850662
+    }, {
+      "reading_idx" : 61,
+      "ts_ms" : 18300000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.20084388329215
+    }, {
+      "reading_idx" : 62,
+      "ts_ms" : 18600000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 106.87190997272818
+    }, {
+      "reading_idx" : 63,
+      "ts_ms" : 18900000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.29195938875988
+    }, {
+      "reading_idx" : 64,
+      "ts_ms" : 19200000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 113.18847841587862
+    }, {
+      "reading_idx" : 65,
+      "ts_ms" : 19500000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 116.59695059545842
+    }, {
+      "reading_idx" : 66,
+      "ts_ms" : 19800000,
+      "input_glucose" : 124.0,
+      "smoothed_glucose" : 122.36630547162775
+    }, {
+      "reading_idx" : 67,
+      "ts_ms" : 20100000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 126.6190941250267
+    }, {
+      "reading_idx" : 68,
+      "ts_ms" : 20400000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 129.30168920462918
+    }, {
+      "reading_idx" : 69,
+      "ts_ms" : 20700000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 128.6243130086125
+    }, {
+      "reading_idx" : 70,
+      "ts_ms" : 21000000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 133.12622568678853
+    }, {
+      "reading_idx" : 71,
+      "ts_ms" : 21300000,
+      "input_glucose" : 139.0,
+      "smoothed_glucose" : 137.77269767576712
+    }, {
+      "reading_idx" : 72,
+      "ts_ms" : 21600000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 142.21458786326133
+    }, {
+      "reading_idx" : 73,
+      "ts_ms" : 21900000,
+      "input_glucose" : 144.0,
+      "smoothed_glucose" : 144.44016497782115
+    }, {
+      "reading_idx" : 74,
+      "ts_ms" : 22200000,
+      "input_glucose" : 152.0,
+      "smoothed_glucose" : 150.2167304153471
+    }, {
+      "reading_idx" : 75,
+      "ts_ms" : 22500000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 150.54622479791473
+    }, {
+      "reading_idx" : 76,
+      "ts_ms" : 22800000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 153.37291451116377
+    }, {
+      "reading_idx" : 77,
+      "ts_ms" : 23100000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 158.39783893526953
+    }, {
+      "reading_idx" : 78,
+      "ts_ms" : 23400000,
+      "input_glucose" : 162.0,
+      "smoothed_glucose" : 161.76257124861587
+    }, {
+      "reading_idx" : 79,
+      "ts_ms" : 23700000,
+      "input_glucose" : 170.0,
+      "smoothed_glucose" : 168.1196311986843
+    }, {
+      "reading_idx" : 80,
+      "ts_ms" : 24000000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.97821076411537
+    }, {
+      "reading_idx" : 81,
+      "ts_ms" : 24300000,
+      "input_glucose" : 171.0,
+      "smoothed_glucose" : 171.46436994262598
+    }, {
+      "reading_idx" : 82,
+      "ts_ms" : 24600000,
+      "input_glucose" : 175.0,
+      "smoothed_glucose" : 174.36703325361913
+    }, {
+      "reading_idx" : 83,
+      "ts_ms" : 24900000,
+      "input_glucose" : 177.0,
+      "smoothed_glucose" : 176.7608785278432
+    }, {
+      "reading_idx" : 84,
+      "ts_ms" : 25200000,
+      "input_glucose" : 180.0,
+      "smoothed_glucose" : 179.52391749770794
+    }, {
+      "reading_idx" : 85,
+      "ts_ms" : 25500000,
+      "input_glucose" : 187.0,
+      "smoothed_glucose" : 185.136541178791
+    }, {
+      "reading_idx" : 86,
+      "ts_ms" : 25800000,
+      "input_glucose" : 191.0,
+      "smoothed_glucose" : 190.09487682208209
+    }, {
+      "reading_idx" : 87,
+      "ts_ms" : 26100000,
+      "input_glucose" : 196.0,
+      "smoothed_glucose" : 195.16758786542607
+    }, {
+      "reading_idx" : 88,
+      "ts_ms" : 26400000,
+      "input_glucose" : 195.0,
+      "smoothed_glucose" : 196.26373223432054
+    }, {
+      "reading_idx" : 89,
+      "ts_ms" : 26700000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 201.4071183224933
+    }, {
+      "reading_idx" : 90,
+      "ts_ms" : 27000000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 200.82078186583527
+    }, {
+      "reading_idx" : 91,
+      "ts_ms" : 27300000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 202.6189767379196
+    }, {
+      "reading_idx" : 92,
+      "ts_ms" : 27600000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 200.62098976943503
+    }, {
+      "reading_idx" : 93,
+      "ts_ms" : 27900000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.43810236787036
+    }, {
+      "reading_idx" : 94,
+      "ts_ms" : 28200000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 199.59911202020456
+    }, {
+      "reading_idx" : 95,
+      "ts_ms" : 28500000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 201.12375825794882
+    }, {
+      "reading_idx" : 96,
+      "ts_ms" : 28800000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.5618041968734
+    }, {
+      "reading_idx" : 97,
+      "ts_ms" : 29100000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.5250118197056
+    }, {
+      "reading_idx" : 98,
+      "ts_ms" : 29400000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 197.70380530211398
+    }, {
+      "reading_idx" : 99,
+      "ts_ms" : 29700000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 196.9189055431299
+    }, {
+      "reading_idx" : 100,
+      "ts_ms" : 30000000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 199.38086573788493
+    }, {
+      "reading_idx" : 101,
+      "ts_ms" : 30300000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 201.35840807870122
+    }, {
+      "reading_idx" : 102,
+      "ts_ms" : 30600000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.8366445371488
+    }, {
+      "reading_idx" : 103,
+      "ts_ms" : 30900000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 199.0440005304549
+    }, {
+      "reading_idx" : 104,
+      "ts_ms" : 31200000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 200.79345098031385
+    }, {
+      "reading_idx" : 105,
+      "ts_ms" : 31500000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 198.43041552445095
+    }, {
+      "reading_idx" : 106,
+      "ts_ms" : 31800000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 198.54297051574636
+    }, {
+      "reading_idx" : 107,
+      "ts_ms" : 32100000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 200.0755952347771
+    }, {
+      "reading_idx" : 108,
+      "ts_ms" : 32400000,
+      "input_glucose" : 195.0,
+      "smoothed_glucose" : 196.87973435199154
+    }, {
+      "reading_idx" : 109,
+      "ts_ms" : 32700000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 199.23976811702843
+    }, {
+      "reading_idx" : 110,
+      "ts_ms" : 33000000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.25129741354436
+    }, {
+      "reading_idx" : 111,
+      "ts_ms" : 33300000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 199.8227012119467
+    }, {
+      "reading_idx" : 112,
+      "ts_ms" : 33600000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0526255246652
+    }, {
+      "reading_idx" : 113,
+      "ts_ms" : 33900000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.09826364766332
+    }, {
+      "reading_idx" : 114,
+      "ts_ms" : 34200000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 200.73784621339732
+    }, {
+      "reading_idx" : 115,
+      "ts_ms" : 34500000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 199.0282847100172
+    }, {
+      "reading_idx" : 116,
+      "ts_ms" : 34800000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 201.4704866293453
+    }, {
+      "reading_idx" : 117,
+      "ts_ms" : 35100000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.41784734314047
+    }, {
+      "reading_idx" : 118,
+      "ts_ms" : 35400000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 201.9079476274888
+    }, {
+      "reading_idx" : 119,
+      "ts_ms" : 35700000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.08248421429298
+    }, {
+      "reading_idx" : 120,
+      "ts_ms" : 36000000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.10103443697304
+    }, {
+      "reading_idx" : 121,
+      "ts_ms" : 36300000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.068137938234
+    }, {
+      "reading_idx" : 122,
+      "ts_ms" : 36600000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.7056601442529
+    }, {
+      "reading_idx" : 123,
+      "ts_ms" : 36900000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 198.0594876765765
+    }, {
+      "reading_idx" : 124,
+      "ts_ms" : 37200000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 198.89593912641968
+    }, {
+      "reading_idx" : 125,
+      "ts_ms" : 37500000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.2248221728166
+    }, {
+      "reading_idx" : 126,
+      "ts_ms" : 37800000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 197.28444188304022
+    }, {
+      "reading_idx" : 127,
+      "ts_ms" : 38100000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 199.56358966303537
+    }, {
+      "reading_idx" : 128,
+      "ts_ms" : 38400000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.42913836845165
+    }, {
+      "reading_idx" : 129,
+      "ts_ms" : 38700000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.56445915271433
+    }, {
+      "reading_idx" : 130,
+      "ts_ms" : 39000000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.10479579420183
+    }, {
+      "reading_idx" : 131,
+      "ts_ms" : 39300000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 199.9255236239195
+    }, {
+      "reading_idx" : 132,
+      "ts_ms" : 39600000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 200.85081343683538
+    }, {
+      "reading_idx" : 133,
+      "ts_ms" : 39900000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 202.4978529693277
+    }, {
+      "reading_idx" : 134,
+      "ts_ms" : 40200000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 201.16599913856317
+    }, {
+      "reading_idx" : 135,
+      "ts_ms" : 40500000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 201.67270954656146
+    }, {
+      "reading_idx" : 136,
+      "ts_ms" : 40800000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 202.604979266822
+    }, {
+      "reading_idx" : 137,
+      "ts_ms" : 41100000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.35625785262803
+    }, {
+      "reading_idx" : 138,
+      "ts_ms" : 41400000,
+      "input_glucose" : 195.0,
+      "smoothed_glucose" : 197.5046892983783
+    }, {
+      "reading_idx" : 139,
+      "ts_ms" : 41700000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 199.82065151769808
+    }, {
+      "reading_idx" : 140,
+      "ts_ms" : 42000000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 200.64198556582463
+    }, {
+      "reading_idx" : 141,
+      "ts_ms" : 42300000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.01064927289343
+    }, {
+      "reading_idx" : 142,
+      "ts_ms" : 42600000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.11138986135677
+    }, {
+      "reading_idx" : 143,
+      "ts_ms" : 42900000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0980458298796
+    }, {
+      "reading_idx" : 144,
+      "ts_ms" : 43200000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.05732958035796
+    }, {
+      "reading_idx" : 145,
+      "ts_ms" : 43500000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.69681131248385
+    }, {
+      "reading_idx" : 146,
+      "ts_ms" : 43800000,
+      "input_glucose" : 196.0,
+      "smoothed_glucose" : 197.05459558467294
+    }, {
+      "reading_idx" : 147,
+      "ts_ms" : 44100000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 198.55771804184965
+    }, {
+      "reading_idx" : 148,
+      "ts_ms" : 44400000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.2044978524855
+    }, {
+      "reading_idx" : 149,
+      "ts_ms" : 44700000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 200.68064273116602
+    }, {
+      "reading_idx" : 150,
+      "ts_ms" : 45000000,
+      "input_glucose" : 259.0,
+      "smoothed_glucose" : 216.05591518501535
+    }, {
+      "reading_idx" : 151,
+      "ts_ms" : 45300000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 205.93177573073814
+    }, {
+      "reading_idx" : 152,
+      "ts_ms" : 45600000,
+      "input_glucose" : 196.0,
+      "smoothed_glucose" : 198.81828853963393
+    }, {
+      "reading_idx" : 153,
+      "ts_ms" : 45900000,
+      "input_glucose" : 195.0,
+      "smoothed_glucose" : 195.41808392931523
+    }, {
+      "reading_idx" : 154,
+      "ts_ms" : 46200000,
+      "input_glucose" : 194.0,
+      "smoothed_glucose" : 193.6291952094295
+    }, {
+      "reading_idx" : 155,
+      "ts_ms" : 46500000,
+      "input_glucose" : 190.0,
+      "smoothed_glucose" : 190.60238110112
+    }, {
+      "reading_idx" : 156,
+      "ts_ms" : 46800000,
+      "input_glucose" : 192.0,
+      "smoothed_glucose" : 190.83807373611347
+    }, {
+      "reading_idx" : 157,
+      "ts_ms" : 47100000,
+      "input_glucose" : 190.0,
+      "smoothed_glucose" : 190.0170404749857
+    }, {
+      "reading_idx" : 158,
+      "ts_ms" : 47400000,
+      "input_glucose" : 187.0,
+      "smoothed_glucose" : 187.78711209597859
+    }, {
+      "reading_idx" : 159,
+      "ts_ms" : 47700000,
+      "input_glucose" : 183.0,
+      "smoothed_glucose" : 184.2019281858142
+    }, {
+      "reading_idx" : 160,
+      "ts_ms" : 48000000,
+      "input_glucose" : 187.0,
+      "smoothed_glucose" : 185.37708274700105
+    }, {
+      "reading_idx" : 161,
+      "ts_ms" : 48300000,
+      "input_glucose" : 184.0,
+      "smoothed_glucose" : 184.3369243664437
+    }, {
+      "reading_idx" : 162,
+      "ts_ms" : 48600000,
+      "input_glucose" : 182.0,
+      "smoothed_glucose" : 182.5864733888457
+    }, {
+      "reading_idx" : 163,
+      "ts_ms" : 48900000,
+      "input_glucose" : 182.0,
+      "smoothed_glucose" : 181.86548365909056
+    }, {
+      "reading_idx" : 164,
+      "ts_ms" : 49200000,
+      "input_glucose" : 184.0,
+      "smoothed_glucose" : 183.0366317805861
+    }, {
+      "reading_idx" : 165,
+      "ts_ms" : 49500000,
+      "input_glucose" : 179.0,
+      "smoothed_glucose" : 180.4199547544572
+    }, {
+      "reading_idx" : 166,
+      "ts_ms" : 49800000,
+      "input_glucose" : 178.0,
+      "smoothed_glucose" : 178.4737456414203
+    }, {
+      "reading_idx" : 167,
+      "ts_ms" : 50100000,
+      "input_glucose" : 174.0,
+      "smoothed_glucose" : 175.0880020115735
+    }, {
+      "reading_idx" : 168,
+      "ts_ms" : 50400000,
+      "input_glucose" : 178.0,
+      "smoothed_glucose" : 176.3626944910647
+    }, {
+      "reading_idx" : 169,
+      "ts_ms" : 50700000,
+      "input_glucose" : 176.0,
+      "smoothed_glucose" : 176.0189886664306
+    }, {
+      "reading_idx" : 170,
+      "ts_ms" : 51000000,
+      "input_glucose" : 175.0,
+      "smoothed_glucose" : 175.25016070020973
+    }, {
+      "reading_idx" : 171,
+      "ts_ms" : 51300000,
+      "input_glucose" : 171.0,
+      "smoothed_glucose" : 172.28443752120944
+    }, {
+      "reading_idx" : 172,
+      "ts_ms" : 51600000,
+      "input_glucose" : 171.0,
+      "smoothed_glucose" : 170.9531411105156
+    }, {
+      "reading_idx" : 173,
+      "ts_ms" : 51900000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.26536944064983
+    }, {
+      "reading_idx" : 174,
+      "ts_ms" : 52200000,
+      "input_glucose" : 168.0,
+      "smoothed_glucose" : 168.01963308390665
+    }, {
+      "reading_idx" : 175,
+      "ts_ms" : 52500000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.66673891718787
+    }, {
+      "reading_idx" : 176,
+      "ts_ms" : 52800000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 162.0894605944493
+    }, {
+      "reading_idx" : 177,
+      "ts_ms" : 53100000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 163.31304602095523
+    }, {
+      "reading_idx" : 178,
+      "ts_ms" : 53400000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 159.65451580634726
+    }, {
+      "reading_idx" : 179,
+      "ts_ms" : 53700000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 159.31312258745163
+    }, {
+      "reading_idx" : 180,
+      "ts_ms" : 54000000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 159.47626037851114
+    }, {
+      "reading_idx" : 181,
+      "ts_ms" : 54300000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 158.3934865294427
+    }, {
+      "reading_idx" : 182,
+      "ts_ms" : 54600000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 159.92709455172877
+    }, {
+      "reading_idx" : 183,
+      "ts_ms" : 54900000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.10652280384636
+    }, {
+      "reading_idx" : 184,
+      "ts_ms" : 55200000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.45976544909513
+    }, {
+      "reading_idx" : 185,
+      "ts_ms" : 55500000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 160.42223465852592
+    }, {
+      "reading_idx" : 186,
+      "ts_ms" : 55800000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.59082557132191
+    }, {
+      "reading_idx" : 187,
+      "ts_ms" : 56100000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 161.7846810353022
+    }, {
+      "reading_idx" : 188,
+      "ts_ms" : 56400000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.54232181365302
+    }, {
+      "reading_idx" : 189,
+      "ts_ms" : 56700000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.94040061962767
+    }, {
+      "reading_idx" : 190,
+      "ts_ms" : 57000000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 157.13738242605703
+    }, {
+      "reading_idx" : 191,
+      "ts_ms" : 57300000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 156.57249744799662
+    }, {
+      "reading_idx" : 192,
+      "ts_ms" : 57600000,
+      "input_glucose" : 162.0,
+      "smoothed_glucose" : 159.89192978038668
+    }, {
+      "reading_idx" : 193,
+      "ts_ms" : 57900000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.30752543625547
+    }, {
+      "reading_idx" : 194,
+      "ts_ms" : 58200000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.64515016222774
+    }, {
+      "reading_idx" : 195,
+      "ts_ms" : 58500000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 161.86721841909565
+    }, {
+      "reading_idx" : 196,
+      "ts_ms" : 58800000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 158.94722552347463
+    }, {
+      "reading_idx" : 197,
+      "ts_ms" : 59100000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 158.70577467237158
+    }, {
+      "reading_idx" : 198,
+      "ts_ms" : 59400000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 158.74888878860514
+    }, {
+      "reading_idx" : 199,
+      "ts_ms" : 59700000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 160.18339755022808
+    } ]
+  },
+  "sinusoid" : {
+    "n" : 200,
+    "trace" : [ {
+      "reading_idx" : 0,
+      "ts_ms" : 0,
+      "input_glucose" : 131.0,
+      "smoothed_glucose" : 131.0
+    }, {
+      "reading_idx" : 1,
+      "ts_ms" : 300000,
+      "input_glucose" : 137.0,
+      "smoothed_glucose" : 137.0000000000004
+    }, {
+      "reading_idx" : 2,
+      "ts_ms" : 600000,
+      "input_glucose" : 139.0,
+      "smoothed_glucose" : 139.99391588721102
+    }, {
+      "reading_idx" : 3,
+      "ts_ms" : 900000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 138.48344586501895
+    }, {
+      "reading_idx" : 4,
+      "ts_ms" : 1200000,
+      "input_glucose" : 148.0,
+      "smoothed_glucose" : 144.94551566783653
+    }, {
+      "reading_idx" : 5,
+      "ts_ms" : 1500000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 148.6072275972392
+    }, {
+      "reading_idx" : 6,
+      "ts_ms" : 1800000,
+      "input_glucose" : 148.0,
+      "smoothed_glucose" : 149.22006740370344
+    }, {
+      "reading_idx" : 7,
+      "ts_ms" : 2100000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 154.09701690717213
+    }, {
+      "reading_idx" : 8,
+      "ts_ms" : 2400000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 156.89777560842396
+    }, {
+      "reading_idx" : 9,
+      "ts_ms" : 2700000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.06739027464513
+    }, {
+      "reading_idx" : 10,
+      "ts_ms" : 3000000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.34420616388422
+    }, {
+      "reading_idx" : 11,
+      "ts_ms" : 3300000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 163.17242099681215
+    }, {
+      "reading_idx" : 12,
+      "ts_ms" : 3600000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 161.76519578159267
+    }, {
+      "reading_idx" : 13,
+      "ts_ms" : 3900000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 163.27687925685663
+    }, {
+      "reading_idx" : 14,
+      "ts_ms" : 4200000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.34734037031876
+    }, {
+      "reading_idx" : 15,
+      "ts_ms" : 4500000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 165.82524437180206
+    }, {
+      "reading_idx" : 16,
+      "ts_ms" : 4800000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.69769992175878
+    }, {
+      "reading_idx" : 17,
+      "ts_ms" : 5100000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 164.11146496717427
+    }, {
+      "reading_idx" : 18,
+      "ts_ms" : 5400000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 161.2894730445702
+    }, {
+      "reading_idx" : 19,
+      "ts_ms" : 5700000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 160.63232259211887
+    }, {
+      "reading_idx" : 20,
+      "ts_ms" : 6000000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 159.92181163956727
+    }, {
+      "reading_idx" : 21,
+      "ts_ms" : 6300000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.78567890918438
+    }, {
+      "reading_idx" : 22,
+      "ts_ms" : 6600000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 159.4797170228196
+    }, {
+      "reading_idx" : 23,
+      "ts_ms" : 6900000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.9226488650007
+    }, {
+      "reading_idx" : 24,
+      "ts_ms" : 7200000,
+      "input_glucose" : 140.0,
+      "smoothed_glucose" : 146.60399602478515
+    }, {
+      "reading_idx" : 25,
+      "ts_ms" : 7500000,
+      "input_glucose" : 140.0,
+      "smoothed_glucose" : 140.56214530752936
+    }, {
+      "reading_idx" : 26,
+      "ts_ms" : 7800000,
+      "input_glucose" : 144.0,
+      "smoothed_glucose" : 141.24983173564365
+    }, {
+      "reading_idx" : 27,
+      "ts_ms" : 8100000,
+      "input_glucose" : 139.0,
+      "smoothed_glucose" : 139.17803545657048
+    }, {
+      "reading_idx" : 28,
+      "ts_ms" : 8400000,
+      "input_glucose" : 138.0,
+      "smoothed_glucose" : 137.8538233152804
+    }, {
+      "reading_idx" : 29,
+      "ts_ms" : 8700000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 135.54918984932186
+    }, {
+      "reading_idx" : 30,
+      "ts_ms" : 9000000,
+      "input_glucose" : 138.0,
+      "smoothed_glucose" : 136.65880654535553
+    }, {
+      "reading_idx" : 31,
+      "ts_ms" : 9300000,
+      "input_glucose" : 122.0,
+      "smoothed_glucose" : 126.91262286890698
+    }, {
+      "reading_idx" : 32,
+      "ts_ms" : 9600000,
+      "input_glucose" : 121.0,
+      "smoothed_glucose" : 121.60075211686686
+    }, {
+      "reading_idx" : 33,
+      "ts_ms" : 9900000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 123.82744218734422
+    }, {
+      "reading_idx" : 34,
+      "ts_ms" : 10200000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 119.70125690018287
+    }, {
+      "reading_idx" : 35,
+      "ts_ms" : 10500000,
+      "input_glucose" : 115.0,
+      "smoothed_glucose" : 115.88790569822685
+    }, {
+      "reading_idx" : 36,
+      "ts_ms" : 10800000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 109.15682767049277
+    }, {
+      "reading_idx" : 37,
+      "ts_ms" : 11100000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 101.77803239744158
+    }, {
+      "reading_idx" : 38,
+      "ts_ms" : 11400000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 102.32233674876075
+    }, {
+      "reading_idx" : 39,
+      "ts_ms" : 11700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 101.4999644967905
+    }, {
+      "reading_idx" : 40,
+      "ts_ms" : 12000000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 96.80826215644825
+    }, {
+      "reading_idx" : 41,
+      "ts_ms" : 12300000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 94.78742387510535
+    }, {
+      "reading_idx" : 42,
+      "ts_ms" : 12600000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 94.95673921118745
+    }, {
+      "reading_idx" : 43,
+      "ts_ms" : 12900000,
+      "input_glucose" : 92.0,
+      "smoothed_glucose" : 92.74531325323683
+    }, {
+      "reading_idx" : 44,
+      "ts_ms" : 13200000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 93.82423838362067
+    }, {
+      "reading_idx" : 45,
+      "ts_ms" : 13500000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 94.57688406171046
+    }, {
+      "reading_idx" : 46,
+      "ts_ms" : 13800000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 94.95129008476638
+    }, {
+      "reading_idx" : 47,
+      "ts_ms" : 14100000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.41279411504846
+    }, {
+      "reading_idx" : 48,
+      "ts_ms" : 14400000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 97.42179624264124
+    }, {
+      "reading_idx" : 49,
+      "ts_ms" : 14700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 100.86745440226937
+    }, {
+      "reading_idx" : 50,
+      "ts_ms" : 15000000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.61353900124143
+    }, {
+      "reading_idx" : 51,
+      "ts_ms" : 15300000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 99.60269366358999
+    }, {
+      "reading_idx" : 52,
+      "ts_ms" : 15600000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 104.39685666817907
+    }, {
+      "reading_idx" : 53,
+      "ts_ms" : 15900000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.42076302871325
+    }, {
+      "reading_idx" : 54,
+      "ts_ms" : 16200000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 110.86180021092194
+    }, {
+      "reading_idx" : 55,
+      "ts_ms" : 16500000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 109.90248366484167
+    }, {
+      "reading_idx" : 56,
+      "ts_ms" : 16800000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 116.20921941534559
+    }, {
+      "reading_idx" : 57,
+      "ts_ms" : 17100000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.06242609529367
+    }, {
+      "reading_idx" : 58,
+      "ts_ms" : 17400000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 119.1872310198412
+    }, {
+      "reading_idx" : 59,
+      "ts_ms" : 17700000,
+      "input_glucose" : 125.0,
+      "smoothed_glucose" : 123.41928298895145
+    }, {
+      "reading_idx" : 60,
+      "ts_ms" : 18000000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 128.5417399864925
+    }, {
+      "reading_idx" : 61,
+      "ts_ms" : 18300000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 133.8705977777371
+    }, {
+      "reading_idx" : 62,
+      "ts_ms" : 18600000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 134.48809033013856
+    }, {
+      "reading_idx" : 63,
+      "ts_ms" : 18900000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 136.09166666702342
+    }, {
+      "reading_idx" : 64,
+      "ts_ms" : 19200000,
+      "input_glucose" : 145.0,
+      "smoothed_glucose" : 142.48736235352285
+    }, {
+      "reading_idx" : 65,
+      "ts_ms" : 19500000,
+      "input_glucose" : 146.0,
+      "smoothed_glucose" : 145.9236970225576
+    }, {
+      "reading_idx" : 66,
+      "ts_ms" : 19800000,
+      "input_glucose" : 152.0,
+      "smoothed_glucose" : 150.91258692603535
+    }, {
+      "reading_idx" : 67,
+      "ts_ms" : 20100000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 155.39976164467205
+    }, {
+      "reading_idx" : 68,
+      "ts_ms" : 20400000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 152.2591686500586
+    }, {
+      "reading_idx" : 69,
+      "ts_ms" : 20700000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 156.7678941862207
+    }, {
+      "reading_idx" : 70,
+      "ts_ms" : 21000000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 162.87978394601043
+    }, {
+      "reading_idx" : 71,
+      "ts_ms" : 21300000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 162.76755591894175
+    }, {
+      "reading_idx" : 72,
+      "ts_ms" : 21600000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 161.4021551864195
+    }, {
+      "reading_idx" : 73,
+      "ts_ms" : 21900000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 165.12877744180724
+    }, {
+      "reading_idx" : 74,
+      "ts_ms" : 22200000,
+      "input_glucose" : 166.0,
+      "smoothed_glucose" : 166.2351063952473
+    }, {
+      "reading_idx" : 75,
+      "ts_ms" : 22500000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 168.4515553444958
+    }, {
+      "reading_idx" : 76,
+      "ts_ms" : 22800000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 165.3082558141343
+    }, {
+      "reading_idx" : 77,
+      "ts_ms" : 23100000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 160.2208383303668
+    }, {
+      "reading_idx" : 78,
+      "ts_ms" : 23400000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 161.2502062126722
+    }, {
+      "reading_idx" : 79,
+      "ts_ms" : 23700000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.21493226399295
+    }, {
+      "reading_idx" : 80,
+      "ts_ms" : 24000000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 161.82880386002992
+    }, {
+      "reading_idx" : 81,
+      "ts_ms" : 24300000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 160.07674547834574
+    }, {
+      "reading_idx" : 82,
+      "ts_ms" : 24600000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 152.5331563332159
+    }, {
+      "reading_idx" : 83,
+      "ts_ms" : 24900000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 149.04777858281733
+    }, {
+      "reading_idx" : 84,
+      "ts_ms" : 25200000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 151.3562775922508
+    }, {
+      "reading_idx" : 85,
+      "ts_ms" : 25500000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 150.35937091083852
+    }, {
+      "reading_idx" : 86,
+      "ts_ms" : 25800000,
+      "input_glucose" : 142.0,
+      "smoothed_glucose" : 144.6289606006327
+    }, {
+      "reading_idx" : 87,
+      "ts_ms" : 26100000,
+      "input_glucose" : 141.0,
+      "smoothed_glucose" : 141.33820951421237
+    }, {
+      "reading_idx" : 88,
+      "ts_ms" : 26400000,
+      "input_glucose" : 139.0,
+      "smoothed_glucose" : 138.9464486039413
+    }, {
+      "reading_idx" : 89,
+      "ts_ms" : 26700000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 136.29454581062208
+    }, {
+      "reading_idx" : 90,
+      "ts_ms" : 27000000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.10017296414492
+    }, {
+      "reading_idx" : 91,
+      "ts_ms" : 27300000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 128.7914649549331
+    }, {
+      "reading_idx" : 92,
+      "ts_ms" : 27600000,
+      "input_glucose" : 122.0,
+      "smoothed_glucose" : 123.28302364622468
+    }, {
+      "reading_idx" : 93,
+      "ts_ms" : 27900000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.57425161758142
+    }, {
+      "reading_idx" : 94,
+      "ts_ms" : 28200000,
+      "input_glucose" : 120.0,
+      "smoothed_glucose" : 118.34329578309091
+    }, {
+      "reading_idx" : 95,
+      "ts_ms" : 28500000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 107.6219792606523
+    }, {
+      "reading_idx" : 96,
+      "ts_ms" : 28800000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 106.80042591731065
+    }, {
+      "reading_idx" : 97,
+      "ts_ms" : 29100000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 106.07267370632302
+    }, {
+      "reading_idx" : 98,
+      "ts_ms" : 29400000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 100.24266000164187
+    }, {
+      "reading_idx" : 99,
+      "ts_ms" : 29700000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 101.0513972152577
+    }, {
+      "reading_idx" : 100,
+      "ts_ms" : 30000000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 98.0379625711548
+    }, {
+      "reading_idx" : 101,
+      "ts_ms" : 30300000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 99.44123425376827
+    }, {
+      "reading_idx" : 102,
+      "ts_ms" : 30600000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 97.11293666816418
+    }, {
+      "reading_idx" : 103,
+      "ts_ms" : 30900000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 97.3557566860164
+    }, {
+      "reading_idx" : 104,
+      "ts_ms" : 31200000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 98.99659537285626
+    }, {
+      "reading_idx" : 105,
+      "ts_ms" : 31500000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.85272121492721
+    }, {
+      "reading_idx" : 106,
+      "ts_ms" : 31800000,
+      "input_glucose" : 92.0,
+      "smoothed_glucose" : 93.88570665663993
+    }, {
+      "reading_idx" : 107,
+      "ts_ms" : 32100000,
+      "input_glucose" : 90.0,
+      "smoothed_glucose" : 90.71516373756945
+    }, {
+      "reading_idx" : 108,
+      "ts_ms" : 32400000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 98.83341094929574
+    }, {
+      "reading_idx" : 109,
+      "ts_ms" : 32700000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 99.11903630872757
+    }, {
+      "reading_idx" : 110,
+      "ts_ms" : 33000000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 98.1116827729964
+    }, {
+      "reading_idx" : 111,
+      "ts_ms" : 33300000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 100.72288264126148
+    }, {
+      "reading_idx" : 112,
+      "ts_ms" : 33600000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.61438480357994
+    }, {
+      "reading_idx" : 113,
+      "ts_ms" : 33900000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 107.94466613888736
+    }, {
+      "reading_idx" : 114,
+      "ts_ms" : 34200000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.24071573942878
+    }, {
+      "reading_idx" : 115,
+      "ts_ms" : 34500000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 112.79423047898437
+    }, {
+      "reading_idx" : 116,
+      "ts_ms" : 34800000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.59972179721407
+    }, {
+      "reading_idx" : 117,
+      "ts_ms" : 35100000,
+      "input_glucose" : 121.0,
+      "smoothed_glucose" : 118.91174678458349
+    }, {
+      "reading_idx" : 118,
+      "ts_ms" : 35400000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.88796525123045
+    }, {
+      "reading_idx" : 119,
+      "ts_ms" : 35700000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 126.46611281570979
+    }, {
+      "reading_idx" : 120,
+      "ts_ms" : 36000000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 133.94465659948384
+    }, {
+      "reading_idx" : 121,
+      "ts_ms" : 36300000,
+      "input_glucose" : 128.0,
+      "smoothed_glucose" : 131.5426777161321
+    }, {
+      "reading_idx" : 122,
+      "ts_ms" : 36600000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 128.85374642410335
+    }, {
+      "reading_idx" : 123,
+      "ts_ms" : 36900000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 138.00624696928935
+    }, {
+      "reading_idx" : 124,
+      "ts_ms" : 37200000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 149.8039008193817
+    }, {
+      "reading_idx" : 125,
+      "ts_ms" : 37500000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 147.45016309461144
+    }, {
+      "reading_idx" : 126,
+      "ts_ms" : 37800000,
+      "input_glucose" : 146.0,
+      "smoothed_glucose" : 147.08542301037946
+    }, {
+      "reading_idx" : 127,
+      "ts_ms" : 38100000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 153.20913010830293
+    }, {
+      "reading_idx" : 128,
+      "ts_ms" : 38400000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 154.01912789504019
+    }, {
+      "reading_idx" : 129,
+      "ts_ms" : 38700000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 155.8541651399334
+    }, {
+      "reading_idx" : 130,
+      "ts_ms" : 39000000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 158.42302795064296
+    }, {
+      "reading_idx" : 131,
+      "ts_ms" : 39300000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 162.69128347983823
+    }, {
+      "reading_idx" : 132,
+      "ts_ms" : 39600000,
+      "input_glucose" : 162.0,
+      "smoothed_glucose" : 163.07468567801166
+    }, {
+      "reading_idx" : 133,
+      "ts_ms" : 39900000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 164.76780445834018
+    }, {
+      "reading_idx" : 134,
+      "ts_ms" : 40200000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 164.6745867395851
+    }, {
+      "reading_idx" : 135,
+      "ts_ms" : 40500000,
+      "input_glucose" : 162.0,
+      "smoothed_glucose" : 163.0653434166404
+    }, {
+      "reading_idx" : 136,
+      "ts_ms" : 40800000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 163.53119007060369
+    }, {
+      "reading_idx" : 137,
+      "ts_ms" : 41100000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 161.1866733406211
+    }, {
+      "reading_idx" : 138,
+      "ts_ms" : 41400000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 162.06038608317604
+    }, {
+      "reading_idx" : 139,
+      "ts_ms" : 41700000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 158.68284825279804
+    }, {
+      "reading_idx" : 140,
+      "ts_ms" : 42000000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.41983226100288
+    }, {
+      "reading_idx" : 141,
+      "ts_ms" : 42300000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 160.92604638268924
+    }, {
+      "reading_idx" : 142,
+      "ts_ms" : 42600000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 158.06352398154283
+    }, {
+      "reading_idx" : 143,
+      "ts_ms" : 42900000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 154.47531927405794
+    }, {
+      "reading_idx" : 144,
+      "ts_ms" : 43200000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 152.8955805046139
+    }, {
+      "reading_idx" : 145,
+      "ts_ms" : 43500000,
+      "input_glucose" : 146.0,
+      "smoothed_glucose" : 147.8399627485266
+    }, {
+      "reading_idx" : 146,
+      "ts_ms" : 43800000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.7124482711198
+    }, {
+      "reading_idx" : 147,
+      "ts_ms" : 44100000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 142.26738609476067
+    }, {
+      "reading_idx" : 148,
+      "ts_ms" : 44400000,
+      "input_glucose" : 138.0,
+      "smoothed_glucose" : 138.81457513755416
+    }, {
+      "reading_idx" : 149,
+      "ts_ms" : 44700000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 131.54929861880905
+    }, {
+      "reading_idx" : 150,
+      "ts_ms" : 45000000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 131.16999258693676
+    }, {
+      "reading_idx" : 151,
+      "ts_ms" : 45300000,
+      "input_glucose" : 124.0,
+      "smoothed_glucose" : 125.78224743352078
+    }, {
+      "reading_idx" : 152,
+      "ts_ms" : 45600000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 119.59804155992215
+    }, {
+      "reading_idx" : 153,
+      "ts_ms" : 45900000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 115.89791390520546
+    }, {
+      "reading_idx" : 154,
+      "ts_ms" : 46200000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 113.55787746865849
+    }, {
+      "reading_idx" : 155,
+      "ts_ms" : 46500000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 116.37689144218957
+    }, {
+      "reading_idx" : 156,
+      "ts_ms" : 46800000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 108.88093627391495
+    }, {
+      "reading_idx" : 157,
+      "ts_ms" : 47100000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 106.60390549477674
+    }, {
+      "reading_idx" : 158,
+      "ts_ms" : 47400000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 98.14251936447447
+    }, {
+      "reading_idx" : 159,
+      "ts_ms" : 47700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 99.18897717402237
+    }, {
+      "reading_idx" : 160,
+      "ts_ms" : 48000000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 101.21522476388186
+    }, {
+      "reading_idx" : 161,
+      "ts_ms" : 48300000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 98.48481978385391
+    }, {
+      "reading_idx" : 162,
+      "ts_ms" : 48600000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 95.15364749198989
+    }, {
+      "reading_idx" : 163,
+      "ts_ms" : 48900000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 95.75998887643993
+    }, {
+      "reading_idx" : 164,
+      "ts_ms" : 49200000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 97.0663136494448
+    }, {
+      "reading_idx" : 165,
+      "ts_ms" : 49500000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 97.79153543140879
+    }, {
+      "reading_idx" : 166,
+      "ts_ms" : 49800000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 101.3951810749053
+    }, {
+      "reading_idx" : 167,
+      "ts_ms" : 50100000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 99.04708562126898
+    }, {
+      "reading_idx" : 168,
+      "ts_ms" : 50400000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 95.6124015650271
+    }, {
+      "reading_idx" : 169,
+      "ts_ms" : 50700000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 96.67935606732274
+    }, {
+      "reading_idx" : 170,
+      "ts_ms" : 51000000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 98.14720551627912
+    }, {
+      "reading_idx" : 171,
+      "ts_ms" : 51300000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 100.87846576588424
+    }, {
+      "reading_idx" : 172,
+      "ts_ms" : 51600000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 103.40777643691975
+    }, {
+      "reading_idx" : 173,
+      "ts_ms" : 51900000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 106.34313204629636
+    }, {
+      "reading_idx" : 174,
+      "ts_ms" : 52200000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 104.77323420457736
+    }, {
+      "reading_idx" : 175,
+      "ts_ms" : 52500000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 112.2828906295584
+    }, {
+      "reading_idx" : 176,
+      "ts_ms" : 52800000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.83830160696013
+    }, {
+      "reading_idx" : 177,
+      "ts_ms" : 53100000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.62686142238547
+    }, {
+      "reading_idx" : 178,
+      "ts_ms" : 53400000,
+      "input_glucose" : 125.0,
+      "smoothed_glucose" : 121.91493516632114
+    }, {
+      "reading_idx" : 179,
+      "ts_ms" : 53700000,
+      "input_glucose" : 132.0,
+      "smoothed_glucose" : 129.8044175119096
+    }, {
+      "reading_idx" : 180,
+      "ts_ms" : 54000000,
+      "input_glucose" : 132.0,
+      "smoothed_glucose" : 132.8817764586531
+    }, {
+      "reading_idx" : 181,
+      "ts_ms" : 54300000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.7515420256724
+    }, {
+      "reading_idx" : 182,
+      "ts_ms" : 54600000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 135.00030666990824
+    }, {
+      "reading_idx" : 183,
+      "ts_ms" : 54900000,
+      "input_glucose" : 152.0,
+      "smoothed_glucose" : 146.48737028068663
+    }, {
+      "reading_idx" : 184,
+      "ts_ms" : 55200000,
+      "input_glucose" : 148.0,
+      "smoothed_glucose" : 149.25140570839628
+    }, {
+      "reading_idx" : 185,
+      "ts_ms" : 55500000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 146.2485969895658
+    }, {
+      "reading_idx" : 186,
+      "ts_ms" : 55800000,
+      "input_glucose" : 147.0,
+      "smoothed_glucose" : 146.8182487159753
+    }, {
+      "reading_idx" : 187,
+      "ts_ms" : 56100000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 151.69365589829832
+    }, {
+      "reading_idx" : 188,
+      "ts_ms" : 56400000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 151.29893895252704
+    }, {
+      "reading_idx" : 189,
+      "ts_ms" : 56700000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 156.66658023447067
+    }, {
+      "reading_idx" : 190,
+      "ts_ms" : 57000000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 158.41499018174915
+    }, {
+      "reading_idx" : 191,
+      "ts_ms" : 57300000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 164.72858639959463
+    }, {
+      "reading_idx" : 192,
+      "ts_ms" : 57600000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 167.38675299623873
+    }, {
+      "reading_idx" : 193,
+      "ts_ms" : 57900000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 159.3306680856071
+    }, {
+      "reading_idx" : 194,
+      "ts_ms" : 58200000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 162.45023672784373
+    }, {
+      "reading_idx" : 195,
+      "ts_ms" : 58500000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 160.2458976214732
+    }, {
+      "reading_idx" : 196,
+      "ts_ms" : 58800000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 165.7904969288875
+    }, {
+      "reading_idx" : 197,
+      "ts_ms" : 59100000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.9313131427615
+    }, {
+      "reading_idx" : 198,
+      "ts_ms" : 59400000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.61872771939298
+    }, {
+      "reading_idx" : 199,
+      "ts_ms" : 59700000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 160.65023982080123
+    } ]
+  },
+  "real24h" : {
+    "n" : 288,
+    "trace" : [ {
+      "reading_idx" : 0,
+      "ts_ms" : 0,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.0
+    }, {
+      "reading_idx" : 1,
+      "ts_ms" : 300000,
+      "input_glucose" : 126.0,
+      "smoothed_glucose" : 126.00000000000011
+    }, {
+      "reading_idx" : 2,
+      "ts_ms" : 600000,
+      "input_glucose" : 120.0,
+      "smoothed_glucose" : 120.02409110836435
+    }, {
+      "reading_idx" : 3,
+      "ts_ms" : 900000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 115.657495148116
+    }, {
+      "reading_idx" : 4,
+      "ts_ms" : 1200000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 111.88165857759112
+    }, {
+      "reading_idx" : 5,
+      "ts_ms" : 1500000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.5697454538007
+    }, {
+      "reading_idx" : 6,
+      "ts_ms" : 1800000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 102.2136076655269
+    }, {
+      "reading_idx" : 7,
+      "ts_ms" : 2100000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 96.95015823937283
+    }, {
+      "reading_idx" : 8,
+      "ts_ms" : 2400000,
+      "input_glucose" : 93.0,
+      "smoothed_glucose" : 93.08933339656082
+    }, {
+      "reading_idx" : 9,
+      "ts_ms" : 2700000,
+      "input_glucose" : 89.0,
+      "smoothed_glucose" : 89.32071697696838
+    }, {
+      "reading_idx" : 10,
+      "ts_ms" : 3000000,
+      "input_glucose" : 84.0,
+      "smoothed_glucose" : 84.85750767117915
+    }, {
+      "reading_idx" : 11,
+      "ts_ms" : 3300000,
+      "input_glucose" : 78.0,
+      "smoothed_glucose" : 79.35177415571314
+    }, {
+      "reading_idx" : 12,
+      "ts_ms" : 3600000,
+      "input_glucose" : 74.0,
+      "smoothed_glucose" : 74.63414823831532
+    }, {
+      "reading_idx" : 13,
+      "ts_ms" : 3900000,
+      "input_glucose" : 73.0,
+      "smoothed_glucose" : 72.33733181623093
+    }, {
+      "reading_idx" : 14,
+      "ts_ms" : 4200000,
+      "input_glucose" : 74.0,
+      "smoothed_glucose" : 72.5279101052933
+    }, {
+      "reading_idx" : 15,
+      "ts_ms" : 4500000,
+      "input_glucose" : 81.0,
+      "smoothed_glucose" : 77.63302356015352
+    }, {
+      "reading_idx" : 16,
+      "ts_ms" : 4800000,
+      "input_glucose" : 91.0,
+      "smoothed_glucose" : 86.84211026496513
+    }, {
+      "reading_idx" : 17,
+      "ts_ms" : 5100000,
+      "input_glucose" : 91.0,
+      "smoothed_glucose" : 91.09544641268972
+    }, {
+      "reading_idx" : 18,
+      "ts_ms" : 5400000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 99.46156719761008
+    }, {
+      "reading_idx" : 19,
+      "ts_ms" : 5700000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 102.21785339167451
+    }, {
+      "reading_idx" : 20,
+      "ts_ms" : 6000000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 101.2853260712982
+    }, {
+      "reading_idx" : 21,
+      "ts_ms" : 6300000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 100.17164542679984
+    }, {
+      "reading_idx" : 22,
+      "ts_ms" : 6600000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.06575134744045
+    }, {
+      "reading_idx" : 23,
+      "ts_ms" : 6900000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 101.9716515453126
+    }, {
+      "reading_idx" : 24,
+      "ts_ms" : 7200000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 107.49229899212364
+    }, {
+      "reading_idx" : 25,
+      "ts_ms" : 7500000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 115.93332929541216
+    }, {
+      "reading_idx" : 26,
+      "ts_ms" : 7800000,
+      "input_glucose" : 123.0,
+      "smoothed_glucose" : 122.15571612710175
+    }, {
+      "reading_idx" : 27,
+      "ts_ms" : 8100000,
+      "input_glucose" : 121.0,
+      "smoothed_glucose" : 122.96097877635643
+    }, {
+      "reading_idx" : 28,
+      "ts_ms" : 8400000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 119.82697781922755
+    }, {
+      "reading_idx" : 29,
+      "ts_ms" : 8700000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 114.5661929560032
+    }, {
+      "reading_idx" : 30,
+      "ts_ms" : 9000000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 107.46688627563826
+    }, {
+      "reading_idx" : 31,
+      "ts_ms" : 9300000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 101.19386800009794
+    }, {
+      "reading_idx" : 32,
+      "ts_ms" : 9600000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 100.26762774315405
+    }, {
+      "reading_idx" : 33,
+      "ts_ms" : 9900000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 101.98370731829363
+    }, {
+      "reading_idx" : 34,
+      "ts_ms" : 10200000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 106.5539115583941
+    }, {
+      "reading_idx" : 35,
+      "ts_ms" : 10500000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 110.77721269103816
+    }, {
+      "reading_idx" : 36,
+      "ts_ms" : 10800000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 111.11262828628303
+    }, {
+      "reading_idx" : 37,
+      "ts_ms" : 11100000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 109.46025585374522
+    }, {
+      "reading_idx" : 38,
+      "ts_ms" : 11400000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 107.11073325184682
+    }, {
+      "reading_idx" : 39,
+      "ts_ms" : 11700000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.35828006930053
+    }, {
+      "reading_idx" : 40,
+      "ts_ms" : 12000000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.06004636939805
+    }, {
+      "reading_idx" : 41,
+      "ts_ms" : 12300000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.67620689176103
+    }, {
+      "reading_idx" : 42,
+      "ts_ms" : 12600000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.74088261956105
+    }, {
+      "reading_idx" : 43,
+      "ts_ms" : 12900000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 101.23609100422279
+    }, {
+      "reading_idx" : 44,
+      "ts_ms" : 13200000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.32969869553258
+    }, {
+      "reading_idx" : 45,
+      "ts_ms" : 13500000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.89464870117662
+    }, {
+      "reading_idx" : 46,
+      "ts_ms" : 13800000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.09540384465375
+    }, {
+      "reading_idx" : 47,
+      "ts_ms" : 14100000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 105.10772338903773
+    }, {
+      "reading_idx" : 48,
+      "ts_ms" : 14400000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 106.68252005231142
+    }, {
+      "reading_idx" : 49,
+      "ts_ms" : 14700000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 107.91482760749375
+    }, {
+      "reading_idx" : 50,
+      "ts_ms" : 15000000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.63443876550522
+    }, {
+      "reading_idx" : 51,
+      "ts_ms" : 15300000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.65090989365218
+    }, {
+      "reading_idx" : 52,
+      "ts_ms" : 15600000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.12466068825165
+    }, {
+      "reading_idx" : 53,
+      "ts_ms" : 15900000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 105.92769708393632
+    }, {
+      "reading_idx" : 54,
+      "ts_ms" : 16200000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 106.56248241603578
+    }, {
+      "reading_idx" : 55,
+      "ts_ms" : 16500000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 106.90865324152757
+    }, {
+      "reading_idx" : 56,
+      "ts_ms" : 16800000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 107.70527029847653
+    }, {
+      "reading_idx" : 57,
+      "ts_ms" : 17100000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.04368815685322
+    }, {
+      "reading_idx" : 58,
+      "ts_ms" : 17700000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 109.73706915057231
+    }, {
+      "reading_idx" : 59,
+      "ts_ms" : 18000000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 110.76025615517057
+    }, {
+      "reading_idx" : 60,
+      "ts_ms" : 18300000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.12751366207912
+    }, {
+      "reading_idx" : 61,
+      "ts_ms" : 18600000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.18028994838447
+    }, {
+      "reading_idx" : 62,
+      "ts_ms" : 18900000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 111.79483429872046
+    }, {
+      "reading_idx" : 63,
+      "ts_ms" : 19200000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.71816848680021
+    }, {
+      "reading_idx" : 64,
+      "ts_ms" : 19500000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.47658565815614
+    }, {
+      "reading_idx" : 65,
+      "ts_ms" : 19800000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 108.94276631821167
+    }, {
+      "reading_idx" : 66,
+      "ts_ms" : 20100000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 108.81241008361496
+    }, {
+      "reading_idx" : 67,
+      "ts_ms" : 21600000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 112.78455266239025
+    }, {
+      "reading_idx" : 68,
+      "ts_ms" : 21900000,
+      "input_glucose" : 115.0,
+      "smoothed_glucose" : 114.5554388523436
+    }, {
+      "reading_idx" : 69,
+      "ts_ms" : 22200000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 116.64719650405938
+    }, {
+      "reading_idx" : 70,
+      "ts_ms" : 22500000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.3173684412331
+    }, {
+      "reading_idx" : 71,
+      "ts_ms" : 22800000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.39210098045297
+    }, {
+      "reading_idx" : 72,
+      "ts_ms" : 23100000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 117.9341502498179
+    }, {
+      "reading_idx" : 73,
+      "ts_ms" : 23400000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 118.77718346860787
+    }, {
+      "reading_idx" : 74,
+      "ts_ms" : 23700000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.10148248761953
+    }, {
+      "reading_idx" : 75,
+      "ts_ms" : 24000000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.15526268462494
+    }, {
+      "reading_idx" : 76,
+      "ts_ms" : 24300000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.44808337489593
+    }, {
+      "reading_idx" : 77,
+      "ts_ms" : 24600000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.07707930937615
+    }, {
+      "reading_idx" : 78,
+      "ts_ms" : 25200000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 117.95071678526286
+    }, {
+      "reading_idx" : 79,
+      "ts_ms" : 25500000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 118.65722957687875
+    }, {
+      "reading_idx" : 80,
+      "ts_ms" : 25800000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.29542014150562
+    }, {
+      "reading_idx" : 81,
+      "ts_ms" : 26100000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0825657430156
+    }, {
+      "reading_idx" : 82,
+      "ts_ms" : 26400000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.32516681803695
+    }, {
+      "reading_idx" : 83,
+      "ts_ms" : 26700000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 116.9879146262993
+    }, {
+      "reading_idx" : 84,
+      "ts_ms" : 27000000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 116.89650651763968
+    }, {
+      "reading_idx" : 85,
+      "ts_ms" : 27600000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.11619417036404
+    }, {
+      "reading_idx" : 86,
+      "ts_ms" : 27900000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 115.96697637772093
+    }, {
+      "reading_idx" : 87,
+      "ts_ms" : 30300000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 116.9769062949075
+    }, {
+      "reading_idx" : 88,
+      "ts_ms" : 30600000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.001331879934
+    }, {
+      "reading_idx" : 89,
+      "ts_ms" : 31200000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.10996902089245
+    }, {
+      "reading_idx" : 90,
+      "ts_ms" : 31500000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 115.9618038582872
+    }, {
+      "reading_idx" : 91,
+      "ts_ms" : 31800000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.56420062382215
+    }, {
+      "reading_idx" : 92,
+      "ts_ms" : 32100000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 113.96494737664644
+    }, {
+      "reading_idx" : 93,
+      "ts_ms" : 32400000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 113.80907441083073
+    }, {
+      "reading_idx" : 94,
+      "ts_ms" : 32700000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.17201738142263
+    }, {
+      "reading_idx" : 95,
+      "ts_ms" : 33000000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 112.92558003883643
+    }, {
+      "reading_idx" : 96,
+      "ts_ms" : 33600000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.09446058608296
+    }, {
+      "reading_idx" : 97,
+      "ts_ms" : 33900000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 111.95156835648908
+    }, {
+      "reading_idx" : 98,
+      "ts_ms" : 34200000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.24771918939385
+    }, {
+      "reading_idx" : 99,
+      "ts_ms" : 34500000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 110.95873514442725
+    }, {
+      "reading_idx" : 100,
+      "ts_ms" : 34800000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.2259137866962
+    }, {
+      "reading_idx" : 101,
+      "ts_ms" : 35100000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 109.93280062696724
+    }, {
+      "reading_idx" : 102,
+      "ts_ms" : 35700000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.08723787891536
+    }, {
+      "reading_idx" : 103,
+      "ts_ms" : 36000000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 108.9466926547517
+    }, {
+      "reading_idx" : 104,
+      "ts_ms" : 36300000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 110.29933070697015
+    }, {
+      "reading_idx" : 105,
+      "ts_ms" : 36600000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.26646236315594
+    }, {
+      "reading_idx" : 106,
+      "ts_ms" : 36900000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 107.49116285543631
+    }, {
+      "reading_idx" : 107,
+      "ts_ms" : 37200000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.47880867822707
+    }, {
+      "reading_idx" : 108,
+      "ts_ms" : 37500000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 105.3891383528094
+    }, {
+      "reading_idx" : 109,
+      "ts_ms" : 37800000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 106.25845802648239
+    }, {
+      "reading_idx" : 110,
+      "ts_ms" : 38100000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 107.45003167696129
+    }, {
+      "reading_idx" : 111,
+      "ts_ms" : 38400000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 105.34255423258455
+    }, {
+      "reading_idx" : 112,
+      "ts_ms" : 38700000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 104.8978185752843
+    }, {
+      "reading_idx" : 113,
+      "ts_ms" : 39000000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 104.81033657990947
+    }, {
+      "reading_idx" : 114,
+      "ts_ms" : 39300000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 104.85724469312855
+    }, {
+      "reading_idx" : 115,
+      "ts_ms" : 39600000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 102.26983729726432
+    }, {
+      "reading_idx" : 116,
+      "ts_ms" : 39900000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 103.04323033031355
+    }, {
+      "reading_idx" : 117,
+      "ts_ms" : 40200000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 105.61694066121889
+    }, {
+      "reading_idx" : 118,
+      "ts_ms" : 40500000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 107.53681601712715
+    }, {
+      "reading_idx" : 119,
+      "ts_ms" : 40800000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 109.58593500363493
+    }, {
+      "reading_idx" : 120,
+      "ts_ms" : 41100000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 110.99004078862632
+    }, {
+      "reading_idx" : 121,
+      "ts_ms" : 41400000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.73026239233226
+    }, {
+      "reading_idx" : 122,
+      "ts_ms" : 41700000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.716466985008
+    }, {
+      "reading_idx" : 123,
+      "ts_ms" : 42000000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 111.14787100078705
+    }, {
+      "reading_idx" : 124,
+      "ts_ms" : 42300000,
+      "input_glucose" : 115.0,
+      "smoothed_glucose" : 113.86920286732072
+    }, {
+      "reading_idx" : 125,
+      "ts_ms" : 42600000,
+      "input_glucose" : 121.0,
+      "smoothed_glucose" : 119.05390266841235
+    }, {
+      "reading_idx" : 126,
+      "ts_ms" : 42900000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 126.57615183791656
+    }, {
+      "reading_idx" : 127,
+      "ts_ms" : 43200000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 133.6177047787704
+    }, {
+      "reading_idx" : 128,
+      "ts_ms" : 43500000,
+      "input_glucose" : 137.0,
+      "smoothed_glucose" : 137.47361013527996
+    }, {
+      "reading_idx" : 129,
+      "ts_ms" : 43800000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 137.0655400373835
+    }, {
+      "reading_idx" : 130,
+      "ts_ms" : 44100000,
+      "input_glucose" : 131.0,
+      "smoothed_glucose" : 133.51358742043013
+    }, {
+      "reading_idx" : 131,
+      "ts_ms" : 44400000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 128.89665887370253
+    }, {
+      "reading_idx" : 132,
+      "ts_ms" : 44700000,
+      "input_glucose" : 122.0,
+      "smoothed_glucose" : 123.54577711626415
+    }, {
+      "reading_idx" : 133,
+      "ts_ms" : 45000000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.78168451826622
+    }, {
+      "reading_idx" : 134,
+      "ts_ms" : 45300000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 112.48260925668426
+    }, {
+      "reading_idx" : 135,
+      "ts_ms" : 45600000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 106.1446285320471
+    }, {
+      "reading_idx" : 136,
+      "ts_ms" : 45900000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 99.26022246390238
+    }, {
+      "reading_idx" : 137,
+      "ts_ms" : 46200000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.16757755661203
+    }, {
+      "reading_idx" : 138,
+      "ts_ms" : 46500000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 92.6536417277669
+    }, {
+      "reading_idx" : 139,
+      "ts_ms" : 46800000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 97.37752550953216
+    }, {
+      "reading_idx" : 140,
+      "ts_ms" : 47100000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 108.67970150790771
+    }, {
+      "reading_idx" : 141,
+      "ts_ms" : 47400000,
+      "input_glucose" : 124.0,
+      "smoothed_glucose" : 120.57991861374038
+    }, {
+      "reading_idx" : 142,
+      "ts_ms" : 47700000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 129.23794277193238
+    }, {
+      "reading_idx" : 143,
+      "ts_ms" : 48000000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.98343175047077
+    }, {
+      "reading_idx" : 144,
+      "ts_ms" : 48300000,
+      "input_glucose" : 137.0,
+      "smoothed_glucose" : 137.61871815994786
+    }, {
+      "reading_idx" : 145,
+      "ts_ms" : 48600000,
+      "input_glucose" : 144.0,
+      "smoothed_glucose" : 143.0669507047704
+    }, {
+      "reading_idx" : 146,
+      "ts_ms" : 48900000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 148.9544162915575
+    }, {
+      "reading_idx" : 147,
+      "ts_ms" : 49200000,
+      "input_glucose" : 155.0,
+      "smoothed_glucose" : 154.34492892307622
+    }, {
+      "reading_idx" : 148,
+      "ts_ms" : 49500000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 160.10958355755005
+    }, {
+      "reading_idx" : 149,
+      "ts_ms" : 49800000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 166.0701219015598
+    }, {
+      "reading_idx" : 150,
+      "ts_ms" : 50100000,
+      "input_glucose" : 173.0,
+      "smoothed_glucose" : 172.10148972267484
+    }, {
+      "reading_idx" : 151,
+      "ts_ms" : 50400000,
+      "input_glucose" : 174.0,
+      "smoothed_glucose" : 174.8228840582411
+    }, {
+      "reading_idx" : 152,
+      "ts_ms" : 50700000,
+      "input_glucose" : 172.0,
+      "smoothed_glucose" : 173.9590689787115
+    }, {
+      "reading_idx" : 153,
+      "ts_ms" : 51000000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 164.47335338517675
+    }, {
+      "reading_idx" : 154,
+      "ts_ms" : 51300000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 158.2992876204281
+    }, {
+      "reading_idx" : 155,
+      "ts_ms" : 51600000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 156.0601643715519
+    }, {
+      "reading_idx" : 156,
+      "ts_ms" : 51900000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 141.74795841607354
+    }, {
+      "reading_idx" : 157,
+      "ts_ms" : 52200000,
+      "input_glucose" : 120.0,
+      "smoothed_glucose" : 124.01796928859332
+    }, {
+      "reading_idx" : 158,
+      "ts_ms" : 52500000,
+      "input_glucose" : 115.0,
+      "smoothed_glucose" : 114.67183534100589
+    }, {
+      "reading_idx" : 159,
+      "ts_ms" : 52800000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 112.79366016389554
+    }, {
+      "reading_idx" : 160,
+      "ts_ms" : 53100000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 114.13990169585621
+    }, {
+      "reading_idx" : 161,
+      "ts_ms" : 53400000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 114.94206717168639
+    }, {
+      "reading_idx" : 162,
+      "ts_ms" : 53700000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.91504129629726
+    }, {
+      "reading_idx" : 163,
+      "ts_ms" : 54000000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 110.00123333256609
+    }, {
+      "reading_idx" : 164,
+      "ts_ms" : 54300000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 110.12118439943416
+    }, {
+      "reading_idx" : 165,
+      "ts_ms" : 54600000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.49796638495006
+    }, {
+      "reading_idx" : 166,
+      "ts_ms" : 54900000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 109.83825351118665
+    }, {
+      "reading_idx" : 167,
+      "ts_ms" : 55200000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.33252380249557
+    }, {
+      "reading_idx" : 168,
+      "ts_ms" : 55500000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 109.72605553628559
+    }, {
+      "reading_idx" : 169,
+      "ts_ms" : 55800000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 111.26934288663969
+    }, {
+      "reading_idx" : 170,
+      "ts_ms" : 56100000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 111.98550819141978
+    }, {
+      "reading_idx" : 171,
+      "ts_ms" : 56400000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.19490792073562
+    }, {
+      "reading_idx" : 172,
+      "ts_ms" : 56700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 105.54419201978101
+    }, {
+      "reading_idx" : 173,
+      "ts_ms" : 57000000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.64503388097711
+    }, {
+      "reading_idx" : 174,
+      "ts_ms" : 57300000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 101.61852138898377
+    }, {
+      "reading_idx" : 175,
+      "ts_ms" : 57600000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.1336025443141
+    }, {
+      "reading_idx" : 176,
+      "ts_ms" : 57900000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.61631329538591
+    }, {
+      "reading_idx" : 177,
+      "ts_ms" : 58200000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.62309934105562
+    }, {
+      "reading_idx" : 178,
+      "ts_ms" : 58500000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.15616851227695
+    }, {
+      "reading_idx" : 179,
+      "ts_ms" : 58800000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 96.01593093796475
+    }, {
+      "reading_idx" : 180,
+      "ts_ms" : 59100000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 96.34892314935027
+    }, {
+      "reading_idx" : 181,
+      "ts_ms" : 59400000,
+      "input_glucose" : 93.0,
+      "smoothed_glucose" : 94.03548242058068
+    }, {
+      "reading_idx" : 182,
+      "ts_ms" : 59700000,
+      "input_glucose" : 89.0,
+      "smoothed_glucose" : 90.32980627921255
+    }, {
+      "reading_idx" : 183,
+      "ts_ms" : 60000000,
+      "input_glucose" : 88.0,
+      "smoothed_glucose" : 88.10768704031872
+    }, {
+      "reading_idx" : 184,
+      "ts_ms" : 60300000,
+      "input_glucose" : 89.0,
+      "smoothed_glucose" : 88.09801963416054
+    }, {
+      "reading_idx" : 185,
+      "ts_ms" : 60600000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 97.0642471435867
+    }, {
+      "reading_idx" : 186,
+      "ts_ms" : 60900000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 110.77710083883689
+    }, {
+      "reading_idx" : 187,
+      "ts_ms" : 61200000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 125.94987048838944
+    }, {
+      "reading_idx" : 188,
+      "ts_ms" : 61500000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 140.43148257723834
+    }, {
+      "reading_idx" : 189,
+      "ts_ms" : 61800000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 152.165429846056
+    }, {
+      "reading_idx" : 190,
+      "ts_ms" : 62100000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 162.4611183711839
+    }, {
+      "reading_idx" : 191,
+      "ts_ms" : 62400000,
+      "input_glucose" : 173.0,
+      "smoothed_glucose" : 172.23538353960214
+    }, {
+      "reading_idx" : 192,
+      "ts_ms" : 62700000,
+      "input_glucose" : 182.0,
+      "smoothed_glucose" : 181.28236292371753
+    }, {
+      "reading_idx" : 193,
+      "ts_ms" : 63000000,
+      "input_glucose" : 190.0,
+      "smoothed_glucose" : 189.4400863231727
+    }, {
+      "reading_idx" : 194,
+      "ts_ms" : 63300000,
+      "input_glucose" : 193.0,
+      "smoothed_glucose" : 193.9661277065421
+    }, {
+      "reading_idx" : 195,
+      "ts_ms" : 63600000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.20747531711453
+    }, {
+      "reading_idx" : 196,
+      "ts_ms" : 63900000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 202.65519879207972
+    }, {
+      "reading_idx" : 197,
+      "ts_ms" : 64200000,
+      "input_glucose" : 204.0,
+      "smoothed_glucose" : 204.71575081463428
+    }, {
+      "reading_idx" : 198,
+      "ts_ms" : 64500000,
+      "input_glucose" : 204.0,
+      "smoothed_glucose" : 205.03111567850002
+    }, {
+      "reading_idx" : 199,
+      "ts_ms" : 64800000,
+      "input_glucose" : 205.0,
+      "smoothed_glucose" : 205.39405574118882
+    }, {
+      "reading_idx" : 200,
+      "ts_ms" : 65100000,
+      "input_glucose" : 205.0,
+      "smoothed_glucose" : 205.34810518719115
+    }, {
+      "reading_idx" : 201,
+      "ts_ms" : 65400000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 201.88452890316867
+    }, {
+      "reading_idx" : 202,
+      "ts_ms" : 65700000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.18440719857597
+    }, {
+      "reading_idx" : 203,
+      "ts_ms" : 66000000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 200.29411740465824
+    }, {
+      "reading_idx" : 204,
+      "ts_ms" : 66300000,
+      "input_glucose" : 205.0,
+      "smoothed_glucose" : 203.246841480936
+    }, {
+      "reading_idx" : 205,
+      "ts_ms" : 66600000,
+      "input_glucose" : 208.0,
+      "smoothed_glucose" : 206.74184588481114
+    }, {
+      "reading_idx" : 206,
+      "ts_ms" : 66900000,
+      "input_glucose" : 212.0,
+      "smoothed_glucose" : 210.86763949618643
+    }, {
+      "reading_idx" : 207,
+      "ts_ms" : 67200000,
+      "input_glucose" : 218.0,
+      "smoothed_glucose" : 216.45329998728184
+    }, {
+      "reading_idx" : 208,
+      "ts_ms" : 67500000,
+      "input_glucose" : 219.0,
+      "smoothed_glucose" : 219.29348263313128
+    }, {
+      "reading_idx" : 209,
+      "ts_ms" : 67800000,
+      "input_glucose" : 216.0,
+      "smoothed_glucose" : 218.0004895119549
+    }, {
+      "reading_idx" : 210,
+      "ts_ms" : 68100000,
+      "input_glucose" : 210.0,
+      "smoothed_glucose" : 212.89359409242704
+    }, {
+      "reading_idx" : 211,
+      "ts_ms" : 68400000,
+      "input_glucose" : 205.0,
+      "smoothed_glucose" : 207.02624457884664
+    }, {
+      "reading_idx" : 212,
+      "ts_ms" : 68700000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.5976607769965
+    }, {
+      "reading_idx" : 213,
+      "ts_ms" : 69000000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.4551814728533
+    }, {
+      "reading_idx" : 214,
+      "ts_ms" : 69300000,
+      "input_glucose" : 193.0,
+      "smoothed_glucose" : 193.78388603105907
+    }, {
+      "reading_idx" : 215,
+      "ts_ms" : 69600000,
+      "input_glucose" : 187.0,
+      "smoothed_glucose" : 188.17402738612662
+    }, {
+      "reading_idx" : 216,
+      "ts_ms" : 69900000,
+      "input_glucose" : 185.0,
+      "smoothed_glucose" : 184.8042853953968
+    }, {
+      "reading_idx" : 217,
+      "ts_ms" : 70200000,
+      "input_glucose" : 181.0,
+      "smoothed_glucose" : 181.26397026197066
+    }, {
+      "reading_idx" : 218,
+      "ts_ms" : 70500000,
+      "input_glucose" : 180.0,
+      "smoothed_glucose" : 179.4918702636905
+    }, {
+      "reading_idx" : 219,
+      "ts_ms" : 70800000,
+      "input_glucose" : 181.0,
+      "smoothed_glucose" : 179.84317903867515
+    }, {
+      "reading_idx" : 220,
+      "ts_ms" : 71100000,
+      "input_glucose" : 177.0,
+      "smoothed_glucose" : 177.72636921409475
+    }, {
+      "reading_idx" : 221,
+      "ts_ms" : 71400000,
+      "input_glucose" : 172.0,
+      "smoothed_glucose" : 173.53013246492947
+    }, {
+      "reading_idx" : 222,
+      "ts_ms" : 71700000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.76534807389712
+    }, {
+      "reading_idx" : 223,
+      "ts_ms" : 72000000,
+      "input_glucose" : 166.0,
+      "smoothed_glucose" : 166.4130195324061
+    }, {
+      "reading_idx" : 224,
+      "ts_ms" : 72300000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.98370330682417
+    }, {
+      "reading_idx" : 225,
+      "ts_ms" : 72600000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 155.70401939286165
+    }, {
+      "reading_idx" : 226,
+      "ts_ms" : 72900000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 150.6158251199082
+    }, {
+      "reading_idx" : 227,
+      "ts_ms" : 73200000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 144.28800992249612
+    }, {
+      "reading_idx" : 228,
+      "ts_ms" : 73500000,
+      "input_glucose" : 140.0,
+      "smoothed_glucose" : 140.0070890887327
+    }, {
+      "reading_idx" : 229,
+      "ts_ms" : 73800000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 136.13045396840957
+    }, {
+      "reading_idx" : 230,
+      "ts_ms" : 74100000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 133.64937283700507
+    }, {
+      "reading_idx" : 231,
+      "ts_ms" : 74400000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 132.41167958345025
+    }, {
+      "reading_idx" : 232,
+      "ts_ms" : 74700000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 130.29079932633024
+    }, {
+      "reading_idx" : 233,
+      "ts_ms" : 75000000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 128.9130731969346
+    }, {
+      "reading_idx" : 234,
+      "ts_ms" : 75300000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.22661177910499
+    }, {
+      "reading_idx" : 235,
+      "ts_ms" : 75600000,
+      "input_glucose" : 124.0,
+      "smoothed_glucose" : 124.6697618074821
+    }, {
+      "reading_idx" : 236,
+      "ts_ms" : 75900000,
+      "input_glucose" : 122.0,
+      "smoothed_glucose" : 122.36094400690902
+    }, {
+      "reading_idx" : 237,
+      "ts_ms" : 76200000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.57599419998792
+    }, {
+      "reading_idx" : 238,
+      "ts_ms" : 76500000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 114.58283560370488
+    }, {
+      "reading_idx" : 239,
+      "ts_ms" : 76800000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 108.57964027757738
+    }, {
+      "reading_idx" : 240,
+      "ts_ms" : 77100000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 105.60852972139347
+    }, {
+      "reading_idx" : 241,
+      "ts_ms" : 77400000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 102.91957977013908
+    }, {
+      "reading_idx" : 242,
+      "ts_ms" : 77700000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 98.2016770428906
+    }, {
+      "reading_idx" : 243,
+      "ts_ms" : 78000000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 95.73920170540475
+    }, {
+      "reading_idx" : 244,
+      "ts_ms" : 78300000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 93.80948025361468
+    }, {
+      "reading_idx" : 245,
+      "ts_ms" : 78600000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 93.9956097288773
+    }, {
+      "reading_idx" : 246,
+      "ts_ms" : 78900000,
+      "input_glucose" : 93.0,
+      "smoothed_glucose" : 93.10143249335191
+    }, {
+      "reading_idx" : 247,
+      "ts_ms" : 79200000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 93.47195754134016
+    }, {
+      "reading_idx" : 248,
+      "ts_ms" : 79500000,
+      "input_glucose" : 93.0,
+      "smoothed_glucose" : 93.11397569033697
+    }, {
+      "reading_idx" : 249,
+      "ts_ms" : 79800000,
+      "input_glucose" : 92.0,
+      "smoothed_glucose" : 92.30538344189472
+    }, {
+      "reading_idx" : 250,
+      "ts_ms" : 80100000,
+      "input_glucose" : 87.0,
+      "smoothed_glucose" : 88.64141685175632
+    }, {
+      "reading_idx" : 251,
+      "ts_ms" : 80400000,
+      "input_glucose" : 87.0,
+      "smoothed_glucose" : 86.97684876631982
+    }, {
+      "reading_idx" : 252,
+      "ts_ms" : 80700000,
+      "input_glucose" : 81.0,
+      "smoothed_glucose" : 82.52989404415807
+    }, {
+      "reading_idx" : 253,
+      "ts_ms" : 81000000,
+      "input_glucose" : 81.0,
+      "smoothed_glucose" : 80.68410214269058
+    }, {
+      "reading_idx" : 254,
+      "ts_ms" : 81300000,
+      "input_glucose" : 79.0,
+      "smoothed_glucose" : 78.95070440697474
+    }, {
+      "reading_idx" : 255,
+      "ts_ms" : 81600000,
+      "input_glucose" : 79.0,
+      "smoothed_glucose" : 78.4753076060177
+    }, {
+      "reading_idx" : 256,
+      "ts_ms" : 81900000,
+      "input_glucose" : 81.0,
+      "smoothed_glucose" : 79.86563647641711
+    }, {
+      "reading_idx" : 257,
+      "ts_ms" : 82200000,
+      "input_glucose" : 84.0,
+      "smoothed_glucose" : 82.68184992626473
+    }, {
+      "reading_idx" : 258,
+      "ts_ms" : 82500000,
+      "input_glucose" : 90.0,
+      "smoothed_glucose" : 87.96478171616863
+    }, {
+      "reading_idx" : 259,
+      "ts_ms" : 82800000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 93.55813320033607
+    }, {
+      "reading_idx" : 260,
+      "ts_ms" : 83100000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.02428708636776
+    }, {
+      "reading_idx" : 261,
+      "ts_ms" : 83400000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 97.33890863066699
+    }, {
+      "reading_idx" : 262,
+      "ts_ms" : 83700000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 100.240742769031
+    }, {
+      "reading_idx" : 263,
+      "ts_ms" : 84000000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 105.33732401537436
+    }, {
+      "reading_idx" : 264,
+      "ts_ms" : 84300000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 112.06372049289702
+    }, {
+      "reading_idx" : 265,
+      "ts_ms" : 84600000,
+      "input_glucose" : 120.0,
+      "smoothed_glucose" : 118.69383670722746
+    }, {
+      "reading_idx" : 266,
+      "ts_ms" : 84900000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 125.72184608296739
+    }, {
+      "reading_idx" : 267,
+      "ts_ms" : 85200000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 129.53464042284162
+    }, {
+      "reading_idx" : 268,
+      "ts_ms" : 85500000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 131.08203388370174
+    }, {
+      "reading_idx" : 269,
+      "ts_ms" : 85800000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 133.76841826205586
+    }, {
+      "reading_idx" : 270,
+      "ts_ms" : 86100000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.62156723175943
+    }, {
+      "reading_idx" : 271,
+      "ts_ms" : 86400000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.9653429874417
+    }, {
+      "reading_idx" : 272,
+      "ts_ms" : 86700000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.07650971643014
+    }, {
+      "reading_idx" : 273,
+      "ts_ms" : 87000000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.07904579037427
+    }, {
+      "reading_idx" : 274,
+      "ts_ms" : 87300000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.04944972588683
+    }, {
+      "reading_idx" : 275,
+      "ts_ms" : 87600000,
+      "input_glucose" : 137.0,
+      "smoothed_glucose" : 136.01298593360934
+    }, {
+      "reading_idx" : 276,
+      "ts_ms" : 87900000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 140.92762946890846
+    }, {
+      "reading_idx" : 277,
+      "ts_ms" : 88200000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 147.75714427656087
+    }, {
+      "reading_idx" : 278,
+      "ts_ms" : 88500000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 154.5328333753209
+    }, {
+      "reading_idx" : 279,
+      "ts_ms" : 88800000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 162.3271953670516
+    }, {
+      "reading_idx" : 280,
+      "ts_ms" : 89100000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 168.49893233850594
+    }, {
+      "reading_idx" : 281,
+      "ts_ms" : 89400000,
+      "input_glucose" : 174.0,
+      "smoothed_glucose" : 173.7650335729988
+    }, {
+      "reading_idx" : 282,
+      "ts_ms" : 89700000,
+      "input_glucose" : 179.0,
+      "smoothed_glucose" : 178.67265585463542
+    }, {
+      "reading_idx" : 283,
+      "ts_ms" : 90000000,
+      "input_glucose" : 180.0,
+      "smoothed_glucose" : 180.85829504986611
+    }, {
+      "reading_idx" : 284,
+      "ts_ms" : 90300000,
+      "input_glucose" : 183.0,
+      "smoothed_glucose" : 183.14697692788502
+    }, {
+      "reading_idx" : 285,
+      "ts_ms" : 90600000,
+      "input_glucose" : 186.0,
+      "smoothed_glucose" : 185.7343115717158
+    }, {
+      "reading_idx" : 286,
+      "ts_ms" : 90900000,
+      "input_glucose" : 188.0,
+      "smoothed_glucose" : 187.89887542657934
+    }, {
+      "reading_idx" : 287,
+      "ts_ms" : 91200000,
+      "input_glucose" : 180.0,
+      "smoothed_glucose" : 183.24383078293573
+    } ]
+  }
+}

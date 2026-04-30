@@ -1,9 +1,20 @@
-"""Run all four smoothers on every cohort user, write per-(user, algorithm) traces."""
+"""Run all three smoothers in production-realistic online mode on every
+cohort user, write per-(user, algorithm) traces.
+
+Online mode = sliding window evaluation: at each chronological reading t the
+smoother is asked what the AID would see at decision time t (leading-edge
+output). This matches how AAPS calls the smoothing plugins in production.
+
+Parallelised across users with ProcessPoolExecutor — one user is one
+worker job, so we can saturate the 19-user cohort across many cores.
+"""
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
 import numpy as np
@@ -13,7 +24,7 @@ from backtest.smoothers import ALL_SMOOTHERS
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Run smoother backtest pipeline")
+    p = argparse.ArgumentParser(description="Run smoother backtest pipeline (online mode)")
     p.add_argument("--cohort", default="backtest/cohort.json", help="cohort.json path")
     p.add_argument("--refresh-cohort", action="store_true",
                    help="Re-select cohort from DB and rewrite cohort.json")
@@ -25,7 +36,102 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                    help="Comma-separated user_ids to limit to (smoke testing)")
     p.add_argument("--force", action="store_true",
                    help="Re-run even if Parquet is up-to-date with cohort hash")
+    p.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 4) - 2),
+                   help="Parallel workers for per-user processing")
+    p.add_argument("--serial", action="store_true",
+                   help="Disable parallelism (useful for debugging)")
     return p.parse_args(argv)
+
+
+def _process_user(
+    table: str,
+    user_id: str,
+    days: int,
+    out_dir: str,
+    cohort_hash_str: str,
+    force: bool,
+) -> dict:
+    """Worker: load one user, run all three smoothers in online mode, write
+    per-algo Parquet traces, return a per-algo timing dict."""
+    out = Path(out_dir)
+    timings: dict = {"user_id": user_id, "table": table, "algos": {}}
+    t_load = time.time()
+    try:
+        us = io.load_user(table, user_id, days=days)
+    except Exception as e:
+        timings["load_error"] = repr(e)
+        return timings
+
+    present = np.isfinite(us.glucose)
+    g = us.glucose[present]
+    ts = us.ts_sec[present]
+    timings["load_s"] = time.time() - t_load
+    timings["n_present"] = int(us.n_present)
+    timings["n_grid"] = int(us.n_grid)
+
+    for cls in ALL_SMOOTHERS:
+        algo = cls.name
+        if not force and trace.is_up_to_date(
+            out, user_id=user_id, algorithm=algo,
+            cohort_hash_str=cohort_hash_str,
+        ):
+            timings["algos"][algo] = {"status": "skip"}
+            continue
+
+        t0 = time.time()
+        smoother = cls()
+        try:
+            if hasattr(smoother, "online_process"):
+                result = smoother.online_process(g, ts, instrument=True)
+            else:
+                result = smoother.process(g, ts, instrument=True)
+        except Exception as e:
+            timings["algos"][algo] = {"status": "error", "error": repr(e)}
+            continue
+
+        trace_df = result.trace
+        if trace_df is None or trace_df.empty:
+            timings["algos"][algo] = {"status": "empty"}
+            continue
+
+        path = trace.write_trace(
+            trace_df, out,
+            user_id=user_id, table=table,
+            algorithm=algo, cohort_hash_str=cohort_hash_str,
+        )
+        timings["algos"][algo] = {
+            "status": "ok",
+            "rows": int(len(trace_df)),
+            "elapsed_s": time.time() - t0,
+            "path": str(path),
+        }
+    return timings
+
+
+def _print_user_summary(timings: dict) -> None:
+    user_id = timings["user_id"]
+    table = timings["table"]
+    if "load_error" in timings:
+        print(f"  {table}/{user_id}  LOAD FAILED: {timings['load_error']}", flush=True)
+        return
+    print(
+        f"  {table}/{user_id}  loaded {timings['n_present']} pts in "
+        f"{timings['load_s']:.1f}s",
+        flush=True,
+    )
+    for algo, info in timings["algos"].items():
+        st = info["status"]
+        if st == "skip":
+            print(f"    {algo:18s} SKIP", flush=True)
+        elif st == "error":
+            print(f"    {algo:18s} FAILED: {info['error']}", flush=True)
+        elif st == "empty":
+            print(f"    {algo:18s} EMPTY", flush=True)
+        else:
+            print(
+                f"    {algo:18s} {info['elapsed_s']:6.2f}s  rows={info['rows']:>6d}",
+                flush=True,
+            )
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -51,52 +157,41 @@ def main(argv: list[str] | None = None) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     total_start = time.time()
-    for member in co:
-        print(f"\n=== {member.table}/{member.user_id} ===", flush=True)
-        load_start = time.time()
-        try:
-            us = io.load_user(member.table, member.user_id, days=args.days)
-        except Exception as e:
-            print(f"  LOAD FAILED: {e}", flush=True)
-            continue
 
-        present = np.isfinite(us.glucose)
-        g = us.glucose[present]
-        ts = us.ts_sec[present]
-        print(f"  loaded {us.n_raw} raw → {us.n_present} grid points "
-              f"({us.n_present/us.n_grid:.1%}) in {time.time()-load_start:.1f}s",
-              flush=True)
-
-        for cls in ALL_SMOOTHERS:
-            algo = cls.name
-            if not args.force and trace.is_up_to_date(
-                out_dir, user_id=member.user_id, algorithm=algo,
-                cohort_hash_str=cohort_hash_str,
-            ):
-                print(f"  {algo:18s} SKIP (up-to-date)", flush=True)
-                continue
-
-            t0 = time.time()
-            try:
-                result = cls().process(g, ts, instrument=True)
-            except Exception as e:
-                print(f"  {algo:18s} FAILED: {e}", flush=True)
-                continue
-
-            trace_df = result.trace
-            if trace_df.empty:
-                print(f"  {algo:18s} EMPTY trace, skipping write", flush=True)
-                continue
-
-            path = trace.write_trace(
-                trace_df, out_dir,
-                user_id=member.user_id, table=member.table,
-                algorithm=algo, cohort_hash_str=cohort_hash_str,
+    if args.serial or args.workers <= 1 or len(co) <= 1:
+        print(f"\n=== Running {len(co)} users serially ===\n", flush=True)
+        for member in co:
+            timings = _process_user(
+                member.table, member.user_id,
+                args.days, str(out_dir), cohort_hash_str, args.force,
             )
-            size_mb = path.stat().st_size / (1024 * 1024)
-            print(f"  {algo:18s} {time.time()-t0:5.2f}s  rows={len(trace_df):>6d}  "
-                  f"{size_mb:.2f} MB  → {path.relative_to(out_dir.parent)}",
-                  flush=True)
+            _print_user_summary(timings)
+    else:
+        n_workers = min(args.workers, len(co))
+        print(
+            f"\n=== Running {len(co)} users across {n_workers} workers ===\n",
+            flush=True,
+        )
+        with ProcessPoolExecutor(max_workers=n_workers) as ex:
+            futures = {
+                ex.submit(
+                    _process_user,
+                    m.table, m.user_id,
+                    args.days, str(out_dir), cohort_hash_str, args.force,
+                ): m
+                for m in co
+            }
+            done = 0
+            for fut in as_completed(futures):
+                done += 1
+                try:
+                    timings = fut.result()
+                except Exception as e:
+                    m = futures[fut]
+                    print(f"  {m.table}/{m.user_id}  WORKER CRASH: {e!r}", flush=True)
+                    continue
+                _print_user_summary(timings)
+                print(f"  ({done}/{len(co)} done)", flush=True)
 
     print(f"\nTotal wall time: {(time.time()-total_start)/60:.1f} min", flush=True)
     return 0

@@ -24,18 +24,16 @@ import matplotlib.pyplot as plt
 
 from backtest import metrics
 
-ALGOS = ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf")
+ALGOS = ("aaps_average", "aaps_exponential", "ukf")
 ALGO_PRETTY = {
     "aaps_average": "AAPS Average",
     "aaps_exponential": "AAPS Exp",
-    "trio_sgolay": "Trio SG",
     "ukf": "UKF",
 }
 SENSOR_COLORS = {"G6": "tab:blue", "G7": "tab:orange", "Libre2": "tab:green"}
 ALGO_COLORS = {
     "aaps_average": "tab:blue",
     "aaps_exponential": "tab:orange",
-    "trio_sgolay": "tab:green",
     "ukf": "tab:red",
 }
 DT_MIN = 5.0
@@ -46,13 +44,6 @@ def _load_pair(runs_root: Path, tag: str, algo: str) -> tuple[np.ndarray, np.nda
     if not pq.exists():
         return None
     df = pd.read_parquet(pq)
-    if algo == "trio_sgolay":
-        # Pass-3 input_glucose = pass-2 output (already smoothed). Build a
-        # (raw, smoothed) pair from pass-1.input (raw) and pass-3.output (final)
-        # so end-to-end metrics characterise the three-pass cumulative effect.
-        pass1 = df[df.step_name == "pass1"].sort_values("reading_idx")
-        pass3 = df[df.step_name == "pass3"].sort_values("reading_idx")
-        return pass1.input_glucose.to_numpy(), pass3.output_glucose.to_numpy()
     df = df.sort_values("reading_idx")
     return df.input_glucose.to_numpy(), df.output_glucose.to_numpy()
 

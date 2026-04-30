@@ -4,6 +4,14 @@ Constants are pulled verbatim from the Kotlin source. Public API takes
 chronological arrays (oldest → newest); internally we flip to Kotlin's
 newest-first indexing so the algorithm mirrors the original line-for-line
 and the parity test can compare element-wise.
+
+Two execution modes:
+  * `process()` — single batch call over the entire array. Used for offline
+    analysis where the RTS backward smoother sees the full series.
+  * `online_process()` — production-realistic sliding window: at each
+    chronological t, builds a fresh UKF over `chrono[t-W+1 .. t]` (W = 36)
+    and emits the smoothed value at the leading edge (= chronological t).
+    This is what AAPS dose-engine actually sees at decision time.
 """
 from __future__ import annotations
 
@@ -51,6 +59,9 @@ MAX_RATE_VARIANCE = 4.0
 MINOR_GAP_THRESHOLD = 7.0  # min
 MAJOR_GAP_THRESHOLD = 60.0  # min
 RATE_DECAY_TIME_CONSTANT = 30.0  # min
+
+# --- Online sliding-window size (mirrors Kotlin Main.kt UKF_WINDOW) ---
+ONLINE_WINDOW = 36
 
 # --- R adaptation ---
 ADAPT_MIN_INNOVATIONS = 12
@@ -172,6 +183,96 @@ class UKF:
         trace = trace.sort_values("reading_idx").reset_index(drop=True)
         trace["ts_sec"] = (trace["ts_ms"] // 1000).astype("int64")
         return SmootherResult(smoothed=smoothed_chrono, trace=trace)
+
+    def online_process(
+        self,
+        glucose: np.ndarray,
+        ts_sec: np.ndarray,
+        *,
+        window: int = ONLINE_WINDOW,
+        instrument: bool = False,
+    ) -> SmootherResult:
+        """Production-realistic sliding-window mode.
+
+        At each chronological index t, builds a fresh `UKF` over
+        `glucose[max(0, t - window + 1) : t + 1]` (chronological order) and
+        returns the smoothed value at the leading edge. Mirrors the Kotlin
+        online driver `runOnlineSliding(window=UKF_WINDOW)`. Fresh state per
+        call matches Kotlin's `{ UkfStandalone().smooth(it) }` pattern.
+
+        With `instrument=True`, captures the leading-edge predict/update/
+        outlier-flag from each window into a per-step trace. RTS does not
+        modify the leading edge (it only revises older positions in the
+        backward sweep), so `output_glucose` equals the forward-pass
+        `x_upd_g` at every t.
+        """
+        n = len(glucose)
+        if n == 0:
+            return SmootherResult(smoothed=np.array([], dtype="float64"))
+
+        glucose_f = glucose.astype("float64")
+        ts_sec_i = ts_sec.astype("int64")
+        out = np.zeros(n, dtype="float64")
+
+        if not instrument:
+            for t in range(n):
+                lo = max(0, t - window + 1)
+                window_g = glucose_f[lo : t + 1]
+                window_t = ts_sec_i[lo : t + 1]
+                if len(window_g) < 2:
+                    out[t] = max(float(window_g[0]), 39.0)
+                    continue
+                res = UKF().process(window_g, window_t)
+                out[t] = res.smoothed[-1]
+            return SmootherResult(smoothed=out)
+
+        rows: list[dict] = []
+        for t in range(n):
+            lo = max(0, t - window + 1)
+            window_g = glucose_f[lo : t + 1]
+            window_t = ts_sec_i[lo : t + 1]
+            if len(window_g) < 2:
+                out[t] = max(float(window_g[0]), 39.0)
+                rows.append({
+                    "reading_idx": t,
+                    "ts_sec": int(ts_sec_i[t]),
+                    "input_glucose": float(glucose_f[t]),
+                    "step_name": "ukf_online",
+                    "x_pred_g": float("nan"),
+                    "x_upd_g": float("nan"),
+                    "is_outlier": False,
+                    "output_glucose": float(out[t]),
+                })
+                continue
+            res = UKF().process(window_g, window_t, instrument=True)
+            out[t] = res.smoothed[-1]
+            # Leading edge in window's chronological coords = last position.
+            le = res.trace[res.trace["reading_idx"] == len(window_g) - 1]
+            if len(le) == 0:
+                rows.append({
+                    "reading_idx": t,
+                    "ts_sec": int(ts_sec_i[t]),
+                    "input_glucose": float(glucose_f[t]),
+                    "step_name": "ukf_online",
+                    "x_pred_g": float("nan"),
+                    "x_upd_g": float("nan"),
+                    "is_outlier": False,
+                    "output_glucose": float(out[t]),
+                })
+                continue
+            r = le.iloc[0]
+            rows.append({
+                "reading_idx": t,
+                "ts_sec": int(ts_sec_i[t]),
+                "input_glucose": float(glucose_f[t]),
+                "step_name": "ukf_online",
+                "x_pred_g": float(r["x_pred_g"]),
+                "x_upd_g": float(r["x_upd_g"]),
+                "is_outlier": bool(r["is_outlier"]),
+                "output_glucose": float(out[t]),
+            })
+
+        return SmootherResult(smoothed=out, trace=pd.DataFrame(rows))
 
     # ------------------------------------------------------------------
     # internals

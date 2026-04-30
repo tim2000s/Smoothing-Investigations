@@ -25,7 +25,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-ALGOS = ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf")
+ALGOS = ("aaps_average", "aaps_exponential", "ukf")
 RANKED_FOR_BEST = "noise_reduction_ratio"  # lower = better
 SILHOUETTE_THRESHOLD = 0.40
 
@@ -95,8 +95,7 @@ def main(argv=None) -> int:
     print(f"Wrote {out_dir/'user_phenotypes.csv'}  silhouette={best_score:.3f} (k={best_k})")
 
     fig, ax = plt.subplots(figsize=(9, 7))
-    palette = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange",
-               "trio_sgolay": "tab:green", "ukf": "tab:red"}
+    palette = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange", "ukf": "tab:red"}
     markers = {0: "o", 1: "s", 2: "^", 3: "D"}
     for _, row in feat_df.iterrows():
         ax.scatter(row.pc1, row.pc2,

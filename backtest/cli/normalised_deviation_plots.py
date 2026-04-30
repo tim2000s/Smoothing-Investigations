@@ -29,14 +29,13 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from backtest.smoothers import AapsAverage, AapsExponential, TrioSGolay, UKF
+from backtest.smoothers import AapsAverage, AapsExponential, UKF
 
 GRID_S = 300
 
 ALGOS = [
     ("aaps_average", AapsAverage, "tab:blue"),
     ("aaps_exponential", AapsExponential, "tab:orange"),
-    ("trio_sgolay", TrioSGolay, "tab:green"),
     ("ukf", UKF, "tab:red"),
 ]
 

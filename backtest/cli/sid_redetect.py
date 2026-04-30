@@ -33,7 +33,7 @@ SID_PKG = REPO_ROOT / "cgm-sensor-integrity" / "cgm_sensor_integrity_v6" / "cgm_
 sys.path.insert(0, str(SID_PKG))
 import cgm_cluster_detector_v5 as detector  # noqa: E402
 
-ALGOS = ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf")
+ALGOS = ("aaps_average", "aaps_exponential", "ukf")
 RF_FEATS = [
     "duration_min", "amplitude", "min_glucose", "max_glucose", "mean_glucose",
     "peak_reversals", "peak_incoh_ratio", "step_max", "chain_size", "hour_of_day",
@@ -199,19 +199,15 @@ def _surviving_cluster_rows(user: str, smoother: str, raw_cl: list,
 
 
 def _load_raw_for_user(user: str, runs_dir: Path) -> tuple[np.ndarray, np.ndarray] | None:
-    """Pull raw input from any one trace.
+    """Load raw input glucose for a user from any available trace.
 
-    For trio_sgolay we must take pass-1's input_glucose (the original raw); for
-    other smoothers, input_glucose is the raw directly.
+    All smoothers in the current set (AAPS Avg/Exp/UKF) write input_glucose
+    as the original raw value, one row per reading.
     """
     for algo in ALGOS:
         pq = runs_dir / user / f"{algo}.parquet"
         if pq.exists():
-            df = pd.read_parquet(pq)
-            if algo == "trio_sgolay":
-                df = df[df.step_name == "pass1"].sort_values("reading_idx")
-            else:
-                df = df.sort_values("reading_idx")
+            df = pd.read_parquet(pq).sort_values("reading_idx")
             return df.ts_sec.to_numpy(), df.input_glucose.to_numpy()
     return None
 
@@ -222,9 +218,6 @@ def _load_smoothed(user: str, algo: str, runs_dir: Path) -> tuple[np.ndarray, np
     if not pq.exists():
         return None
     df = pd.read_parquet(pq)
-    if algo == "trio_sgolay":
-        # Pass-3 output is the cumulative final smoothed value.
-        df = df[df.step_name == "pass3"]
     df = df.sort_values("reading_idx")
     return df.reading_idx.to_numpy(), df.output_glucose.to_numpy()
 
@@ -320,8 +313,7 @@ def _count_row(user: str, table: str, smoother: str, cl: list, *,
 def _pareto_figure(counts_df: pd.DataFrame, surviving_df: pd.DataFrame, out_path: Path) -> None:
     smoothers = [a for a in ALGOS if a in counts_df.smoother.unique()]
     fig, ax = plt.subplots(figsize=(9, 7))
-    colors = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange",
-              "trio_sgolay": "tab:green", "ukf": "tab:red"}
+    colors = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange", "ukf": "tab:red"}
     for algo in smoothers:
         per_user_red = counts_df[counts_df.smoother == algo].set_index("user_id")["pct_reduction_vs_raw"]
         per_user_amp = surviving_df[surviving_df.smoother == algo].groupby("user_id")["amplitude"].median()
@@ -350,8 +342,7 @@ def _correlation_forest_figure(corr_df: pd.DataFrame, out_path: Path) -> None:
     y_labels = []
     y_pos = []
     pos = 0
-    colors = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange",
-              "trio_sgolay": "tab:green", "ukf": "tab:red"}
+    colors = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange", "ukf": "tab:red"}
     for outcome in OUTCOMES:
         for algo in smoothers:
             sub = corr_df[(corr_df.outcome == outcome) & (corr_df.smoother == algo)]

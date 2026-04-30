@@ -17,7 +17,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 GRID_S = 300
-ALGOS = ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf")
+ALGOS = ("aaps_average", "aaps_exponential", "ukf")
 
 
 def _gain(raw: np.ndarray, smo: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
@@ -77,18 +77,9 @@ def main(argv=None) -> int:
             if not pq.exists():
                 continue
             df = pd.read_parquet(pq)
-            if algo == "trio_sgolay":
-                # Pass-3 input_glucose = pass-2 output (already smoothed). Use
-                # pass-1.input (raw) and pass-3.output (final) to compute the
-                # cumulative three-pass transfer function.
-                pass1 = df[df.step_name == "pass1"].sort_values("reading_idx")
-                pass3 = df[df.step_name == "pass3"].sort_values("reading_idx")
-                raw = pass1.input_glucose.to_numpy()
-                smo = pass3.output_glucose.to_numpy()
-            else:
-                df = df.sort_values("reading_idx")
-                raw = df.input_glucose.to_numpy()
-                smo = df.output_glucose.to_numpy()
+            df = df.sort_values("reading_idx")
+            raw = df.input_glucose.to_numpy()
+            smo = df.output_glucose.to_numpy()
             by_algo[algo].append(_gain(raw, smo))
 
     fig, axes = plt.subplots(2, 2, figsize=(13, 9), sharex=True, sharey=True)

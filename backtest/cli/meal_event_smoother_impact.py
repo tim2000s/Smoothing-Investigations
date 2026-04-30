@@ -5,8 +5,7 @@ For every Nightscout treatment whose notes match /meal|fast carbs/i, this script
   1. Slices a window of CGM readings around the meal time
        (T_event − pre_min, T_event + post_min) and resamples to a strict
        5-minute grid.
-  2. Runs all four smoothers (AAPS Average, AAPS Exponential, Trio Savitzky-Golay,
-       Adaptive UKF) on the window's raw glucose.
+  2. Runs all three smoothers (AAPS Average, AAPS Exponential, Adaptive UKF) on the window's raw glucose.
   3. Computes the AID-relevant decision quantities at each post-event sample for
        both raw and each smoother:
          - delta            (5-min change, mg/dL/min)
@@ -48,7 +47,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from backtest.smoothers import AapsAverage, AapsExponential, TrioSGolay, UKF
+from backtest.smoothers import AapsAverage, AapsExponential, UKF
 
 GRID_S = 300
 DELTA_THRESHOLD = 1.0     # mg/dL/min — a typical "rate-rising" threshold
@@ -61,7 +60,6 @@ POST_MIN_DEFAULT = 180   # 3 hours of post-event CGM
 ALGOS = (
     ("aaps_average", AapsAverage),
     ("aaps_exponential", AapsExponential),
-    ("trio_sgolay", TrioSGolay),
     ("ukf", UKF),
 )
 
@@ -188,15 +186,15 @@ def analyse_event(event_ts_ms: int, raw_g: np.ndarray, ts_rel_sec: np.ndarray, t
     for name, cls in ALGOS:
         out = np.full(len(raw_g), np.nan)
         try:
-            res = cls().process(g_in, ts_in)
-            # Need to align res.smoothed back to the contiguous-grid mask
+            smoother = cls()
+            if hasattr(smoother, "online_process"):
+                res = smoother.online_process(g_in, ts_in)
+            else:
+                res = smoother.process(g_in, ts_in)
             out_idx = np.where(present)[0]
-            # UKF emits 1 fewer per segment, so we can't always index 1:1; trust
-            # smoothers to emit one output per input on a single segment.
             if len(res.smoothed) == len(g_in):
                 out[out_idx] = res.smoothed
             else:
-                # UKF segment-init drop: pad first by raw, rest by output
                 missing = len(g_in) - len(res.smoothed)
                 out[out_idx[missing:]] = res.smoothed
         except Exception:
@@ -274,8 +272,7 @@ def plot_event(meal_idx: int, treatment: dict, info: dict, fig_dir: Path) -> Non
     smooth = info["smoothed_per_algo"]
 
     fig, axes = plt.subplots(2, 1, figsize=(11, 8), sharex=True)
-    colors = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange",
-              "trio_sgolay": "tab:green", "ukf": "tab:red"}
+    colors = {"aaps_average": "tab:blue", "aaps_exponential": "tab:orange", "ukf": "tab:red"}
 
     # Top: glucose
     axes[0].plot(ts_min - event_t, raw_g, color="black", lw=1.0, alpha=0.55, label="raw")

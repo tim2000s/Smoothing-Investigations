@@ -1,16 +1,20 @@
 """Phase 2 backtest — sensor-identified data only.
 
 For each (user, sensor_type) where we have an explicit Dexcom G6 or G7 label,
-load the readings, resample to a strict 5-min grid, run all 4 smoothers,
-and write per-(user, sensor, algorithm) Parquet traces.
+load the readings, resample to a strict 5-min grid, run all three smoothers
+in online sliding-window mode, and write per-(user, sensor, algorithm)
+Parquet traces. Online mode = production-realistic: at each chronological t
+the smoother emits the value the AID dose engine would see at decision time.
 
 Excludes rows where sensor_type ∈ {'Dexcom_unspecified', 'unknown'}.
 """
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
 import numpy as np
@@ -85,10 +89,100 @@ def to_grid(df: pd.DataFrame) -> tuple[np.ndarray, np.ndarray]:
     return ts_rel, glucose
 
 
+def _process_pair(
+    user_id: str, sensor: str, dsn: str, out_root_str: str, cohort_hash_str: str,
+) -> dict:
+    """Worker: load one (user, sensor) pair, run all three smoothers, write traces."""
+    out_root = Path(out_root_str)
+    tag = f"{user_id}__{sensor}"
+    summary: dict = {"tag": tag, "algos": {}}
+
+    try:
+        df = fetch_user_sensor_window(user_id, sensor, dsn=dsn)
+    except Exception as e:
+        summary["error"] = f"fetch_failed: {e!r}"
+        return summary
+
+    ts_rel, glucose = to_grid(df)
+    if len(glucose) == 0 or not np.isfinite(glucose).any():
+        summary["status"] = "empty"
+        return summary
+
+    present = np.isfinite(glucose)
+    density = float(present.mean())
+    n_present = int(present.sum())
+    summary["density"] = density
+    summary["n_present"] = n_present
+    summary["raw_rows"] = int(len(df))
+    summary["grid"] = int(len(glucose))
+
+    if density < MIN_DENSITY:
+        summary["status"] = "low_density"
+        return summary
+
+    g_in = glucose[present]
+    ts_in = ts_rel[present]
+
+    for cls in ALL_SMOOTHERS:
+        algo = cls.name
+        t0 = time.time()
+        smoother = cls()
+        try:
+            if hasattr(smoother, "online_process"):
+                res = smoother.online_process(g_in, ts_in, instrument=True)
+            else:
+                res = smoother.process(g_in, ts_in, instrument=True)
+        except Exception as e:
+            summary["algos"][algo] = {"status": "error", "error": repr(e)}
+            continue
+        trace = res.trace
+        if trace is None or trace.empty:
+            summary["algos"][algo] = {"status": "empty"}
+            continue
+        trace = trace.copy()
+        trace.insert(0, "sensor_type", sensor)
+        path = bt_trace.write_trace(
+            trace, out_root, user_id=tag, table=f"phase2_{sensor}",
+            algorithm=algo, cohort_hash_str=cohort_hash_str,
+        )
+        summary["algos"][algo] = {
+            "status": "ok",
+            "rows": int(len(trace)),
+            "elapsed_s": time.time() - t0,
+            "path": str(path),
+        }
+    return summary
+
+
+def _print_pair_summary(s: dict) -> None:
+    tag = s.get("tag", "?")
+    if "error" in s:
+        print(f"  {tag}  ERROR: {s['error']}", flush=True)
+        return
+    if s.get("status") == "empty":
+        print(f"  {tag}  EMPTY", flush=True)
+        return
+    if s.get("status") == "low_density":
+        print(f"  {tag}  density {s['density']:.1%} < {MIN_DENSITY:.0%}, skipped", flush=True)
+        return
+    print(
+        f"  {tag}  raw={s['raw_rows']:,} grid={s['grid']:,} "
+        f"present={s['n_present']:,} ({s['density']:.1%})",
+        flush=True,
+    )
+    for algo, info in s["algos"].items():
+        if info["status"] == "ok":
+            print(f"    {algo:18s} {info['elapsed_s']:6.2f}s rows={info['rows']:,}", flush=True)
+        else:
+            print(f"    {algo:18s} {info['status'].upper()}", flush=True)
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--out", default="runs/phase2", help="Output Parquet directory")
     p.add_argument("--dsn", default=DEFAULT_DSN)
+    p.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 4) - 2))
+    p.add_argument("--serial", action="store_true")
     args = p.parse_args(argv)
 
     pairs = list_user_sensor_pairs(args.dsn)
@@ -98,50 +192,42 @@ def main(argv=None) -> int:
 
     out_root = Path(args.out)
     out_root.mkdir(parents=True, exist_ok=True)
-    cohort_hash_str = "phase2_v1"  # version tag used for idempotency keying
+    cohort_hash_str = "phase2_v1"
 
     total_start = time.time()
-    for row in pairs.itertuples(index=False):
-        user_id = row.user_id
-        sensor = row.sensor_type
-        tag = f"{user_id}__{sensor}"
-        print(f"\n=== {tag} ===", flush=True)
-        df = fetch_user_sensor_window(user_id, sensor)
-        ts_rel, glucose = to_grid(df)
-        if len(glucose) == 0 or not np.isfinite(glucose).any():
-            print("  empty, skipping", flush=True)
-            continue
-        present = np.isfinite(glucose)
-        density = float(present.mean())
-        n_present = int(present.sum())
-        print(f"  raw rows={len(df):,}  grid={len(glucose):,}  present={n_present:,} "
-              f"({density:.1%})", flush=True)
-        if density < MIN_DENSITY:
-            print(f"  density {density:.1%} < {MIN_DENSITY:.0%}, skipping", flush=True)
-            continue
 
-        g_in = glucose[present]
-        ts_in = ts_rel[present]
-
-        for cls in ALL_SMOOTHERS:
-            algo = cls.name
-            t0 = time.time()
-            res = cls().process(g_in, ts_in, instrument=True)
-            trace = res.trace
-            if trace.empty:
-                print(f"  {algo:18s} EMPTY", flush=True)
-                continue
-            # tag the trace with sensor info
-            trace = trace.copy()
-            trace.insert(0, "sensor_type", sensor)
-            path = bt_trace.write_trace(
-                trace, out_root, user_id=tag, table=f"phase2_{sensor}",
-                algorithm=algo, cohort_hash_str=cohort_hash_str,
+    if args.serial or args.workers <= 1 or len(pairs) <= 1:
+        print(f"\n=== Running {len(pairs)} pairs serially ===\n", flush=True)
+        for row in pairs.itertuples(index=False):
+            s = _process_pair(
+                row.user_id, row.sensor_type,
+                args.dsn, str(out_root), cohort_hash_str,
             )
-            size_mb = path.stat().st_size / (1024 * 1024)
-            print(f"  {algo:18s} {time.time()-t0:5.2f}s  rows={len(trace):>6,d}  "
-                  f"{size_mb:.2f} MB → {path.relative_to(out_root.parent)}",
-                  flush=True)
+            _print_pair_summary(s)
+    else:
+        n_workers = min(args.workers, len(pairs))
+        print(f"\n=== Running {len(pairs)} pairs across {n_workers} workers ===\n",
+              flush=True)
+        with ProcessPoolExecutor(max_workers=n_workers) as ex:
+            futures = {
+                ex.submit(
+                    _process_pair, row.user_id, row.sensor_type,
+                    args.dsn, str(out_root), cohort_hash_str,
+                ): row
+                for row in pairs.itertuples(index=False)
+            }
+            done = 0
+            for fut in as_completed(futures):
+                done += 1
+                try:
+                    s = fut.result()
+                except Exception as e:
+                    row = futures[fut]
+                    print(f"  {row.user_id}__{row.sensor_type}  WORKER CRASH: {e!r}",
+                          flush=True)
+                    continue
+                _print_pair_summary(s)
+                print(f"  ({done}/{len(pairs)} done)", flush=True)
 
     print(f"\nTotal wall time: {(time.time() - total_start)/60:.1f} min")
     return 0

@@ -25,11 +25,10 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 
 
-ALGOS = ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf")
+ALGOS = ("aaps_average", "aaps_exponential", "ukf")
 ALGO_PRETTY = {
     "aaps_average": "AAPS Average",
     "aaps_exponential": "AAPS Exponential (TSUNAMI)",
-    "trio_sgolay": "Trio Savitzky-Golay",
     "ukf": "Adaptive UKF",
 }
 TITLE_COLOR = RGBColor(0x1A, 0x47, 0x73)

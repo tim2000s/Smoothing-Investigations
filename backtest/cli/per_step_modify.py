@@ -43,16 +43,6 @@ def _stats_for_user_algo(user_id: str, table: str, algo: str, runs_dir: Path) ->
             **_delta_stats(deltas[np.isfinite(deltas)]),
         })
 
-    elif algo == "trio_sgolay":
-        ordered = df.sort_values(["reading_idx", "pass_idx"])
-        for p_idx, p_name in enumerate(("pass1", "pass2", "pass3")):
-            sub = ordered[ordered.step_name == p_name]
-            deltas = sub["output_glucose"].to_numpy() - sub["input_glucose"].to_numpy()
-            rows.append({
-                "user_id": user_id, "table": table, "algorithm": algo, "step": p_name,
-                **_delta_stats(deltas[np.isfinite(deltas)]),
-            })
-
     elif algo == "ukf":
         d_predict = df["x_pred_g"].to_numpy() - df["input_glucose"].to_numpy()
         d_update = df["x_upd_g"].to_numpy() - df["x_pred_g"].to_numpy()
@@ -75,7 +65,7 @@ def _stats_for_user_algo(user_id: str, table: str, algo: str, runs_dir: Path) ->
 
 def _plot_stack(per_step_df: pd.DataFrame, out_path: Path) -> None:
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
-    for ax, algo in zip(axes.flatten(), ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf")):
+    for ax, algo in zip(axes.flatten(), ("aaps_average", "aaps_exponential", "ukf")):
         sub = per_step_df[per_step_df.algorithm == algo]
         if sub.empty:
             ax.set_title(f"{algo} (no data)")
@@ -109,7 +99,7 @@ def main(argv=None) -> int:
 
     rows: list[dict] = []
     for member in cohort_members:
-        for algo in ("aaps_average", "aaps_exponential", "trio_sgolay", "ukf"):
+        for algo in ("aaps_average", "aaps_exponential", "ukf"):
             rows.extend(_stats_for_user_algo(
                 member["user_id"], member["table"], algo, runs_dir,
             ))

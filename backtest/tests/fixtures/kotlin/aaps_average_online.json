@@ -1,0 +1,3454 @@
+{
+  "step" : {
+    "n" : 200,
+    "trace" : [ {
+      "reading_idx" : 0,
+      "ts_ms" : 0,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 1,
+      "ts_ms" : 300000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 2,
+      "ts_ms" : 600000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 3,
+      "ts_ms" : 900000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 4,
+      "ts_ms" : 1200000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 5,
+      "ts_ms" : 1500000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 6,
+      "ts_ms" : 1800000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 7,
+      "ts_ms" : 2100000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 8,
+      "ts_ms" : 2400000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 9,
+      "ts_ms" : 2700000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 10,
+      "ts_ms" : 3000000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 11,
+      "ts_ms" : 3300000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 12,
+      "ts_ms" : 3600000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 13,
+      "ts_ms" : 3900000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 14,
+      "ts_ms" : 4200000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 15,
+      "ts_ms" : 4500000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 16,
+      "ts_ms" : 4800000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 17,
+      "ts_ms" : 5100000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 18,
+      "ts_ms" : 5400000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 19,
+      "ts_ms" : 5700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 20,
+      "ts_ms" : 6000000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 21,
+      "ts_ms" : 6300000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 22,
+      "ts_ms" : 6600000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 23,
+      "ts_ms" : 6900000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 24,
+      "ts_ms" : 7200000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 25,
+      "ts_ms" : 7500000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 26,
+      "ts_ms" : 7800000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 27,
+      "ts_ms" : 8100000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 28,
+      "ts_ms" : 8400000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 29,
+      "ts_ms" : 8700000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 30,
+      "ts_ms" : 9000000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 31,
+      "ts_ms" : 9300000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 32,
+      "ts_ms" : 9600000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 33,
+      "ts_ms" : 9900000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 34,
+      "ts_ms" : 10200000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 35,
+      "ts_ms" : 10500000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 36,
+      "ts_ms" : 10800000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 37,
+      "ts_ms" : 11100000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 38,
+      "ts_ms" : 11400000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 39,
+      "ts_ms" : 11700000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 40,
+      "ts_ms" : 12000000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 41,
+      "ts_ms" : 12300000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 42,
+      "ts_ms" : 12600000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 43,
+      "ts_ms" : 12900000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 44,
+      "ts_ms" : 13200000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 45,
+      "ts_ms" : 13500000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 46,
+      "ts_ms" : 13800000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 47,
+      "ts_ms" : 14100000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.0
+    }, {
+      "reading_idx" : 48,
+      "ts_ms" : 14400000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.0
+    }, {
+      "reading_idx" : 49,
+      "ts_ms" : 14700000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 50,
+      "ts_ms" : 15000000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 51,
+      "ts_ms" : 15300000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 52,
+      "ts_ms" : 15600000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 53,
+      "ts_ms" : 15900000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 54,
+      "ts_ms" : 16200000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 55,
+      "ts_ms" : 16500000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 56,
+      "ts_ms" : 16800000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 57,
+      "ts_ms" : 17100000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 58,
+      "ts_ms" : 17400000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 59,
+      "ts_ms" : 17700000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 60,
+      "ts_ms" : 18000000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 61,
+      "ts_ms" : 18300000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 62,
+      "ts_ms" : 18600000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 63,
+      "ts_ms" : 18900000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 64,
+      "ts_ms" : 19200000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.0
+    }, {
+      "reading_idx" : 65,
+      "ts_ms" : 19500000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 66,
+      "ts_ms" : 19800000,
+      "input_glucose" : 124.0,
+      "smoothed_glucose" : 124.0
+    }, {
+      "reading_idx" : 67,
+      "ts_ms" : 20100000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.0
+    }, {
+      "reading_idx" : 68,
+      "ts_ms" : 20400000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 129.0
+    }, {
+      "reading_idx" : 69,
+      "ts_ms" : 20700000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.0
+    }, {
+      "reading_idx" : 70,
+      "ts_ms" : 21000000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 135.0
+    }, {
+      "reading_idx" : 71,
+      "ts_ms" : 21300000,
+      "input_glucose" : 139.0,
+      "smoothed_glucose" : 139.0
+    }, {
+      "reading_idx" : 72,
+      "ts_ms" : 21600000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 73,
+      "ts_ms" : 21900000,
+      "input_glucose" : 144.0,
+      "smoothed_glucose" : 144.0
+    }, {
+      "reading_idx" : 74,
+      "ts_ms" : 22200000,
+      "input_glucose" : 152.0,
+      "smoothed_glucose" : 152.0
+    }, {
+      "reading_idx" : 75,
+      "ts_ms" : 22500000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 149.0
+    }, {
+      "reading_idx" : 76,
+      "ts_ms" : 22800000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 154.0
+    }, {
+      "reading_idx" : 77,
+      "ts_ms" : 23100000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 78,
+      "ts_ms" : 23400000,
+      "input_glucose" : 162.0,
+      "smoothed_glucose" : 162.0
+    }, {
+      "reading_idx" : 79,
+      "ts_ms" : 23700000,
+      "input_glucose" : 170.0,
+      "smoothed_glucose" : 170.0
+    }, {
+      "reading_idx" : 80,
+      "ts_ms" : 24000000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.0
+    }, {
+      "reading_idx" : 81,
+      "ts_ms" : 24300000,
+      "input_glucose" : 171.0,
+      "smoothed_glucose" : 171.0
+    }, {
+      "reading_idx" : 82,
+      "ts_ms" : 24600000,
+      "input_glucose" : 175.0,
+      "smoothed_glucose" : 175.0
+    }, {
+      "reading_idx" : 83,
+      "ts_ms" : 24900000,
+      "input_glucose" : 177.0,
+      "smoothed_glucose" : 177.0
+    }, {
+      "reading_idx" : 84,
+      "ts_ms" : 25200000,
+      "input_glucose" : 180.0,
+      "smoothed_glucose" : 180.0
+    }, {
+      "reading_idx" : 85,
+      "ts_ms" : 25500000,
+      "input_glucose" : 187.0,
+      "smoothed_glucose" : 187.0
+    }, {
+      "reading_idx" : 86,
+      "ts_ms" : 25800000,
+      "input_glucose" : 191.0,
+      "smoothed_glucose" : 191.0
+    }, {
+      "reading_idx" : 87,
+      "ts_ms" : 26100000,
+      "input_glucose" : 196.0,
+      "smoothed_glucose" : 196.0
+    }, {
+      "reading_idx" : 88,
+      "ts_ms" : 26400000,
+      "input_glucose" : 195.0,
+      "smoothed_glucose" : 195.0
+    }, {
+      "reading_idx" : 89,
+      "ts_ms" : 26700000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 203.0
+    }, {
+      "reading_idx" : 90,
+      "ts_ms" : 27000000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 91,
+      "ts_ms" : 27300000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 203.0
+    }, {
+      "reading_idx" : 92,
+      "ts_ms" : 27600000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 93,
+      "ts_ms" : 27900000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 94,
+      "ts_ms" : 28200000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 95,
+      "ts_ms" : 28500000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 96,
+      "ts_ms" : 28800000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 97,
+      "ts_ms" : 29100000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 98,
+      "ts_ms" : 29400000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 197.0
+    }, {
+      "reading_idx" : 99,
+      "ts_ms" : 29700000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 197.0
+    }, {
+      "reading_idx" : 100,
+      "ts_ms" : 30000000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 101,
+      "ts_ms" : 30300000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 102,
+      "ts_ms" : 30600000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 103,
+      "ts_ms" : 30900000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.0
+    }, {
+      "reading_idx" : 104,
+      "ts_ms" : 31200000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 105,
+      "ts_ms" : 31500000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 197.0
+    }, {
+      "reading_idx" : 106,
+      "ts_ms" : 31800000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 107,
+      "ts_ms" : 32100000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 108,
+      "ts_ms" : 32400000,
+      "input_glucose" : 195.0,
+      "smoothed_glucose" : 195.0
+    }, {
+      "reading_idx" : 109,
+      "ts_ms" : 32700000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 110,
+      "ts_ms" : 33000000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 111,
+      "ts_ms" : 33300000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 112,
+      "ts_ms" : 33600000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 113,
+      "ts_ms" : 33900000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 114,
+      "ts_ms" : 34200000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 115,
+      "ts_ms" : 34500000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.0
+    }, {
+      "reading_idx" : 116,
+      "ts_ms" : 34800000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 203.0
+    }, {
+      "reading_idx" : 117,
+      "ts_ms" : 35100000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 118,
+      "ts_ms" : 35400000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 119,
+      "ts_ms" : 35700000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 120,
+      "ts_ms" : 36000000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 121,
+      "ts_ms" : 36300000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 122,
+      "ts_ms" : 36600000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 123,
+      "ts_ms" : 36900000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 197.0
+    }, {
+      "reading_idx" : 124,
+      "ts_ms" : 37200000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 125,
+      "ts_ms" : 37500000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.0
+    }, {
+      "reading_idx" : 126,
+      "ts_ms" : 37800000,
+      "input_glucose" : 197.0,
+      "smoothed_glucose" : 197.0
+    }, {
+      "reading_idx" : 127,
+      "ts_ms" : 38100000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 128,
+      "ts_ms" : 38400000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 129,
+      "ts_ms" : 38700000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.0
+    }, {
+      "reading_idx" : 130,
+      "ts_ms" : 39000000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.0
+    }, {
+      "reading_idx" : 131,
+      "ts_ms" : 39300000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 132,
+      "ts_ms" : 39600000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 133,
+      "ts_ms" : 39900000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 203.0
+    }, {
+      "reading_idx" : 134,
+      "ts_ms" : 40200000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 135,
+      "ts_ms" : 40500000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 136,
+      "ts_ms" : 40800000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 203.0
+    }, {
+      "reading_idx" : 137,
+      "ts_ms" : 41100000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 138,
+      "ts_ms" : 41400000,
+      "input_glucose" : 195.0,
+      "smoothed_glucose" : 195.0
+    }, {
+      "reading_idx" : 139,
+      "ts_ms" : 41700000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 140,
+      "ts_ms" : 42000000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 141,
+      "ts_ms" : 42300000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 142,
+      "ts_ms" : 42600000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 143,
+      "ts_ms" : 42900000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 144,
+      "ts_ms" : 43200000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 145,
+      "ts_ms" : 43500000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 146,
+      "ts_ms" : 43800000,
+      "input_glucose" : 196.0,
+      "smoothed_glucose" : 196.0
+    }, {
+      "reading_idx" : 147,
+      "ts_ms" : 44100000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 148,
+      "ts_ms" : 44400000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.0
+    }, {
+      "reading_idx" : 149,
+      "ts_ms" : 44700000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 150,
+      "ts_ms" : 45000000,
+      "input_glucose" : 259.0,
+      "smoothed_glucose" : 259.0
+    }, {
+      "reading_idx" : 151,
+      "ts_ms" : 45300000,
+      "input_glucose" : 199.0,
+      "smoothed_glucose" : 199.0
+    }, {
+      "reading_idx" : 152,
+      "ts_ms" : 45600000,
+      "input_glucose" : 196.0,
+      "smoothed_glucose" : 196.0
+    }, {
+      "reading_idx" : 153,
+      "ts_ms" : 45900000,
+      "input_glucose" : 195.0,
+      "smoothed_glucose" : 195.0
+    }, {
+      "reading_idx" : 154,
+      "ts_ms" : 46200000,
+      "input_glucose" : 194.0,
+      "smoothed_glucose" : 194.0
+    }, {
+      "reading_idx" : 155,
+      "ts_ms" : 46500000,
+      "input_glucose" : 190.0,
+      "smoothed_glucose" : 190.0
+    }, {
+      "reading_idx" : 156,
+      "ts_ms" : 46800000,
+      "input_glucose" : 192.0,
+      "smoothed_glucose" : 192.0
+    }, {
+      "reading_idx" : 157,
+      "ts_ms" : 47100000,
+      "input_glucose" : 190.0,
+      "smoothed_glucose" : 190.0
+    }, {
+      "reading_idx" : 158,
+      "ts_ms" : 47400000,
+      "input_glucose" : 187.0,
+      "smoothed_glucose" : 187.0
+    }, {
+      "reading_idx" : 159,
+      "ts_ms" : 47700000,
+      "input_glucose" : 183.0,
+      "smoothed_glucose" : 183.0
+    }, {
+      "reading_idx" : 160,
+      "ts_ms" : 48000000,
+      "input_glucose" : 187.0,
+      "smoothed_glucose" : 187.0
+    }, {
+      "reading_idx" : 161,
+      "ts_ms" : 48300000,
+      "input_glucose" : 184.0,
+      "smoothed_glucose" : 184.0
+    }, {
+      "reading_idx" : 162,
+      "ts_ms" : 48600000,
+      "input_glucose" : 182.0,
+      "smoothed_glucose" : 182.0
+    }, {
+      "reading_idx" : 163,
+      "ts_ms" : 48900000,
+      "input_glucose" : 182.0,
+      "smoothed_glucose" : 182.0
+    }, {
+      "reading_idx" : 164,
+      "ts_ms" : 49200000,
+      "input_glucose" : 184.0,
+      "smoothed_glucose" : 184.0
+    }, {
+      "reading_idx" : 165,
+      "ts_ms" : 49500000,
+      "input_glucose" : 179.0,
+      "smoothed_glucose" : 179.0
+    }, {
+      "reading_idx" : 166,
+      "ts_ms" : 49800000,
+      "input_glucose" : 178.0,
+      "smoothed_glucose" : 178.0
+    }, {
+      "reading_idx" : 167,
+      "ts_ms" : 50100000,
+      "input_glucose" : 174.0,
+      "smoothed_glucose" : 174.0
+    }, {
+      "reading_idx" : 168,
+      "ts_ms" : 50400000,
+      "input_glucose" : 178.0,
+      "smoothed_glucose" : 178.0
+    }, {
+      "reading_idx" : 169,
+      "ts_ms" : 50700000,
+      "input_glucose" : 176.0,
+      "smoothed_glucose" : 176.0
+    }, {
+      "reading_idx" : 170,
+      "ts_ms" : 51000000,
+      "input_glucose" : 175.0,
+      "smoothed_glucose" : 175.0
+    }, {
+      "reading_idx" : 171,
+      "ts_ms" : 51300000,
+      "input_glucose" : 171.0,
+      "smoothed_glucose" : 171.0
+    }, {
+      "reading_idx" : 172,
+      "ts_ms" : 51600000,
+      "input_glucose" : 171.0,
+      "smoothed_glucose" : 171.0
+    }, {
+      "reading_idx" : 173,
+      "ts_ms" : 51900000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.0
+    }, {
+      "reading_idx" : 174,
+      "ts_ms" : 52200000,
+      "input_glucose" : 168.0,
+      "smoothed_glucose" : 168.0
+    }, {
+      "reading_idx" : 175,
+      "ts_ms" : 52500000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.0
+    }, {
+      "reading_idx" : 176,
+      "ts_ms" : 52800000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 177,
+      "ts_ms" : 53100000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.0
+    }, {
+      "reading_idx" : 178,
+      "ts_ms" : 53400000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 158.0
+    }, {
+      "reading_idx" : 179,
+      "ts_ms" : 53700000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 180,
+      "ts_ms" : 54000000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 181,
+      "ts_ms" : 54300000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 158.0
+    }, {
+      "reading_idx" : 182,
+      "ts_ms" : 54600000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 183,
+      "ts_ms" : 54900000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 184,
+      "ts_ms" : 55200000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 185,
+      "ts_ms" : 55500000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 186,
+      "ts_ms" : 55800000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 187,
+      "ts_ms" : 56100000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 188,
+      "ts_ms" : 56400000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 189,
+      "ts_ms" : 56700000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 190,
+      "ts_ms" : 57000000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.0
+    }, {
+      "reading_idx" : 191,
+      "ts_ms" : 57300000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.0
+    }, {
+      "reading_idx" : 192,
+      "ts_ms" : 57600000,
+      "input_glucose" : 162.0,
+      "smoothed_glucose" : 162.0
+    }, {
+      "reading_idx" : 193,
+      "ts_ms" : 57900000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 194,
+      "ts_ms" : 58200000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 195,
+      "ts_ms" : 58500000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 196,
+      "ts_ms" : 58800000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.0
+    }, {
+      "reading_idx" : 197,
+      "ts_ms" : 59100000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 198,
+      "ts_ms" : 59400000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 199,
+      "ts_ms" : 59700000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    } ]
+  },
+  "sinusoid" : {
+    "n" : 200,
+    "trace" : [ {
+      "reading_idx" : 0,
+      "ts_ms" : 0,
+      "input_glucose" : 131.0,
+      "smoothed_glucose" : 131.0
+    }, {
+      "reading_idx" : 1,
+      "ts_ms" : 300000,
+      "input_glucose" : 137.0,
+      "smoothed_glucose" : 137.0
+    }, {
+      "reading_idx" : 2,
+      "ts_ms" : 600000,
+      "input_glucose" : 139.0,
+      "smoothed_glucose" : 139.0
+    }, {
+      "reading_idx" : 3,
+      "ts_ms" : 900000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 136.0
+    }, {
+      "reading_idx" : 4,
+      "ts_ms" : 1200000,
+      "input_glucose" : 148.0,
+      "smoothed_glucose" : 148.0
+    }, {
+      "reading_idx" : 5,
+      "ts_ms" : 1500000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 149.0
+    }, {
+      "reading_idx" : 6,
+      "ts_ms" : 1800000,
+      "input_glucose" : 148.0,
+      "smoothed_glucose" : 148.0
+    }, {
+      "reading_idx" : 7,
+      "ts_ms" : 2100000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.0
+    }, {
+      "reading_idx" : 8,
+      "ts_ms" : 2400000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.0
+    }, {
+      "reading_idx" : 9,
+      "ts_ms" : 2700000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 10,
+      "ts_ms" : 3000000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 11,
+      "ts_ms" : 3300000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 164.0
+    }, {
+      "reading_idx" : 12,
+      "ts_ms" : 3600000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 13,
+      "ts_ms" : 3900000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 164.0
+    }, {
+      "reading_idx" : 14,
+      "ts_ms" : 4200000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 15,
+      "ts_ms" : 4500000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 167.0
+    }, {
+      "reading_idx" : 16,
+      "ts_ms" : 4800000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.0
+    }, {
+      "reading_idx" : 17,
+      "ts_ms" : 5100000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 18,
+      "ts_ms" : 5400000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 19,
+      "ts_ms" : 5700000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 20,
+      "ts_ms" : 6000000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 21,
+      "ts_ms" : 6300000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.0
+    }, {
+      "reading_idx" : 22,
+      "ts_ms" : 6600000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 23,
+      "ts_ms" : 6900000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.0
+    }, {
+      "reading_idx" : 24,
+      "ts_ms" : 7200000,
+      "input_glucose" : 140.0,
+      "smoothed_glucose" : 140.0
+    }, {
+      "reading_idx" : 25,
+      "ts_ms" : 7500000,
+      "input_glucose" : 140.0,
+      "smoothed_glucose" : 140.0
+    }, {
+      "reading_idx" : 26,
+      "ts_ms" : 7800000,
+      "input_glucose" : 144.0,
+      "smoothed_glucose" : 144.0
+    }, {
+      "reading_idx" : 27,
+      "ts_ms" : 8100000,
+      "input_glucose" : 139.0,
+      "smoothed_glucose" : 139.0
+    }, {
+      "reading_idx" : 28,
+      "ts_ms" : 8400000,
+      "input_glucose" : 138.0,
+      "smoothed_glucose" : 138.0
+    }, {
+      "reading_idx" : 29,
+      "ts_ms" : 8700000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 135.0
+    }, {
+      "reading_idx" : 30,
+      "ts_ms" : 9000000,
+      "input_glucose" : 138.0,
+      "smoothed_glucose" : 138.0
+    }, {
+      "reading_idx" : 31,
+      "ts_ms" : 9300000,
+      "input_glucose" : 122.0,
+      "smoothed_glucose" : 122.0
+    }, {
+      "reading_idx" : 32,
+      "ts_ms" : 9600000,
+      "input_glucose" : 121.0,
+      "smoothed_glucose" : 121.0
+    }, {
+      "reading_idx" : 33,
+      "ts_ms" : 9900000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.0
+    }, {
+      "reading_idx" : 34,
+      "ts_ms" : 10200000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 35,
+      "ts_ms" : 10500000,
+      "input_glucose" : 115.0,
+      "smoothed_glucose" : 115.0
+    }, {
+      "reading_idx" : 36,
+      "ts_ms" : 10800000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 37,
+      "ts_ms" : 11100000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 38,
+      "ts_ms" : 11400000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 39,
+      "ts_ms" : 11700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 40,
+      "ts_ms" : 12000000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 41,
+      "ts_ms" : 12300000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 42,
+      "ts_ms" : 12600000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 96.0
+    }, {
+      "reading_idx" : 43,
+      "ts_ms" : 12900000,
+      "input_glucose" : 92.0,
+      "smoothed_glucose" : 92.0
+    }, {
+      "reading_idx" : 44,
+      "ts_ms" : 13200000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 45,
+      "ts_ms" : 13500000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 46,
+      "ts_ms" : 13800000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 47,
+      "ts_ms" : 14100000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.0
+    }, {
+      "reading_idx" : 48,
+      "ts_ms" : 14400000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 49,
+      "ts_ms" : 14700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 50,
+      "ts_ms" : 15000000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 51,
+      "ts_ms" : 15300000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 52,
+      "ts_ms" : 15600000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 53,
+      "ts_ms" : 15900000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 54,
+      "ts_ms" : 16200000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.0
+    }, {
+      "reading_idx" : 55,
+      "ts_ms" : 16500000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.0
+    }, {
+      "reading_idx" : 56,
+      "ts_ms" : 16800000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 57,
+      "ts_ms" : 17100000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 58,
+      "ts_ms" : 17400000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 59,
+      "ts_ms" : 17700000,
+      "input_glucose" : 125.0,
+      "smoothed_glucose" : 125.0
+    }, {
+      "reading_idx" : 60,
+      "ts_ms" : 18000000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 130.0
+    }, {
+      "reading_idx" : 61,
+      "ts_ms" : 18300000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 135.0
+    }, {
+      "reading_idx" : 62,
+      "ts_ms" : 18600000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.0
+    }, {
+      "reading_idx" : 63,
+      "ts_ms" : 18900000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 136.0
+    }, {
+      "reading_idx" : 64,
+      "ts_ms" : 19200000,
+      "input_glucose" : 145.0,
+      "smoothed_glucose" : 145.0
+    }, {
+      "reading_idx" : 65,
+      "ts_ms" : 19500000,
+      "input_glucose" : 146.0,
+      "smoothed_glucose" : 146.0
+    }, {
+      "reading_idx" : 66,
+      "ts_ms" : 19800000,
+      "input_glucose" : 152.0,
+      "smoothed_glucose" : 152.0
+    }, {
+      "reading_idx" : 67,
+      "ts_ms" : 20100000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.0
+    }, {
+      "reading_idx" : 68,
+      "ts_ms" : 20400000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 149.0
+    }, {
+      "reading_idx" : 69,
+      "ts_ms" : 20700000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 70,
+      "ts_ms" : 21000000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.0
+    }, {
+      "reading_idx" : 71,
+      "ts_ms" : 21300000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 72,
+      "ts_ms" : 21600000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 73,
+      "ts_ms" : 21900000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 167.0
+    }, {
+      "reading_idx" : 74,
+      "ts_ms" : 22200000,
+      "input_glucose" : 166.0,
+      "smoothed_glucose" : 166.0
+    }, {
+      "reading_idx" : 75,
+      "ts_ms" : 22500000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.0
+    }, {
+      "reading_idx" : 76,
+      "ts_ms" : 22800000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 77,
+      "ts_ms" : 23100000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 158.0
+    }, {
+      "reading_idx" : 78,
+      "ts_ms" : 23400000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 79,
+      "ts_ms" : 23700000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 80,
+      "ts_ms" : 24000000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 81,
+      "ts_ms" : 24300000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 82,
+      "ts_ms" : 24600000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 149.0
+    }, {
+      "reading_idx" : 83,
+      "ts_ms" : 24900000,
+      "input_glucose" : 149.0,
+      "smoothed_glucose" : 149.0
+    }, {
+      "reading_idx" : 84,
+      "ts_ms" : 25200000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 154.0
+    }, {
+      "reading_idx" : 85,
+      "ts_ms" : 25500000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 150.0
+    }, {
+      "reading_idx" : 86,
+      "ts_ms" : 25800000,
+      "input_glucose" : 142.0,
+      "smoothed_glucose" : 142.0
+    }, {
+      "reading_idx" : 87,
+      "ts_ms" : 26100000,
+      "input_glucose" : 141.0,
+      "smoothed_glucose" : 141.0
+    }, {
+      "reading_idx" : 88,
+      "ts_ms" : 26400000,
+      "input_glucose" : 139.0,
+      "smoothed_glucose" : 139.0
+    }, {
+      "reading_idx" : 89,
+      "ts_ms" : 26700000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 136.0
+    }, {
+      "reading_idx" : 90,
+      "ts_ms" : 27000000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 91,
+      "ts_ms" : 27300000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.0
+    }, {
+      "reading_idx" : 92,
+      "ts_ms" : 27600000,
+      "input_glucose" : 122.0,
+      "smoothed_glucose" : 122.0
+    }, {
+      "reading_idx" : 93,
+      "ts_ms" : 27900000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 94,
+      "ts_ms" : 28200000,
+      "input_glucose" : 120.0,
+      "smoothed_glucose" : 120.0
+    }, {
+      "reading_idx" : 95,
+      "ts_ms" : 28500000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 96,
+      "ts_ms" : 28800000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 97,
+      "ts_ms" : 29100000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 98,
+      "ts_ms" : 29400000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 99,
+      "ts_ms" : 29700000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 100,
+      "ts_ms" : 30000000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 101,
+      "ts_ms" : 30300000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 102,
+      "ts_ms" : 30600000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 96.0
+    }, {
+      "reading_idx" : 103,
+      "ts_ms" : 30900000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 104,
+      "ts_ms" : 31200000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 105,
+      "ts_ms" : 31500000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 106,
+      "ts_ms" : 31800000,
+      "input_glucose" : 92.0,
+      "smoothed_glucose" : 92.0
+    }, {
+      "reading_idx" : 107,
+      "ts_ms" : 32100000,
+      "input_glucose" : 90.0,
+      "smoothed_glucose" : 90.0
+    }, {
+      "reading_idx" : 108,
+      "ts_ms" : 32400000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.0
+    }, {
+      "reading_idx" : 109,
+      "ts_ms" : 32700000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 110,
+      "ts_ms" : 33000000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 111,
+      "ts_ms" : 33300000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 112,
+      "ts_ms" : 33600000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 113,
+      "ts_ms" : 33900000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 114,
+      "ts_ms" : 34200000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 115,
+      "ts_ms" : 34500000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.0
+    }, {
+      "reading_idx" : 116,
+      "ts_ms" : 34800000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.0
+    }, {
+      "reading_idx" : 117,
+      "ts_ms" : 35100000,
+      "input_glucose" : 121.0,
+      "smoothed_glucose" : 121.0
+    }, {
+      "reading_idx" : 118,
+      "ts_ms" : 35400000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 119,
+      "ts_ms" : 35700000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 129.0
+    }, {
+      "reading_idx" : 120,
+      "ts_ms" : 36000000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 136.0
+    }, {
+      "reading_idx" : 121,
+      "ts_ms" : 36300000,
+      "input_glucose" : 128.0,
+      "smoothed_glucose" : 128.0
+    }, {
+      "reading_idx" : 122,
+      "ts_ms" : 36600000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.0
+    }, {
+      "reading_idx" : 123,
+      "ts_ms" : 36900000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 124,
+      "ts_ms" : 37200000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 154.0
+    }, {
+      "reading_idx" : 125,
+      "ts_ms" : 37500000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 126,
+      "ts_ms" : 37800000,
+      "input_glucose" : 146.0,
+      "smoothed_glucose" : 146.0
+    }, {
+      "reading_idx" : 127,
+      "ts_ms" : 38100000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.0
+    }, {
+      "reading_idx" : 128,
+      "ts_ms" : 38400000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 153.0
+    }, {
+      "reading_idx" : 129,
+      "ts_ms" : 38700000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.0
+    }, {
+      "reading_idx" : 130,
+      "ts_ms" : 39000000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 131,
+      "ts_ms" : 39300000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 164.0
+    }, {
+      "reading_idx" : 132,
+      "ts_ms" : 39600000,
+      "input_glucose" : 162.0,
+      "smoothed_glucose" : 162.0
+    }, {
+      "reading_idx" : 133,
+      "ts_ms" : 39900000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.0
+    }, {
+      "reading_idx" : 134,
+      "ts_ms" : 40200000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 164.0
+    }, {
+      "reading_idx" : 135,
+      "ts_ms" : 40500000,
+      "input_glucose" : 162.0,
+      "smoothed_glucose" : 162.0
+    }, {
+      "reading_idx" : 136,
+      "ts_ms" : 40800000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 164.0
+    }, {
+      "reading_idx" : 137,
+      "ts_ms" : 41100000,
+      "input_glucose" : 160.0,
+      "smoothed_glucose" : 160.0
+    }, {
+      "reading_idx" : 138,
+      "ts_ms" : 41400000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 139,
+      "ts_ms" : 41700000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.0
+    }, {
+      "reading_idx" : 140,
+      "ts_ms" : 42000000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.0
+    }, {
+      "reading_idx" : 141,
+      "ts_ms" : 42300000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 164.0
+    }, {
+      "reading_idx" : 142,
+      "ts_ms" : 42600000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.0
+    }, {
+      "reading_idx" : 143,
+      "ts_ms" : 42900000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 153.0
+    }, {
+      "reading_idx" : 144,
+      "ts_ms" : 43200000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 153.0
+    }, {
+      "reading_idx" : 145,
+      "ts_ms" : 43500000,
+      "input_glucose" : 146.0,
+      "smoothed_glucose" : 146.0
+    }, {
+      "reading_idx" : 146,
+      "ts_ms" : 43800000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 147,
+      "ts_ms" : 44100000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 148,
+      "ts_ms" : 44400000,
+      "input_glucose" : 138.0,
+      "smoothed_glucose" : 138.0
+    }, {
+      "reading_idx" : 149,
+      "ts_ms" : 44700000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 129.0
+    }, {
+      "reading_idx" : 150,
+      "ts_ms" : 45000000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.0
+    }, {
+      "reading_idx" : 151,
+      "ts_ms" : 45300000,
+      "input_glucose" : 124.0,
+      "smoothed_glucose" : 124.0
+    }, {
+      "reading_idx" : 152,
+      "ts_ms" : 45600000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 153,
+      "ts_ms" : 45900000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 154,
+      "ts_ms" : 46200000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.0
+    }, {
+      "reading_idx" : 155,
+      "ts_ms" : 46500000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 156,
+      "ts_ms" : 46800000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 157,
+      "ts_ms" : 47100000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 158,
+      "ts_ms" : 47400000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 159,
+      "ts_ms" : 47700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 160,
+      "ts_ms" : 48000000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 161,
+      "ts_ms" : 48300000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 162,
+      "ts_ms" : 48600000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.0
+    }, {
+      "reading_idx" : 163,
+      "ts_ms" : 48900000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 164,
+      "ts_ms" : 49200000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 165,
+      "ts_ms" : 49500000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 166,
+      "ts_ms" : 49800000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 167,
+      "ts_ms" : 50100000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 168,
+      "ts_ms" : 50400000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.0
+    }, {
+      "reading_idx" : 169,
+      "ts_ms" : 50700000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 170,
+      "ts_ms" : 51000000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 171,
+      "ts_ms" : 51300000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 172,
+      "ts_ms" : 51600000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.0
+    }, {
+      "reading_idx" : 173,
+      "ts_ms" : 51900000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 174,
+      "ts_ms" : 52200000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 175,
+      "ts_ms" : 52500000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 176,
+      "ts_ms" : 52800000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.0
+    }, {
+      "reading_idx" : 177,
+      "ts_ms" : 53100000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.0
+    }, {
+      "reading_idx" : 178,
+      "ts_ms" : 53400000,
+      "input_glucose" : 125.0,
+      "smoothed_glucose" : 125.0
+    }, {
+      "reading_idx" : 179,
+      "ts_ms" : 53700000,
+      "input_glucose" : 132.0,
+      "smoothed_glucose" : 132.0
+    }, {
+      "reading_idx" : 180,
+      "ts_ms" : 54000000,
+      "input_glucose" : 132.0,
+      "smoothed_glucose" : 132.0
+    }, {
+      "reading_idx" : 181,
+      "ts_ms" : 54300000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 182,
+      "ts_ms" : 54600000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 183,
+      "ts_ms" : 54900000,
+      "input_glucose" : 152.0,
+      "smoothed_glucose" : 152.0
+    }, {
+      "reading_idx" : 184,
+      "ts_ms" : 55200000,
+      "input_glucose" : 148.0,
+      "smoothed_glucose" : 148.0
+    }, {
+      "reading_idx" : 185,
+      "ts_ms" : 55500000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 186,
+      "ts_ms" : 55800000,
+      "input_glucose" : 147.0,
+      "smoothed_glucose" : 147.0
+    }, {
+      "reading_idx" : 187,
+      "ts_ms" : 56100000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 154.0
+    }, {
+      "reading_idx" : 188,
+      "ts_ms" : 56400000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 150.0
+    }, {
+      "reading_idx" : 189,
+      "ts_ms" : 56700000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 190,
+      "ts_ms" : 57000000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 158.0
+    }, {
+      "reading_idx" : 191,
+      "ts_ms" : 57300000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 167.0
+    }, {
+      "reading_idx" : 192,
+      "ts_ms" : 57600000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 167.0
+    }, {
+      "reading_idx" : 193,
+      "ts_ms" : 57900000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 153.0
+    }, {
+      "reading_idx" : 194,
+      "ts_ms" : 58200000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.0
+    }, {
+      "reading_idx" : 195,
+      "ts_ms" : 58500000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 196,
+      "ts_ms" : 58800000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.0
+    }, {
+      "reading_idx" : 197,
+      "ts_ms" : 59100000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.0
+    }, {
+      "reading_idx" : 198,
+      "ts_ms" : 59400000,
+      "input_glucose" : 165.0,
+      "smoothed_glucose" : 165.0
+    }, {
+      "reading_idx" : 199,
+      "ts_ms" : 59700000,
+      "input_glucose" : 158.0,
+      "smoothed_glucose" : 158.0
+    } ]
+  },
+  "real24h" : {
+    "n" : 288,
+    "trace" : [ {
+      "reading_idx" : 0,
+      "ts_ms" : 0,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.0
+    }, {
+      "reading_idx" : 1,
+      "ts_ms" : 300000,
+      "input_glucose" : 126.0,
+      "smoothed_glucose" : 126.0
+    }, {
+      "reading_idx" : 2,
+      "ts_ms" : 600000,
+      "input_glucose" : 120.0,
+      "smoothed_glucose" : 120.0
+    }, {
+      "reading_idx" : 3,
+      "ts_ms" : 900000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 4,
+      "ts_ms" : 1200000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 5,
+      "ts_ms" : 1500000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 6,
+      "ts_ms" : 1800000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 7,
+      "ts_ms" : 2100000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 96.0
+    }, {
+      "reading_idx" : 8,
+      "ts_ms" : 2400000,
+      "input_glucose" : 93.0,
+      "smoothed_glucose" : 93.0
+    }, {
+      "reading_idx" : 9,
+      "ts_ms" : 2700000,
+      "input_glucose" : 89.0,
+      "smoothed_glucose" : 89.0
+    }, {
+      "reading_idx" : 10,
+      "ts_ms" : 3000000,
+      "input_glucose" : 84.0,
+      "smoothed_glucose" : 84.0
+    }, {
+      "reading_idx" : 11,
+      "ts_ms" : 3300000,
+      "input_glucose" : 78.0,
+      "smoothed_glucose" : 78.0
+    }, {
+      "reading_idx" : 12,
+      "ts_ms" : 3600000,
+      "input_glucose" : 74.0,
+      "smoothed_glucose" : 74.0
+    }, {
+      "reading_idx" : 13,
+      "ts_ms" : 3900000,
+      "input_glucose" : 73.0,
+      "smoothed_glucose" : 73.0
+    }, {
+      "reading_idx" : 14,
+      "ts_ms" : 4200000,
+      "input_glucose" : 74.0,
+      "smoothed_glucose" : 74.0
+    }, {
+      "reading_idx" : 15,
+      "ts_ms" : 4500000,
+      "input_glucose" : 81.0,
+      "smoothed_glucose" : 81.0
+    }, {
+      "reading_idx" : 16,
+      "ts_ms" : 4800000,
+      "input_glucose" : 91.0,
+      "smoothed_glucose" : 91.0
+    }, {
+      "reading_idx" : 17,
+      "ts_ms" : 5100000,
+      "input_glucose" : 91.0,
+      "smoothed_glucose" : 91.0
+    }, {
+      "reading_idx" : 18,
+      "ts_ms" : 5400000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 19,
+      "ts_ms" : 5700000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 20,
+      "ts_ms" : 6000000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 21,
+      "ts_ms" : 6300000,
+      "input_glucose" : 99.0,
+      "smoothed_glucose" : 99.0
+    }, {
+      "reading_idx" : 22,
+      "ts_ms" : 6600000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 23,
+      "ts_ms" : 6900000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 24,
+      "ts_ms" : 7200000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 25,
+      "ts_ms" : 7500000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 26,
+      "ts_ms" : 7800000,
+      "input_glucose" : 123.0,
+      "smoothed_glucose" : 123.0
+    }, {
+      "reading_idx" : 27,
+      "ts_ms" : 8100000,
+      "input_glucose" : 121.0,
+      "smoothed_glucose" : 121.0
+    }, {
+      "reading_idx" : 28,
+      "ts_ms" : 8400000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 29,
+      "ts_ms" : 8700000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 30,
+      "ts_ms" : 9000000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 31,
+      "ts_ms" : 9300000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 32,
+      "ts_ms" : 9600000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 33,
+      "ts_ms" : 9900000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.0
+    }, {
+      "reading_idx" : 34,
+      "ts_ms" : 10200000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 35,
+      "ts_ms" : 10500000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 36,
+      "ts_ms" : 10800000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 37,
+      "ts_ms" : 11100000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.0
+    }, {
+      "reading_idx" : 38,
+      "ts_ms" : 11400000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.0
+    }, {
+      "reading_idx" : 39,
+      "ts_ms" : 11700000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 40,
+      "ts_ms" : 12000000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.0
+    }, {
+      "reading_idx" : 41,
+      "ts_ms" : 12300000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 42,
+      "ts_ms" : 12600000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 43,
+      "ts_ms" : 12900000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 44,
+      "ts_ms" : 13200000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 45,
+      "ts_ms" : 13500000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 46,
+      "ts_ms" : 13800000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 47,
+      "ts_ms" : 14100000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.0
+    }, {
+      "reading_idx" : 48,
+      "ts_ms" : 14400000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 49,
+      "ts_ms" : 14700000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.0
+    }, {
+      "reading_idx" : 50,
+      "ts_ms" : 15000000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 51,
+      "ts_ms" : 15300000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.0
+    }, {
+      "reading_idx" : 52,
+      "ts_ms" : 15600000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.0
+    }, {
+      "reading_idx" : 53,
+      "ts_ms" : 15900000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.0
+    }, {
+      "reading_idx" : 54,
+      "ts_ms" : 16200000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 55,
+      "ts_ms" : 16500000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 56,
+      "ts_ms" : 16800000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.0
+    }, {
+      "reading_idx" : 57,
+      "ts_ms" : 17100000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.0
+    }, {
+      "reading_idx" : 58,
+      "ts_ms" : 17700000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 59,
+      "ts_ms" : 18000000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 60,
+      "ts_ms" : 18300000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 61,
+      "ts_ms" : 18600000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 62,
+      "ts_ms" : 18900000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 63,
+      "ts_ms" : 19200000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 64,
+      "ts_ms" : 19500000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 65,
+      "ts_ms" : 19800000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 66,
+      "ts_ms" : 20100000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 67,
+      "ts_ms" : 21600000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.0
+    }, {
+      "reading_idx" : 68,
+      "ts_ms" : 21900000,
+      "input_glucose" : 115.0,
+      "smoothed_glucose" : 115.0
+    }, {
+      "reading_idx" : 69,
+      "ts_ms" : 22200000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 70,
+      "ts_ms" : 22500000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 71,
+      "ts_ms" : 22800000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 72,
+      "ts_ms" : 23100000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 73,
+      "ts_ms" : 23400000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 74,
+      "ts_ms" : 23700000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 75,
+      "ts_ms" : 24000000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 76,
+      "ts_ms" : 24300000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 77,
+      "ts_ms" : 24600000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 78,
+      "ts_ms" : 25200000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 79,
+      "ts_ms" : 25500000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 80,
+      "ts_ms" : 25800000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 81,
+      "ts_ms" : 26100000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 82,
+      "ts_ms" : 26400000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 83,
+      "ts_ms" : 26700000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 84,
+      "ts_ms" : 27000000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 85,
+      "ts_ms" : 27600000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 86,
+      "ts_ms" : 27900000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 87,
+      "ts_ms" : 30300000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 88,
+      "ts_ms" : 30600000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 89,
+      "ts_ms" : 31200000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 90,
+      "ts_ms" : 31500000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 91,
+      "ts_ms" : 31800000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.0
+    }, {
+      "reading_idx" : 92,
+      "ts_ms" : 32100000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.0
+    }, {
+      "reading_idx" : 93,
+      "ts_ms" : 32400000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.0
+    }, {
+      "reading_idx" : 94,
+      "ts_ms" : 32700000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.0
+    }, {
+      "reading_idx" : 95,
+      "ts_ms" : 33000000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.0
+    }, {
+      "reading_idx" : 96,
+      "ts_ms" : 33600000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 97,
+      "ts_ms" : 33900000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 98,
+      "ts_ms" : 34200000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 99,
+      "ts_ms" : 34500000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 100,
+      "ts_ms" : 34800000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 101,
+      "ts_ms" : 35100000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 102,
+      "ts_ms" : 35700000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 103,
+      "ts_ms" : 36000000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 104,
+      "ts_ms" : 36300000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 105,
+      "ts_ms" : 36600000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 106,
+      "ts_ms" : 36900000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.0
+    }, {
+      "reading_idx" : 107,
+      "ts_ms" : 37200000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 108,
+      "ts_ms" : 37500000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.0
+    }, {
+      "reading_idx" : 109,
+      "ts_ms" : 37800000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 110,
+      "ts_ms" : 38100000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.0
+    }, {
+      "reading_idx" : 111,
+      "ts_ms" : 38400000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.0
+    }, {
+      "reading_idx" : 112,
+      "ts_ms" : 38700000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 113,
+      "ts_ms" : 39000000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 114,
+      "ts_ms" : 39300000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 115,
+      "ts_ms" : 39600000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 116,
+      "ts_ms" : 39900000,
+      "input_glucose" : 104.0,
+      "smoothed_glucose" : 104.0
+    }, {
+      "reading_idx" : 117,
+      "ts_ms" : 40200000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 118,
+      "ts_ms" : 40500000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.0
+    }, {
+      "reading_idx" : 119,
+      "ts_ms" : 40800000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 120,
+      "ts_ms" : 41100000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 121,
+      "ts_ms" : 41400000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 122,
+      "ts_ms" : 41700000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 123,
+      "ts_ms" : 42000000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 124,
+      "ts_ms" : 42300000,
+      "input_glucose" : 115.0,
+      "smoothed_glucose" : 115.0
+    }, {
+      "reading_idx" : 125,
+      "ts_ms" : 42600000,
+      "input_glucose" : 121.0,
+      "smoothed_glucose" : 121.0
+    }, {
+      "reading_idx" : 126,
+      "ts_ms" : 42900000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 129.0
+    }, {
+      "reading_idx" : 127,
+      "ts_ms" : 43200000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 135.0
+    }, {
+      "reading_idx" : 128,
+      "ts_ms" : 43500000,
+      "input_glucose" : 137.0,
+      "smoothed_glucose" : 137.0
+    }, {
+      "reading_idx" : 129,
+      "ts_ms" : 43800000,
+      "input_glucose" : 135.0,
+      "smoothed_glucose" : 135.0
+    }, {
+      "reading_idx" : 130,
+      "ts_ms" : 44100000,
+      "input_glucose" : 131.0,
+      "smoothed_glucose" : 131.0
+    }, {
+      "reading_idx" : 131,
+      "ts_ms" : 44400000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.0
+    }, {
+      "reading_idx" : 132,
+      "ts_ms" : 44700000,
+      "input_glucose" : 122.0,
+      "smoothed_glucose" : 122.0
+    }, {
+      "reading_idx" : 133,
+      "ts_ms" : 45000000,
+      "input_glucose" : 118.0,
+      "smoothed_glucose" : 118.0
+    }, {
+      "reading_idx" : 134,
+      "ts_ms" : 45300000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 135,
+      "ts_ms" : 45600000,
+      "input_glucose" : 105.0,
+      "smoothed_glucose" : 105.0
+    }, {
+      "reading_idx" : 136,
+      "ts_ms" : 45900000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 137,
+      "ts_ms" : 46200000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.0
+    }, {
+      "reading_idx" : 138,
+      "ts_ms" : 46500000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.0
+    }, {
+      "reading_idx" : 139,
+      "ts_ms" : 46800000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 140,
+      "ts_ms" : 47100000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.0
+    }, {
+      "reading_idx" : 141,
+      "ts_ms" : 47400000,
+      "input_glucose" : 124.0,
+      "smoothed_glucose" : 124.0
+    }, {
+      "reading_idx" : 142,
+      "ts_ms" : 47700000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 130.0
+    }, {
+      "reading_idx" : 143,
+      "ts_ms" : 48000000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.0
+    }, {
+      "reading_idx" : 144,
+      "ts_ms" : 48300000,
+      "input_glucose" : 137.0,
+      "smoothed_glucose" : 137.0
+    }, {
+      "reading_idx" : 145,
+      "ts_ms" : 48600000,
+      "input_glucose" : 144.0,
+      "smoothed_glucose" : 144.0
+    }, {
+      "reading_idx" : 146,
+      "ts_ms" : 48900000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 150.0
+    }, {
+      "reading_idx" : 147,
+      "ts_ms" : 49200000,
+      "input_glucose" : 155.0,
+      "smoothed_glucose" : 155.0
+    }, {
+      "reading_idx" : 148,
+      "ts_ms" : 49500000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 149,
+      "ts_ms" : 49800000,
+      "input_glucose" : 167.0,
+      "smoothed_glucose" : 167.0
+    }, {
+      "reading_idx" : 150,
+      "ts_ms" : 50100000,
+      "input_glucose" : 173.0,
+      "smoothed_glucose" : 173.0
+    }, {
+      "reading_idx" : 151,
+      "ts_ms" : 50400000,
+      "input_glucose" : 174.0,
+      "smoothed_glucose" : 174.0
+    }, {
+      "reading_idx" : 152,
+      "ts_ms" : 50700000,
+      "input_glucose" : 172.0,
+      "smoothed_glucose" : 172.0
+    }, {
+      "reading_idx" : 153,
+      "ts_ms" : 51000000,
+      "input_glucose" : 159.0,
+      "smoothed_glucose" : 159.0
+    }, {
+      "reading_idx" : 154,
+      "ts_ms" : 51300000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.0
+    }, {
+      "reading_idx" : 155,
+      "ts_ms" : 51600000,
+      "input_glucose" : 157.0,
+      "smoothed_glucose" : 157.0
+    }, {
+      "reading_idx" : 156,
+      "ts_ms" : 51900000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 130.0
+    }, {
+      "reading_idx" : 157,
+      "ts_ms" : 52200000,
+      "input_glucose" : 120.0,
+      "smoothed_glucose" : 120.0
+    }, {
+      "reading_idx" : 158,
+      "ts_ms" : 52500000,
+      "input_glucose" : 115.0,
+      "smoothed_glucose" : 115.0
+    }, {
+      "reading_idx" : 159,
+      "ts_ms" : 52800000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 160,
+      "ts_ms" : 53100000,
+      "input_glucose" : 117.0,
+      "smoothed_glucose" : 117.0
+    }, {
+      "reading_idx" : 161,
+      "ts_ms" : 53400000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 162,
+      "ts_ms" : 53700000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 163,
+      "ts_ms" : 54000000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 164,
+      "ts_ms" : 54300000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 165,
+      "ts_ms" : 54600000,
+      "input_glucose" : 108.0,
+      "smoothed_glucose" : 108.0
+    }, {
+      "reading_idx" : 166,
+      "ts_ms" : 54900000,
+      "input_glucose" : 111.0,
+      "smoothed_glucose" : 111.0
+    }, {
+      "reading_idx" : 167,
+      "ts_ms" : 55200000,
+      "input_glucose" : 109.0,
+      "smoothed_glucose" : 109.0
+    }, {
+      "reading_idx" : 168,
+      "ts_ms" : 55500000,
+      "input_glucose" : 110.0,
+      "smoothed_glucose" : 110.0
+    }, {
+      "reading_idx" : 169,
+      "ts_ms" : 55800000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 170,
+      "ts_ms" : 56100000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 171,
+      "ts_ms" : 56400000,
+      "input_glucose" : 112.0,
+      "smoothed_glucose" : 112.0
+    }, {
+      "reading_idx" : 172,
+      "ts_ms" : 56700000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 173,
+      "ts_ms" : 57000000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 174,
+      "ts_ms" : 57300000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 175,
+      "ts_ms" : 57600000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 176,
+      "ts_ms" : 57900000,
+      "input_glucose" : 100.0,
+      "smoothed_glucose" : 100.0
+    }, {
+      "reading_idx" : 177,
+      "ts_ms" : 58200000,
+      "input_glucose" : 98.0,
+      "smoothed_glucose" : 98.0
+    }, {
+      "reading_idx" : 178,
+      "ts_ms" : 58500000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 179,
+      "ts_ms" : 58800000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 96.0
+    }, {
+      "reading_idx" : 180,
+      "ts_ms" : 59100000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 181,
+      "ts_ms" : 59400000,
+      "input_glucose" : 93.0,
+      "smoothed_glucose" : 93.0
+    }, {
+      "reading_idx" : 182,
+      "ts_ms" : 59700000,
+      "input_glucose" : 89.0,
+      "smoothed_glucose" : 89.0
+    }, {
+      "reading_idx" : 183,
+      "ts_ms" : 60000000,
+      "input_glucose" : 88.0,
+      "smoothed_glucose" : 88.0
+    }, {
+      "reading_idx" : 184,
+      "ts_ms" : 60300000,
+      "input_glucose" : 89.0,
+      "smoothed_glucose" : 89.0
+    }, {
+      "reading_idx" : 185,
+      "ts_ms" : 60600000,
+      "input_glucose" : 102.0,
+      "smoothed_glucose" : 102.0
+    }, {
+      "reading_idx" : 186,
+      "ts_ms" : 60900000,
+      "input_glucose" : 116.0,
+      "smoothed_glucose" : 116.0
+    }, {
+      "reading_idx" : 187,
+      "ts_ms" : 61200000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 130.0
+    }, {
+      "reading_idx" : 188,
+      "ts_ms" : 61500000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 189,
+      "ts_ms" : 61800000,
+      "input_glucose" : 153.0,
+      "smoothed_glucose" : 153.0
+    }, {
+      "reading_idx" : 190,
+      "ts_ms" : 62100000,
+      "input_glucose" : 163.0,
+      "smoothed_glucose" : 163.0
+    }, {
+      "reading_idx" : 191,
+      "ts_ms" : 62400000,
+      "input_glucose" : 173.0,
+      "smoothed_glucose" : 173.0
+    }, {
+      "reading_idx" : 192,
+      "ts_ms" : 62700000,
+      "input_glucose" : 182.0,
+      "smoothed_glucose" : 182.0
+    }, {
+      "reading_idx" : 193,
+      "ts_ms" : 63000000,
+      "input_glucose" : 190.0,
+      "smoothed_glucose" : 190.0
+    }, {
+      "reading_idx" : 194,
+      "ts_ms" : 63300000,
+      "input_glucose" : 193.0,
+      "smoothed_glucose" : 193.0
+    }, {
+      "reading_idx" : 195,
+      "ts_ms" : 63600000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.0
+    }, {
+      "reading_idx" : 196,
+      "ts_ms" : 63900000,
+      "input_glucose" : 203.0,
+      "smoothed_glucose" : 203.0
+    }, {
+      "reading_idx" : 197,
+      "ts_ms" : 64200000,
+      "input_glucose" : 204.0,
+      "smoothed_glucose" : 204.0
+    }, {
+      "reading_idx" : 198,
+      "ts_ms" : 64500000,
+      "input_glucose" : 204.0,
+      "smoothed_glucose" : 204.0
+    }, {
+      "reading_idx" : 199,
+      "ts_ms" : 64800000,
+      "input_glucose" : 205.0,
+      "smoothed_glucose" : 205.0
+    }, {
+      "reading_idx" : 200,
+      "ts_ms" : 65100000,
+      "input_glucose" : 205.0,
+      "smoothed_glucose" : 205.0
+    }, {
+      "reading_idx" : 201,
+      "ts_ms" : 65400000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 202,
+      "ts_ms" : 65700000,
+      "input_glucose" : 200.0,
+      "smoothed_glucose" : 200.0
+    }, {
+      "reading_idx" : 203,
+      "ts_ms" : 66000000,
+      "input_glucose" : 201.0,
+      "smoothed_glucose" : 201.0
+    }, {
+      "reading_idx" : 204,
+      "ts_ms" : 66300000,
+      "input_glucose" : 205.0,
+      "smoothed_glucose" : 205.0
+    }, {
+      "reading_idx" : 205,
+      "ts_ms" : 66600000,
+      "input_glucose" : 208.0,
+      "smoothed_glucose" : 208.0
+    }, {
+      "reading_idx" : 206,
+      "ts_ms" : 66900000,
+      "input_glucose" : 212.0,
+      "smoothed_glucose" : 212.0
+    }, {
+      "reading_idx" : 207,
+      "ts_ms" : 67200000,
+      "input_glucose" : 218.0,
+      "smoothed_glucose" : 218.0
+    }, {
+      "reading_idx" : 208,
+      "ts_ms" : 67500000,
+      "input_glucose" : 219.0,
+      "smoothed_glucose" : 219.0
+    }, {
+      "reading_idx" : 209,
+      "ts_ms" : 67800000,
+      "input_glucose" : 216.0,
+      "smoothed_glucose" : 216.0
+    }, {
+      "reading_idx" : 210,
+      "ts_ms" : 68100000,
+      "input_glucose" : 210.0,
+      "smoothed_glucose" : 210.0
+    }, {
+      "reading_idx" : 211,
+      "ts_ms" : 68400000,
+      "input_glucose" : 205.0,
+      "smoothed_glucose" : 205.0
+    }, {
+      "reading_idx" : 212,
+      "ts_ms" : 68700000,
+      "input_glucose" : 202.0,
+      "smoothed_glucose" : 202.0
+    }, {
+      "reading_idx" : 213,
+      "ts_ms" : 69000000,
+      "input_glucose" : 198.0,
+      "smoothed_glucose" : 198.0
+    }, {
+      "reading_idx" : 214,
+      "ts_ms" : 69300000,
+      "input_glucose" : 193.0,
+      "smoothed_glucose" : 193.0
+    }, {
+      "reading_idx" : 215,
+      "ts_ms" : 69600000,
+      "input_glucose" : 187.0,
+      "smoothed_glucose" : 187.0
+    }, {
+      "reading_idx" : 216,
+      "ts_ms" : 69900000,
+      "input_glucose" : 185.0,
+      "smoothed_glucose" : 185.0
+    }, {
+      "reading_idx" : 217,
+      "ts_ms" : 70200000,
+      "input_glucose" : 181.0,
+      "smoothed_glucose" : 181.0
+    }, {
+      "reading_idx" : 218,
+      "ts_ms" : 70500000,
+      "input_glucose" : 180.0,
+      "smoothed_glucose" : 180.0
+    }, {
+      "reading_idx" : 219,
+      "ts_ms" : 70800000,
+      "input_glucose" : 181.0,
+      "smoothed_glucose" : 181.0
+    }, {
+      "reading_idx" : 220,
+      "ts_ms" : 71100000,
+      "input_glucose" : 177.0,
+      "smoothed_glucose" : 177.0
+    }, {
+      "reading_idx" : 221,
+      "ts_ms" : 71400000,
+      "input_glucose" : 172.0,
+      "smoothed_glucose" : 172.0
+    }, {
+      "reading_idx" : 222,
+      "ts_ms" : 71700000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.0
+    }, {
+      "reading_idx" : 223,
+      "ts_ms" : 72000000,
+      "input_glucose" : 166.0,
+      "smoothed_glucose" : 166.0
+    }, {
+      "reading_idx" : 224,
+      "ts_ms" : 72300000,
+      "input_glucose" : 161.0,
+      "smoothed_glucose" : 161.0
+    }, {
+      "reading_idx" : 225,
+      "ts_ms" : 72600000,
+      "input_glucose" : 154.0,
+      "smoothed_glucose" : 154.0
+    }, {
+      "reading_idx" : 226,
+      "ts_ms" : 72900000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 150.0
+    }, {
+      "reading_idx" : 227,
+      "ts_ms" : 73200000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 228,
+      "ts_ms" : 73500000,
+      "input_glucose" : 140.0,
+      "smoothed_glucose" : 140.0
+    }, {
+      "reading_idx" : 229,
+      "ts_ms" : 73800000,
+      "input_glucose" : 136.0,
+      "smoothed_glucose" : 136.0
+    }, {
+      "reading_idx" : 230,
+      "ts_ms" : 74100000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 231,
+      "ts_ms" : 74400000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.0
+    }, {
+      "reading_idx" : 232,
+      "ts_ms" : 74700000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 130.0
+    }, {
+      "reading_idx" : 233,
+      "ts_ms" : 75000000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 129.0
+    }, {
+      "reading_idx" : 234,
+      "ts_ms" : 75300000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.0
+    }, {
+      "reading_idx" : 235,
+      "ts_ms" : 75600000,
+      "input_glucose" : 124.0,
+      "smoothed_glucose" : 124.0
+    }, {
+      "reading_idx" : 236,
+      "ts_ms" : 75900000,
+      "input_glucose" : 122.0,
+      "smoothed_glucose" : 122.0
+    }, {
+      "reading_idx" : 237,
+      "ts_ms" : 76200000,
+      "input_glucose" : 119.0,
+      "smoothed_glucose" : 119.0
+    }, {
+      "reading_idx" : 238,
+      "ts_ms" : 76500000,
+      "input_glucose" : 113.0,
+      "smoothed_glucose" : 113.0
+    }, {
+      "reading_idx" : 239,
+      "ts_ms" : 76800000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 240,
+      "ts_ms" : 77100000,
+      "input_glucose" : 106.0,
+      "smoothed_glucose" : 106.0
+    }, {
+      "reading_idx" : 241,
+      "ts_ms" : 77400000,
+      "input_glucose" : 103.0,
+      "smoothed_glucose" : 103.0
+    }, {
+      "reading_idx" : 242,
+      "ts_ms" : 77700000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 243,
+      "ts_ms" : 78000000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 96.0
+    }, {
+      "reading_idx" : 244,
+      "ts_ms" : 78300000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.0
+    }, {
+      "reading_idx" : 245,
+      "ts_ms" : 78600000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 246,
+      "ts_ms" : 78900000,
+      "input_glucose" : 93.0,
+      "smoothed_glucose" : 93.0
+    }, {
+      "reading_idx" : 247,
+      "ts_ms" : 79200000,
+      "input_glucose" : 94.0,
+      "smoothed_glucose" : 94.0
+    }, {
+      "reading_idx" : 248,
+      "ts_ms" : 79500000,
+      "input_glucose" : 93.0,
+      "smoothed_glucose" : 93.0
+    }, {
+      "reading_idx" : 249,
+      "ts_ms" : 79800000,
+      "input_glucose" : 92.0,
+      "smoothed_glucose" : 92.0
+    }, {
+      "reading_idx" : 250,
+      "ts_ms" : 80100000,
+      "input_glucose" : 87.0,
+      "smoothed_glucose" : 87.0
+    }, {
+      "reading_idx" : 251,
+      "ts_ms" : 80400000,
+      "input_glucose" : 87.0,
+      "smoothed_glucose" : 87.0
+    }, {
+      "reading_idx" : 252,
+      "ts_ms" : 80700000,
+      "input_glucose" : 81.0,
+      "smoothed_glucose" : 81.0
+    }, {
+      "reading_idx" : 253,
+      "ts_ms" : 81000000,
+      "input_glucose" : 81.0,
+      "smoothed_glucose" : 81.0
+    }, {
+      "reading_idx" : 254,
+      "ts_ms" : 81300000,
+      "input_glucose" : 79.0,
+      "smoothed_glucose" : 79.0
+    }, {
+      "reading_idx" : 255,
+      "ts_ms" : 81600000,
+      "input_glucose" : 79.0,
+      "smoothed_glucose" : 79.0
+    }, {
+      "reading_idx" : 256,
+      "ts_ms" : 81900000,
+      "input_glucose" : 81.0,
+      "smoothed_glucose" : 81.0
+    }, {
+      "reading_idx" : 257,
+      "ts_ms" : 82200000,
+      "input_glucose" : 84.0,
+      "smoothed_glucose" : 84.0
+    }, {
+      "reading_idx" : 258,
+      "ts_ms" : 82500000,
+      "input_glucose" : 90.0,
+      "smoothed_glucose" : 90.0
+    }, {
+      "reading_idx" : 259,
+      "ts_ms" : 82800000,
+      "input_glucose" : 95.0,
+      "smoothed_glucose" : 95.0
+    }, {
+      "reading_idx" : 260,
+      "ts_ms" : 83100000,
+      "input_glucose" : 97.0,
+      "smoothed_glucose" : 97.0
+    }, {
+      "reading_idx" : 261,
+      "ts_ms" : 83400000,
+      "input_glucose" : 96.0,
+      "smoothed_glucose" : 96.0
+    }, {
+      "reading_idx" : 262,
+      "ts_ms" : 83700000,
+      "input_glucose" : 101.0,
+      "smoothed_glucose" : 101.0
+    }, {
+      "reading_idx" : 263,
+      "ts_ms" : 84000000,
+      "input_glucose" : 107.0,
+      "smoothed_glucose" : 107.0
+    }, {
+      "reading_idx" : 264,
+      "ts_ms" : 84300000,
+      "input_glucose" : 114.0,
+      "smoothed_glucose" : 114.0
+    }, {
+      "reading_idx" : 265,
+      "ts_ms" : 84600000,
+      "input_glucose" : 120.0,
+      "smoothed_glucose" : 120.0
+    }, {
+      "reading_idx" : 266,
+      "ts_ms" : 84900000,
+      "input_glucose" : 127.0,
+      "smoothed_glucose" : 127.0
+    }, {
+      "reading_idx" : 267,
+      "ts_ms" : 85200000,
+      "input_glucose" : 129.0,
+      "smoothed_glucose" : 129.0
+    }, {
+      "reading_idx" : 268,
+      "ts_ms" : 85500000,
+      "input_glucose" : 130.0,
+      "smoothed_glucose" : 130.0
+    }, {
+      "reading_idx" : 269,
+      "ts_ms" : 85800000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 270,
+      "ts_ms" : 86100000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 271,
+      "ts_ms" : 86400000,
+      "input_glucose" : 133.0,
+      "smoothed_glucose" : 133.0
+    }, {
+      "reading_idx" : 272,
+      "ts_ms" : 86700000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 273,
+      "ts_ms" : 87000000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 274,
+      "ts_ms" : 87300000,
+      "input_glucose" : 134.0,
+      "smoothed_glucose" : 134.0
+    }, {
+      "reading_idx" : 275,
+      "ts_ms" : 87600000,
+      "input_glucose" : 137.0,
+      "smoothed_glucose" : 137.0
+    }, {
+      "reading_idx" : 276,
+      "ts_ms" : 87900000,
+      "input_glucose" : 143.0,
+      "smoothed_glucose" : 143.0
+    }, {
+      "reading_idx" : 277,
+      "ts_ms" : 88200000,
+      "input_glucose" : 150.0,
+      "smoothed_glucose" : 150.0
+    }, {
+      "reading_idx" : 278,
+      "ts_ms" : 88500000,
+      "input_glucose" : 156.0,
+      "smoothed_glucose" : 156.0
+    }, {
+      "reading_idx" : 279,
+      "ts_ms" : 88800000,
+      "input_glucose" : 164.0,
+      "smoothed_glucose" : 164.0
+    }, {
+      "reading_idx" : 280,
+      "ts_ms" : 89100000,
+      "input_glucose" : 169.0,
+      "smoothed_glucose" : 169.0
+    }, {
+      "reading_idx" : 281,
+      "ts_ms" : 89400000,
+      "input_glucose" : 174.0,
+      "smoothed_glucose" : 174.0
+    }, {
+      "reading_idx" : 282,
+      "ts_ms" : 89700000,
+      "input_glucose" : 179.0,
+      "smoothed_glucose" : 179.0
+    }, {
+      "reading_idx" : 283,
+      "ts_ms" : 90000000,
+      "input_glucose" : 180.0,
+      "smoothed_glucose" : 180.0
+    }, {
+      "reading_idx" : 284,
+      "ts_ms" : 90300000,
+      "input_glucose" : 183.0,
+      "smoothed_glucose" : 183.0
+    }, {
+      "reading_idx" : 285,
+      "ts_ms" : 90600000,
+      "input_glucose" : 186.0,
+      "smoothed_glucose" : 186.0
+    }, {
+      "reading_idx" : 286,
+      "ts_ms" : 90900000,
+      "input_glucose" : 188.0,
+      "smoothed_glucose" : 188.0
+    }, {
+      "reading_idx" : 287,
+      "ts_ms" : 91200000,
+      "input_glucose" : 180.0,
+      "smoothed_glucose" : 180.0
+    } ]
+  }
+}

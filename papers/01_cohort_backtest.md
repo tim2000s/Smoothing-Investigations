@@ -134,7 +134,7 @@ We pivoted the per-user metrics into one row per user with a column for each (me
 
 ### 3.5 SID (Sensor Integrity Detection) re-detection
 
-The Sensor Integrity Detection (SID) v6 logic looks for sustained glucose-deviation events that suggest a sensor problem (compression, calibration drift). We ran SID against each smoother's output to count surviving events. The headline numbers across the cohort are:
+SID v6 is a research-grade Sensor Integrity Detection layer maintained separately from AAPS and oref0 (it is not part of either production stack). The logic looks for sustained glucose-deviation events that suggest a sensor problem (compression, calibration drift). We ran SID against each smoother's output to count surviving events. The headline numbers across the cohort are:
 
 * AAPS Average: 4 948 SID events (bias to flag, since the leading edge is raw and noisy)
 * AAPS Exponential: 1 259 events (75 % fewer than AAPS Average)
@@ -182,7 +182,7 @@ The UKF absorbs 38 % of raw outliers at the leading edge — meaning its current
 ### 4.4 Limitations
 
 * The cohort is 19 users, not a clinical trial. We did not have ground-truth glucose values (no blood-glucose comparator), so noise/delay statistics are purely intrinsic-to-the-stream.
-* We evaluated only the *intrinsic* effect of each smoother on its own output. We did not run the full oref0 dose engine downstream of each smoother; we cannot say whether the 36 % reduction in SID events the UKF produces would translate to fewer (or more) clinical hypo/hyper events under closed-loop control.
+* We evaluated only the *intrinsic* effect of each smoother on its own output. We did not run the full oref0 dose engine downstream of each smoother; we cannot say whether the SID-event-count reductions under the adaptive smoothers (≈ 75 % under AAPS Exponential, ≈ 51 % under the UKF, both relative to AAPS Average) would translate to fewer or more clinical hypo/hyper events under closed-loop control. SID v6 is itself a research-grade detection layer maintained separately from production AAPS / oref0.
 * The AAPS Exponential and UKF window sizes (24 and 36 readings) are taken from the upstream code; they could be tuned per user but were not.
 * The UKF parameterisation comes from a development branch. The algorithm has not yet shipped in a stable AAPS release at the time of writing.
 * Online sliding-window evaluation rebuilds smoother state at every reading, which differs from production where some smoothers persist learned R across calls. We followed the production AAPS choice of fresh state per call (this is what the Kotlin source does on every loop tick) so the comparison reflects what production actually executes; it is *not* what a long-running stateful filter would look like.

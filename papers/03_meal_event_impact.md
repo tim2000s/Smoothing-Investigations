@@ -12,9 +12,9 @@ Meal-detection logic in oref0 (`autotune`, `autosens`, the SMB launch trigger) r
 
 ## 1. Introduction
 
-oref0's behaviour around meals is governed by three downstream consumers of the smoothed glucose stream. First, the SMB (Super-Micro-Bolus) launch trigger checks for sustained positive rate-of-change above a configurable threshold — once the AID sees a sustained rise in the smoothed CGM (in this analysis the threshold is 1.0 mg/dL/min on the smoothed first derivative), it can launch a small priming bolus to head off the post-meal peak. Second, `autotune` and `autosens` use the cumulative deviation of the smoothed CGM from oref0's predicted curve to learn whether the user's basal/ISF/CR are off; large meal-driven deviations flagged by the smoother contribute to the daily learning signal. Third, the Sensor Integrity Detection (SID) layer uses the smoothed deviation to flag potential sensor problems; meal-driven deviations should *not* trigger SID.
+oref0's behaviour around meals is shaped by two downstream consumers of the smoothed glucose stream. First, the SMB (Super-Micro-Bolus) launch trigger checks for sustained positive rate-of-change above a configurable threshold — once the AID sees a sustained rise in the smoothed CGM (in this analysis the threshold is 1.0 mg/dL/min on the smoothed first derivative), it can launch a small priming bolus to head off the post-meal peak. Second, `autotune` and `autosens` use the cumulative deviation of the smoothed CGM from oref0's predicted curve to learn whether the user's basal/ISF/CR are off; large meal-driven deviations flagged by the smoother contribute to the daily learning signal.
 
-The smoother sits in front of all three consumers. Its choice therefore changes how soon the SMB trigger fires, how strongly autotune learns from a given meal, and how much risk there is of a meal being mistaken for a sensor problem. This paper measures, on real meals from a live closed-loop instance, the operationally relevant response of each smoother.
+The smoother sits in front of both consumers. Its choice therefore changes how soon the SMB trigger fires and how strongly autotune learns from a given meal. This paper measures, on real meals from a live closed-loop instance, the operationally relevant response of each smoother.
 
 ## 2. Methods
 

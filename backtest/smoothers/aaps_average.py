@@ -91,7 +91,7 @@ class AapsAverage:
 
 
 def _avg_smooth(values: np.ndarray, ts_ms: np.ndarray, *,
-                instrument: bool, online: bool = False) -> SmootherResult:
+                instrument: bool) -> SmootherResult:
     n = len(values)
     out = values.astype("float64").copy()  # default: raw value
     smoothed_flag = np.zeros(n, dtype=bool)
@@ -99,13 +99,13 @@ def _avg_smooth(values: np.ndarray, ts_ms: np.ndarray, *,
     evenly_spaced_flag = np.zeros(n, dtype=bool)
 
     if n >= 5:
-        # Mirror the AAPS production loop: smooth every interior position
-        # except the very newest. In chronological array convention, the
-        # newest is index n-1; the production "newest" matches data[0] in
-        # newest-first AAPS lists (which is left unsmoothed). So we smooth
-        # i in [1, n-2] inclusive.
-        upper = n - 1 if not online else n - 1  # online: same range; the leading edge is at n-1 and stays raw
-        for i in range(1, upper):
+        # Mirror the AAPS production loop (`for i in lastIndex - 1 downTo 1`):
+        # smooth interior positions only. In chronological-array convention
+        # the newest reading is at index n-1 (= Kotlin's data[0], which the
+        # production loop never touches) and the oldest is at index 0
+        # (= Kotlin's data[lastIndex]). So we smooth chronological positions
+        # 1..n-2 inclusive.
+        for i in range(1, n - 1):
             v0, v1, v2 = values[i - 1], values[i], values[i + 1]
             in_range = (39 < v0 < 401) and (39 < v1 < 401) and (39 < v2 < 401)
             spacing_ok = (

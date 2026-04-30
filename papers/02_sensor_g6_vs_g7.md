@@ -29,7 +29,7 @@ We extracted readings from a Phase 2 sensor-tagging table (`oref_phase2_sites_v2
 * Both G6 and G7 in the same user (in disjoint time windows): User_D, User_I, User_J (3 users, 6 segments)
 * G6 only with overlapping unknown segment dropped: User_M (1 user, G6 segment only — the small G7 fragment was below the 14-day floor)
 
-Total: 13 (user, sensor) pairs across 9 unique users.
+Total: 13 (user, sensor) pairs across 10 unique users.
 
 For users with both sensors we did not require the segments to be contiguous; we only required the rows to be cleanly attributed to one sensor or the other. Where the same physical sensor was reported via two upload paths (e.g., Trio iOS and xDrip+ both polling the Dexcom transmitter), we used a deduplicated ingest that keeps a single representative row per timestamp.
 
@@ -41,12 +41,12 @@ For each (user, sensor) segment we ran each smoother in production-realistic onl
 
 For each (user, sensor, algorithm) trace we computed the following per-user metrics:
 
-* Noise reduction ratio (5–10 minute band)
-* Phase shift delay (minutes; negative = smoothed lags raw)
-* Cross-correlation lag (minutes)
-* Step-response delay
-* Hypoglycaemia event preservation (% of < 70 mg/dL events surviving)
-* Outlier absorption (% of single-reading > 30 mg/dL spikes attenuated by ≥ 50 %)
+* Noise reduction ratio (variance ratio of first differences)
+* Phase shift delay (Hilbert-phase difference in the 1–6 hour cycle band, in minutes; negative = smoothed lags raw)
+* Cross-correlation lag (minutes; sub-sample parabolic interpolation, search bounded to ± 60 min)
+* Step-response delay (raw rate ≥ 0.5 mg/dL/min sustained, total amplitude ≥ 15 mg/dL; smoothed crosses 0.35 mg/dL/min)
+* Hypoglycaemia event preservation (% of < 70 mg/dL events that the smoothed series also dips below 70 on within the same event window; events separated by ≥ 60 min)
+* Outlier absorption (% of single-step ≥ 40 mg/dL raw changes that the smoothed series does not exhibit at the same step)
 * Peak-event acceleration retention — a Phase-2-specific addition; see § 2.4.
 
 We aggregated the per-segment metrics to the median across users for each (sensor, algorithm) combination.
@@ -111,7 +111,7 @@ The per-sensor distribution boxplots show overlapping G6 and G7 distributions fo
 
 *Figure 3. Per-sensor distribution of hypoglycaemia-event preservation across users. AAPS Average is bound at 100 %; the adaptive smoothers show modest 3–4 percentage-point shifts between sensors.*
 
-*Figure 4. Per-sensor distribution of outlier absorption (% of single-reading > 30 mg/dL spikes attenuated by ≥ 50 %). G7 shows slightly higher absorption rates for both adaptive smoothers, consistent with G7 producing slightly more single-reading transmission spikes in our data.*
+*Figure 4. Per-sensor distribution of outlier absorption (% of single-step ≥ 40 mg/dL raw changes that the smoothed series does not exhibit at the same step). G7 shows slightly higher absorption rates for both adaptive smoothers, consistent with G7 producing slightly more single-step transmission artefacts in our data.*
 
 *Figure 5. Within-user G6 → G7 paired comparison for the three users with both sensors. Each panel shows one smoother metric with G6 on the left, G7 on the right, and lines connecting the same user's two values. Small magnitude of within-user deltas confirms that sensor type is a second-order modulator.*
 
@@ -127,7 +127,7 @@ The one metric where the smoothers differ substantially across sensors is peak-e
 
 ### 4.3 The User_J anomaly
 
-User_J's reversed sign on every G7 − G6 delta is striking. We re-checked the upstream data: User_J's G6 segment is 18 449 readings (≈ 9.4 weeks), the G7 segment is 28 993 readings (≈ 14.8 weeks), and the segments do not overlap in time. The dedup ingest used here keeps a single canonical row per (user, timestamp), so the same physical reading cannot appear in both segments. The reversal therefore reflects a real change between the two periods — but with three users we cannot say whether it is "what happens when User_J switches sensors" or "what happens to User_J in the second half of the year" or "what happens to User_J after a pump model change". Future work with a larger transition cohort and explicit metadata for confounders (pump model, season, insulin formulation) could attribute the change.
+User_J's reversed sign on every G7 − G6 delta is the largest within-user effect in this sub-cohort and warrants a check. The upstream data shows User_J's G6 segment is 18 449 readings spanning ≈ 72 days, the G7 segment is 28 993 readings spanning ≈ 109 days, and the segments do not overlap in time. The dedup ingest used here keeps a single canonical row per (user, timestamp), so the same physical reading cannot appear in both segments. The reversal therefore reflects a real change between the two periods. With three users this paper does not attribute it to a cause; possibilities include the seasonal shift, a pump model change, or small-N variance. A larger transition cohort with explicit metadata for confounders (pump model, season, insulin formulation) would be needed to disentangle these.
 
 ### 4.4 Phase delay independence
 

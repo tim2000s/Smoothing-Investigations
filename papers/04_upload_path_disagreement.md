@@ -26,7 +26,7 @@ This paper documents two specific cases on a live Nightscout instance to quantif
 
 ### 2.1 Source
 
-We pulled the full Nightscout `entries` JSON for two users from a live instance (`nstest3.crabdance.com`) operating closed-loop AID. We deliberately read the source JSON rather than a deduplicated database table so that both upload paths are visible.
+The two users analysed here come from the Phase 2 sensor-tagged cohort. The source data is per-user Nightscout `entries` JSON exported into `multi_user/data/site_*.json` from each user's own live AID-running Nightscout instance. We deliberately read the source JSON rather than a deduplicated database table so that both upload paths are visible.
 
 ### 2.2 Path classification
 
@@ -127,7 +127,7 @@ Pre-database dedup, applied at ingest time, is the cleanest implementation; per-
 
 * Two users on one Nightscout instance is a very small sample. The 100 % agreement for User_D and 99.90 % for User_L are characteristic of these specific upload-path combinations; a different combination (e.g., Loop iOS vs xDrip+ on a G6) might show different agreement statistics.
 * We did not test paths that involve calibration — for example, an xDrip+ instance that applies user calibration on top of the Dexcom value would disagree systematically with a Dexcom-native path that uses the factory calibration.
-* The 150 ms pairing tolerance was chosen pragmatically; a larger tolerance would pair more rows but at the cost of pairing readings across grid cells in fast-changing intervals, which would inflate the disagreement statistics by including comparisons of physically different sensor samples.
+* The 150-second pairing tolerance was chosen pragmatically; a larger tolerance would pair more rows but at the cost of pairing readings across grid cells in fast-changing intervals, which would inflate the disagreement statistics by including comparisons of physically different sensor samples.
 
 ## 5. Conclusion
 

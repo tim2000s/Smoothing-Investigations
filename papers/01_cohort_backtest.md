@@ -42,25 +42,25 @@ All 15 parity tests pass before any cohort run.
 
 ### 2.2 Cohort selection
 
-The cohort consists of 19 users selected from a research database of oref0-style closed-loop sessions. Three source tables (`oref_v5`, `oref_v6`, `oref_v7`) correspond to different oref0 release lines. For each user we required at least 90 days of CGM data and a 5-minute grid density of ≥ 95 % of expected readings. We extracted the most recent 90 days per user (≈ 25 000 readings each) and resampled onto a strict 5-minute grid using the in-repo loader (`backtest.io.load_user`).
+The cohort consists of 19 users selected from a research database of oref0-style closed-loop sessions. Three source tables (`oref_v5`, `oref_v6`, `oref_v7`) correspond to different oref0 release lines. The cohort selector requires at least 90 days of CGM data and a 5-minute grid density of ≥ 95 % of expected readings. We extracted up to the most recent 90 days per user (median 21 033 present readings per user, range 2 733 – 25 312) and resampled onto a strict 5-minute grid using the in-repo loader (`backtest.io.load_user`).
 
 ### 2.3 Online sliding-window evaluation
 
-For every (user, algorithm) pair, we ran the smoother in online mode: at each chronological index t we instantiated a fresh smoother, fed it the trailing W readings, and recorded the leading-edge smoothed value as the smoother's output at t. Per-step trace columns (input glucose, output glucose, plus filter-internal quantities for the UKF) were written to Parquet. Across the cohort this produced 57 trace files (19 users × 3 algorithms) totalling ≈ 480 000 reading-decisions.
+For every (user, algorithm) pair, we ran the smoother in online mode: at each chronological index t we instantiated a fresh smoother, fed it the trailing W readings, and recorded the leading-edge smoothed value as the smoother's output at t. Per-step trace columns (input glucose, output glucose, plus filter-internal quantities for the UKF) were written to Parquet. Across the cohort this produced 57 trace files (19 users × 3 algorithms) totalling ≈ 370 000 reading-decisions per algorithm (≈ 1.1 million in aggregate).
 
 ### 2.4 Per-user metrics
 
-For each (user, algorithm) trace we computed the following metrics, producing one row per pair in `reports/per_user_metrics.csv`:
+For each (user, algorithm) trace we computed the following metrics, producing one row per pair in `reports/per_user_metrics.csv`. Exact definitions are in `backtest/metrics.py`.
 
-* **Cross-correlation lag** (`xcorr_lag_min`) — argmax of the cross-correlation between raw and smoothed series, in minutes; a positive value means the smoothed series lags the raw.
-* **Step-response delay** (`step_response_median_delay_min`) — median delay between a ≥ 20 mg/dL change in the raw and the half-amplitude crossing in the smoothed.
-* **Phase-shift delay** (`phase_shift_delay_min`) — phase of the smoother's transfer function at the dominant cycling frequency, expressed in minutes.
-* **Noise reduction ratio** (`noise_reduction_ratio`) — ratio of high-frequency power in the smoothed to the raw (5–10 minute band).
-* **Attenuation in the signal band** (`attenuation_signal_band`) — ratio of low-frequency power in the smoothed to the raw (≥ 30-minute band); ideally ≈ 1, meaning real glucose dynamics pass through.
-* **Hypoglycaemia preservation** (`hypo_preserved_pct`) — percentage of independent < 70 mg/dL events in the raw that remain ≤ 70 mg/dL in the smoothed.
-* **Hypo amplitude delta** (`hypo_amp_delta`) — median (smoothed nadir − raw nadir) across hypo events.
-* **Peak preservation** (`peak_preserved_pct`) — same as hypo, but for > 220 mg/dL excursions.
-* **Outlier absorption** (`outlier_absorbed_pct`) — percentage of single-reading raw spikes (> 30 mg/dL deviation from a 25-min local median) that the smoother attenuates by ≥ 50 %.
+* **Cross-correlation lag** (`xcorr_lag_min`) — argmax of the cross-correlation between raw and smoothed (with sub-sample parabolic interpolation around the peak), in minutes; a positive value means the smoothed series lags the raw. Search bounded to ± 60 min.
+* **Step-response delay** (`step_response_median_delay_min`) — median time between (a) the raw rate of change first crossing 0.5 mg/dL/min at the start of a sustained event whose total amplitude reaches ≥ 15 mg/dL, and (b) the smoothed rate of change crossing the same threshold scaled by 0.7 (= 0.35 mg/dL/min). The 0.7 factor is applied because smoothing dampens the rate; a strict same-threshold crossing under-counts smoother responses. A negative delay means the smoothed crosses 0.35 mg/dL/min before the raw crosses 0.5 mg/dL/min.
+* **Phase-shift delay** (`phase_shift_delay_min`) — median Hilbert-phase difference between band-pass-filtered (1–6 hour cycle) raw and smoothed series, scaled at the band centre frequency (3-hour cycle) and expressed in minutes.
+* **Noise reduction ratio** (`noise_reduction_ratio`) — variance ratio of the first differences of the two series: `var(diff(smoothed)) / var(diff(raw))`. First-difference variance is dominated by 5-minute step-to-step changes, which are the high-frequency content. A ratio < 1 means the smoother reduces step-to-step noise.
+* **Attenuation in the signal band** (`attenuation_signal_band`) — power-spectral-density ratio in the 1–6 hour cycle band (where physiological glucose dynamics live). 1.0 = no attenuation, < 1 = real signal dampened.
+* **Hypoglycaemia preservation** (`hypo_preserved_pct`) — percentage of independent < 70 mg/dL events in the raw (separated by ≥ 60 min of in-range glucose) that the smoothed series also dips below 70 mg/dL on within the same event window.
+* **Hypo amplitude delta** (`hypo_amp_delta`) — median (smoothed nadir − raw nadir) across preserved hypo events.
+* **Peak preservation** (`peak_preserved_pct`) — same as hypo, but for > 180 mg/dL excursions.
+* **Outlier absorption** (`outlier_absorbed_pct`) — percentage of single-step (one-grid-step, i.e. 5-minute) raw changes ≥ 40 mg/dL that the smoothed series does not also exhibit at the same step (i.e. the smoothed first-difference at that step falls below 40 mg/dL).
 
 We also produced spectrum-domain transfer-function estimates and per-step modification deltas (the change a smoother applies relative to the raw input, broken down into predict / update / RTS components for the UKF).
 
@@ -83,16 +83,16 @@ The following table reports the cohort median (with the 25th–75th percentile r
 | Step-response delay (min) | −0.75 (−0.94 – −0.63) | 0.31 (0.21 – 0.41) | −0.25 (−0.29 – −0.19) |
 | Hypo events preserved (%) | 100.0 (100.0 – 100.0) | 92.9 (87.5 – 95.1) | 96.6 (92.2 – 97.7) |
 | Median hypo amplitude delta (mg/dL) | 0.00 (0.00 – 0.00) | 0.00 (−0.15 – 0.00) | −0.18 (−0.35 – −0.01) |
-| Peak (> 220 mg/dL) preserved (%) | 100.0 (100.0 – 100.0) | 98.4 (96.1 – 99.5) | 99.5 (98.5 – 100.0) |
+| Peak (> 180 mg/dL) preserved (%) | 100.0 (100.0 – 100.0) | 98.4 (96.1 – 99.5) | 99.5 (98.5 – 100.0) |
 | Outlier absorption (%) | 0.0 (0.0 – 0.0) | 29.7 (20.3 – 48.9) | 37.8 (29.2 – 59.5) |
 
 A few features stand out.
 
 **AAPS Average is operationally a no-op at the leading edge.** Every metric reduces to its raw-pass-through value: noise ratio 1.0, phase shift 0, no outlier absorption, 100 % hypo preservation. This is not a flaw in the algorithm; it is the consequence of the production design where the dose engine reads the raw value for the current reading and the smoother only retroactively smooths older readings. The smoother does affect rate-of-change calculations (because the AID may compute slope using smoothed t − 1 and raw t), but the current-reading value driving the next bolus or basal adjustment is never modified.
 
-**AAPS Exponential is the most aggressive smoother.** It applies the largest noise reduction (16 % cohort median), but at a cost: 1.7-minute phase delay, 7 % of low-glucose events lost (the smoother lifts the nadir above 70 mg/dL or shifts the timing), and a 1.6-minute step-response lag.
+**AAPS Exponential applies the larger phase delay.** It reduces step-to-step noise by 16 % (cohort median) at a cost of a 1.7-minute phase delay, with 7 % of low-glucose events not preserved (the smoother lifts the nadir above 70 mg/dL or shifts the timing) and a step-response that crosses the smoothed-rate threshold 0.31 minutes after the raw rate crossing — the only smoother in the cohort with a positive step-response value.
 
-**The UKF dominates the noise/delay frontier.** It achieves slightly more aggressive noise reduction (18 % cohort median) than AAPS Exponential at half the phase delay (0.85 min). Step-response delay is *negative* (median −0.25 min), meaning the UKF's rate-of-change estimate predicts crossings of large changes slightly faster than they actually occur — a feature of the rate-state and the q-inflation that ramps the rate variance during sustained changes.
+**The UKF achieves slightly more noise reduction at less than half the phase delay.** It reduces step-to-step noise by 18 % (cohort median) versus AAPS Exponential's 16 %, with phase delay 0.85 minutes versus AAPS Exponential's 1.7 minutes. The step-response value (median −0.25 min) is negative because the metric uses a smoothed-rate threshold of 0.35 mg/dL/min while measuring against a raw-rate threshold of 0.5 mg/dL/min: the smoothed rate, fed by the UKF's rate-state, crosses 0.35 mg/dL/min before the raw single-step rate crosses 0.5 mg/dL/min in 50 % of large events. AAPS Average shows a comparable −0.75 min on the same metric for the same threshold-asymmetry reason. This number should not be read as the UKF "predicting" the future of the raw stream.
 
 The pairwise Wilcoxon tests reject the null of no median difference at Holm-corrected p < 0.001 for every metric and every pair where the two smoothers differ on the metric (so AAPS Average is significantly different from both other smoothers on noise, phase, and outlier absorption; AAPS Exponential and UKF differ significantly on phase, hypo preservation, and outlier absorption). The full table is in `reports/cross_smoother_tests.csv`.
 
@@ -110,19 +110,19 @@ For the UKF we can decompose the smoothing into three stages and report the per-
 
 | Stage | Median |Δ| (mg/dL) | Frac. of readings changed |
 |---|---:|---:|
-| Predict (sigma-point time-update) | 3.5 | 100 % |
-| Update (Kalman correction towards measurement) | 2.3 | 100 % |
-| RTS (backward smoother) | 0.0 | 0.2 % |
+| Predict (sigma-point time-update) | 2.4 | 100 % |
+| Update (Kalman correction towards measurement) | 1.6 | 100 % |
+| RTS (backward smoother) | 0.0 | 0.01 % |
 
 *Figure 3. Per-step modification stack: median absolute Δ (mg/dL) at each pipeline stage, broken out by smoother. For AAPS Average and AAPS Exponential the only stage is the filter; for the UKF the stack is predict / update / RTS. RTS contributes essentially zero at the leading edge.*
 
 The RTS stage applies effectively zero modification at the leading edge — confirming the algorithmic property: RTS revises older positions in the window but leaves the newest state at its forward value. This is *correct* for a real-time AID — it would be incoherent for the smoother to retroactively rewrite the value the dose engine already used. But it does mean that the RTS code path, which is the most computationally distinctive part of the implementation, contributes nothing to the current-reading output. Its effect is on the historical curve the AID can look back at.
 
-For the AAPS Exponential the leading-edge filter applies a median |Δ| of 2.0 mg/dL and changes 86 % of readings.
+For AAPS Exponential the leading-edge filter applies a median |Δ| of 1.0 mg/dL and changes 78 % of readings (cohort medians).
 
 ### 3.3.1 Event-aligned visual comparison
 
-To visualise smoother behaviour against real data, we event-aligned the cohort traces around two reference event types: low-variance "calm" 6-hour windows where the raw glucose stays within a narrow band, and "rate-rise" events where a sustained ≥ 0.5 mg/dL/min rise is observed.
+To visualise smoother behaviour against real data, we event-aligned the cohort traces around two reference event types: low-variance "calm" 60-minute windows (raw glucose in [70, 180] mg/dL with |raw rate| < 0.3 mg/dL/min sustained for the full window), and "rate-rise" events (raw rate ≥ 0.5 mg/dL/min sustained for ≥ 15 minutes). The deviation figures below have three panels — (smoothed − raw) glucose, (smoothed − raw) first derivative, and (smoothed − raw) second derivative — but only the glucose panel is described in the captions for brevity.
 
 *Figure 4. Calm-window deviation envelopes: median (line) and IQR (shaded) of (smoothed − raw) across calm windows for each smoother. AAPS Average's envelope sits exactly on zero (no leading-edge effect). AAPS Exponential and the UKF show small bounded deviations during quiet periods.*
 
@@ -130,7 +130,7 @@ To visualise smoother behaviour against real data, we event-aligned the cohort t
 
 ### 3.4 Per-user phenotypes
 
-We clustered users on their smoother-independent characteristics — coefficient of variation, time-in-range, mean rate-of-change, fraction of readings above 220 mg/dL — and computed silhouette scores for k = 2 and k = 3. The k = 2 silhouette is 0.30, below the 0.4 threshold normally used to declare meaningful structure. This means we found no clear phenotypic split (e.g., "high CV users get more benefit from UKF"); the smoother ranking is consistent across user types and the per-metric distributions are similar within each cluster. We therefore do not recommend a regime-dependent smoother choice.
+We pivoted the per-user metrics into one row per user with a column for each (metric × algorithm) pair (so each user is described by their full multi-smoother profile), z-scored the columns, and ran KMeans clustering for k ∈ {2, 3, 4}. The best silhouette across k was 0.30, below the 0.4 threshold typically used to declare meaningful cluster structure. We therefore did not assign users to phenotypes for downstream analysis; the smoother ranking is consistent across the cohort and we do not recommend a regime-dependent smoother choice.
 
 ### 3.5 SID (Sensor Integrity Detection) re-detection
 

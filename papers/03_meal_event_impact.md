@@ -24,7 +24,7 @@ We pulled CGM and treatment data from a Nightscout instance (`nstest3.crabdance.
 
 ### 2.2 Meal window construction
 
-For each meal event we built a 4-hour window (60 minutes before to 180 minutes after). The CGM stream was resampled onto a strict 5-minute grid relative to the meal time, with NaN where readings were missing. We then ran each of the three smoothers (AAPS Average, AAPS Exponential, UKF) in production-realistic online sliding-window mode on the full available CGM history up to and including the meal window — mirroring how the live AID would have called the smoother during the meal, with each leading-edge value computed from a fresh smoother instance over the trailing 24 (AAPS Exp) or 36 (UKF) readings.
+For each meal event we built a 4-hour window (60 minutes before to 180 minutes after). The CGM stream was resampled onto a strict 5-minute grid relative to the meal time, with NaN where readings were missing. We then ran each of the three smoothers (AAPS Average, AAPS Exponential, UKF) in production-realistic online sliding-window mode on the full available CGM history up to and including the meal window — mirroring how the live AID would have called the smoother during the meal, with each leading-edge value computed from a fresh smoother instance over the trailing 24 readings (AAPS Exp) or the configured UKF window (24–48 readings; 36 in this analysis).
 
 ### 2.3 Per-meal metrics
 

@@ -8,7 +8,7 @@
 
 The Adaptive Unscented Kalman Filter (UKF) with Rauch–Tung–Striebel (RTS) backward sweep is currently in an AAPS development branch and has not shipped in a stable AAPS or Trio release. This paper asks whether the signal-level evidence supports adding it. We re-implemented the UKF alongside the two production smoothers — the AAPS three-point central-window average (`AvgSmoothingPlugin`) and the AAPS dual-order exponential (`ExponentialSmoothingPlugin`, TSUNAMI) — validated each Python port against the upstream Kotlin source to bit-exactness or sub-mg/dL tolerance, and ran all three across a 19-user, 90-day cohort in *online sliding-window mode*: at every chronological reading t the smoother is asked the value the AID dose engine would see at decision time t.
 
-On every metric where AAPS Exponential improves on raw, the UKF improves further. It reduces step-to-step noise by 18% (versus 16% for AAPS Exponential) with a phase delay of 0.85 minutes (versus 1.7 minutes — roughly half the lag). It preserves 96.6% of raw low-glucose events at the leading edge versus 92.9% for AAPS Exponential, absorbs 38% of large single-reading outliers versus 30%, and on a per-user paired comparison achieves at least as much noise reduction at smaller phase delay for 14 of 19 users. Neither adaptive smoother dampens real multi-hour glucose dynamics. The one metric where AAPS Exponential outperforms the UKF is sensor-integrity alert count (1 259 versus 2 416), a consequence of AAPS Exponential's larger lag making the smoothed trace less sensitive to genuine glucose excursions — whether this represents fewer false alarms or more missed real sensor problems cannot be determined without ground-truth labels.
+On every metric where AAPS Exponential improves on raw, the UKF improves further. It reduces step-to-step noise by 18% (versus 16% for AAPS Exponential) with a phase delay of 0.85 minutes (versus 1.7 minutes — roughly half the lag). It preserves 96.6% of raw low-glucose events at the leading edge versus 92.9% for AAPS Exponential, absorbs 38% of large single-reading outliers versus 30%, and on a per-user paired comparison achieves at least as much noise reduction at smaller phase delay for 14 of 19 users. Neither adaptive smoother dampens real multi-hour glucose dynamics. The one metric where AAPS Exponential outperforms the UKF is sensor-integrity alert count (1,711 versus 3,263), a consequence of AAPS Exponential's larger lag making the smoothed trace less sensitive to genuine glucose excursions — whether this represents fewer false alarms or more missed real sensor problems cannot be determined without ground-truth labels.
 
 AAPS Average produces a smoothed leading-edge value for neither the current reading nor recent readings in time for the current dose decision; the dose engine reads raw at decision time. Its role is in cleaning the historical curve and damping the slope calculation.
 
@@ -142,9 +142,9 @@ We pivoted the per-user metrics into one row per user with a column for each (me
 
 SID v6 is a research-grade Sensor Integrity Detection layer maintained separately from AAPS and oref0 (it is not part of either production stack). The logic looks for sustained glucose-deviation events that suggest a sensor problem (compression, calibration drift). We ran SID against each smoother's output to count surviving events. The headline numbers across the cohort are:
 
-* AAPS Average: 4 948 SID events (bias to flag, since the leading edge is raw and noisy)
-* AAPS Exponential: 1 259 events (75 % fewer than AAPS Average)
-* UKF: 2 416 events (51 % fewer than AAPS Average)
+* AAPS Average: 4,948 SID events (bias to flag, since the leading edge is raw and noisy)
+* AAPS Exponential: 1,711 events (65 % fewer than AAPS Average)
+* UKF: 3,263 events (34 % fewer than AAPS Average)
 
 *Figure 6. Per-user SID-survival vs noise reduction for each smoother. Lower-left is fewer SID events at greater noise reduction. AAPS Exponential lies lowest on event count, the UKF in between, AAPS Average highest (the noisy upper-right corner).*
 
@@ -188,7 +188,7 @@ The UKF absorbs 38 % of raw outliers at the leading edge — meaning its current
 ### 4.4 Limitations
 
 * The cohort is 19 users, not a clinical trial. We did not have ground-truth glucose values (no blood-glucose comparator), so noise/delay statistics are purely intrinsic-to-the-stream.
-* We evaluated only the *intrinsic* effect of each smoother on its own output. We did not run the full oref0 dose engine downstream of each smoother; we cannot say whether the SID-event-count reductions under the adaptive smoothers (≈ 75 % under AAPS Exponential, ≈ 51 % under the UKF, both relative to AAPS Average) would translate to fewer or more clinical hypo/hyper events under closed-loop control. SID v6 is itself a research-grade detection layer maintained separately from production AAPS / oref0.
+* We evaluated only the *intrinsic* effect of each smoother on its own output. We did not run the full oref0 dose engine downstream of each smoother; we cannot say whether the SID-event-count reductions under the adaptive smoothers (≈ 65 % under AAPS Exponential, ≈ 34 % under the UKF, both relative to AAPS Average) would translate to fewer or more clinical hypo/hyper events under closed-loop control. SID v6 is itself a research-grade detection layer maintained separately from production AAPS / oref0.
 * The AAPS Exponential and UKF window sizes (24 and 36 readings) are taken from the upstream code; they could be tuned per user but were not.
 * The UKF parameterisation comes from a development branch. The algorithm has not yet shipped in a stable AAPS release at the time of writing.
 * Online sliding-window evaluation rebuilds smoother state at every reading, which differs from production where some smoothers persist learned R across calls. We followed the production AAPS choice of fresh state per call (this is what the Kotlin source does on every loop tick) so the comparison reflects what production actually executes; it is *not* what a long-running stateful filter would look like.

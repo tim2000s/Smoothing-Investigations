@@ -479,7 +479,7 @@ class UKF:
                 if row is not None:
                     rts_val = max(smoothed_results[i - start_idx], 39.0)
                     row["output_glucose"] = rts_val
-                    row["is_rts"] = (i != end_idx)
+                    row["is_rts"] = (i != start_idx)
 
 
 # ----------------------------------------------------------------------

@@ -87,6 +87,7 @@ User_D's two paths agree exactly on every paired entry. The `xDrip+` and `Trio i
 User_L's two paths agree exactly on 99.90 % of paired entries (51 802 of 51 856). Of the 54 disagreements:
 
 * 21 are the Dexcom low-end sentinel quirk: the Share2 path reports `39` mg/dL where the native G7 path reports `40` mg/dL. Both indicate "below the LOW range"; this is an encoding choice by the bridge, not a different sensor reading.
+* 6 differ by 1–5 mg/dL. These are pairs that fall within the ±5 mg/dL column in the table but not within the exact-agreement column; all have timestamp jitter in the 2–10 s range, consistent with minor rounding or encoding differences between upload paths.
 * 27 differ by > 5 mg/dL. Inspecting the timestamps, these correspond to rows where the timestamp jitter is at the 60–120 s end of the range, suggesting the two paths captured the underlying sensor at slightly different sample times. The maximum `sgv` Δ of 87 mg/dL is one such row — a fast-rising glucose sampled 2 minutes apart at very different points in the trajectory.
 
 The mean timestamp jitter is 7 seconds — well below the 5-minute grid spacing — so when the data is resampled onto a 5-minute grid both paths land in the same grid cell for 99.94 % of pairs.

@@ -117,7 +117,7 @@ def build_figure(out_path: str):
     fig = plt.figure(figsize=(14, 11))
     fig.patch.set_facecolor("white")
 
-    # 4 columns, each column = 2 rows (main + deviation), using height_ratios
+    # 2 columns, each column = 4 rows (main + deviation × 2 panels), using height_ratios
     gs = GridSpec(
         4, 2,
         figure=fig,
@@ -216,9 +216,8 @@ def build_figure(out_path: str):
         elif idx == 2:  # spike
             ax_main.set_ylim(20, 225)
             dip_i = np.argmin(raw)     # 39 sentinel reading
-            spike_i = dip_i + 1        # 170 rebound reading
+            spike_i = min(dip_i + 1, len(raw) - 1)   # 170 rebound reading
             # Absorption: how much of the raw swing does each smoother show?
-            pre_baseline = raw[dip_i - 2]  # stable glucose just before
             exp_swing  = exp[spike_i]  - exp[dip_i]
             ukf_swing  = ukf[spike_i]  - ukf[dip_i]
             raw_swing  = raw[spike_i]  - raw[dip_i]

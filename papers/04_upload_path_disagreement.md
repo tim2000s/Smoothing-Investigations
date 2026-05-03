@@ -22,6 +22,8 @@ For research that loads Nightscout `entries` and groups them by user and time, t
 
 This paper documents two specific cases on a live Nightscout instance to quantify the effect.
 
+This deduplication work underpins the trustworthiness of the smoother comparisons in Papers 1–3 of this series. The per-sensor analysis in Paper 2 depends on sensor attribution being reliable: if the same physical reading appears under two device strings, it can be miscounted as G6 evidence, G7 evidence, or both, corrupting the per-sensor cohort. The cohort metrics in Paper 1 depend on each user's reading count being correct: a user with dual-upload paths and no dedup contributes roughly twice the statistical weight they should, biasing cohort medians and widening the apparent inter-user spread. Without the dedup protocol described here, neither the per-sensor comparison nor the per-user metric table can be trusted as a basis for the conclusion that the UKF is worth adding to AAPS and Trio.
+
 ## 2. Methods
 
 ### 2.1 Source

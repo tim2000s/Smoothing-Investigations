@@ -30,6 +30,7 @@ def render(fname, title, subtitle, col_labels, rows, best_cells, label_w=0.30):
     tbl.auto_set_font_size(False)
     tbl.set_fontsize(12.5)
     tbl.scale(1, 1.9)
+    multiline_hdr = any("\n" in str(lbl) for lbl in col_labels)
     val_w = (1.0 - label_w) / (ncol - 1)
     widths = [label_w] + [val_w] * (ncol - 1)
     for (r, c), cell in tbl.get_celld().items():
@@ -39,6 +40,9 @@ def render(fname, title, subtitle, col_labels, rows, best_cells, label_w=0.30):
         if r == 0:
             cell.set_facecolor(HDRBG)
             cell.set_text_props(color="white", fontweight="bold")
+            if multiline_hdr:
+                cell.set_height(cell.get_height() * 1.75)
+                cell.set_fontsize(11.5)
         else:
             data_r = r - 1
             base = "white" if data_r % 2 == 0 else ALTBG
@@ -67,8 +71,8 @@ def render(fname, title, subtitle, col_labels, rows, best_cells, label_w=0.30):
 render(
     "table1_full_cohort.jpg",
     "Smoother comparison  ·  all 183 users, full history",
-    "oref_v5+v6+v7 · 10.9M SGVs · online sliding-window mode · median per user.  "
-    "Green = best (excluding AAPS Average, a leading-edge no-op).",
+    "n = 8,071,627 analysed readings · 183 users · online sliding-window · median per user.  "
+    "Green = best (excl. AAPS Average, a no-op).",
     ["Metric", "AAPS Average", "AAPS Exponential", "Adaptive UKF"],
     [
         ["Noise reduction",       "0%  (no-op)", "15.6%",    "17.0%"],
@@ -86,7 +90,8 @@ render(
     "table2_ukf_by_platform.jpg",
     "Adaptive UKF  ·  consistency across platforms",
     "Median UKF metrics per source table.  v5 = Trio · v6 = AndroidAPS (pre-DynISF) · v7 = OpenAPS/oref0.",
-    ["Metric", "oref_v5  (n=29)", "oref_v6  (n=44)", "oref_v7  (n=110)"],
+    ["Metric", "oref_v5\n29 users · 2.21M pts", "oref_v6\n44 users · 1.27M pts",
+     "oref_v7\n110 users · 4.60M pts"],
     [
         ["Noise reduction",       "23.0%",    "12.9%",    "16.6%"],
         ["Phase delay",           "1.08 min", "0.85 min", "0.76 min"],
@@ -101,9 +106,9 @@ render(
 render(
     "table3_sensor_g6_g7.jpg",
     "Sensor-stratified  ·  Dexcom G6 vs G7",
-    "Sensor-tagged cohort (oref_phase2_sites_v2) · 9 G6 + 6 G7 users · median per user.  "
-    "Green = Adaptive UKF beats AAPS Exponential.",
-    ["Metric", "G6 · Exp", "G6 · UKF", "G7 · Exp", "G7 · UKF"],
+    "Sensor-tagged cohort (oref_phase2_sites_v2) · median per user · n per column · "
+    "Green = UKF beats AAPS Exponential.",
+    ["Metric", "G6 · Exp\n9 users", "G6 · UKF\n238k pts", "G7 · Exp\n4 users", "G7 · UKF\n134k pts"],
     [
         ["Noise reduction",      "20.6%",    "21.7%",    "26.9%",    "26.1%"],
         ["Phase delay",          "2.02 min", "1.04 min", "2.04 min", "1.09 min"],

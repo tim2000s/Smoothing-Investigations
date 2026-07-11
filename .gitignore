@@ -73,3 +73,6 @@ multi_user/report/
 multi_user/run_analysis.py
 multi_user/sensor_analysis.py
 multi_user/sites.json
+
+# At-scale full-cohort run traces (large, reproducible)
+runs_full/

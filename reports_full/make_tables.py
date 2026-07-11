@@ -88,10 +88,10 @@ render(
 # ---- Table 2: per-platform UKF breakdown ----
 render(
     "table2_ukf_by_platform.jpg",
-    "Adaptive UKF  ·  consistency across platforms",
-    "Median UKF metrics per source table.  v5 = Trio · v6 = AndroidAPS (pre-DynISF) · v7 = OpenAPS/oref0.",
-    ["Metric", "oref_v5\n29 users · 2.21M pts", "oref_v6\n44 users · 1.27M pts",
-     "oref_v7\n110 users · 4.60M pts"],
+    "Adaptive UKF  ·  consistency across AID systems",
+    "Median UKF metrics per AID system.  AndroidAPS cohort is the pre-DynISF era.",
+    ["Metric", "Trio\n29 users · 2.21M pts", "AndroidAPS\n44 users · 1.27M pts",
+     "OpenAPS\n110 users · 4.60M pts"],
     [
         ["Noise reduction",       "23.0%",    "12.9%",    "16.6%"],
         ["Phase delay",           "1.08 min", "0.85 min", "0.76 min"],
@@ -106,7 +106,7 @@ render(
 render(
     "table3_sensor_g6_g7.jpg",
     "Sensor-stratified  ·  Dexcom G6 vs G7",
-    "Sensor-tagged cohort (oref_phase2_sites_v2) · median per user · n per column · "
+    "Sensor-tagged cohort · median per user · n per column · "
     "Green = UKF beats AAPS Exponential.",
     ["Metric", "G6 · Exp\n9 users", "G6 · UKF\n238k pts", "G7 · Exp\n4 users", "G7 · UKF\n134k pts"],
     [

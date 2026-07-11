@@ -9,8 +9,8 @@ the paper's conclusion holds at population scale.
 
 ## Method
 
-- Cohort: `backtest/cohort_full.json` — all **183 users** across `oref_v5`
-  (29), `oref_v6` (44), `oref_v7` (110), built by `backtest/build_full_cohort.py`
+- Cohort: `backtest/cohort_full.json` — all **183 users** across Trio (29),
+  AndroidAPS (44), OpenAPS (110), built by `backtest/build_full_cohort.py`
   (no density/cadence/span filtering; skips only users with < ~1 day of data).
   **10.9M SGV rows.**
 - Run: `python -m backtest.cli.run_backtest --cohort backtest/cohort_full.json
@@ -26,15 +26,18 @@ the paper's conclusion holds at population scale.
 strict 5-minute grid and gap handling — these are the points actually run
 through each smoother.
 
-| Source | n users | n data points |
+| AID system | n users | n data points |
 |---|---:|---:|
-| oref_v5 (Trio) | 29 | 2,205,663 |
-| oref_v6 (AndroidAPS) | 44 | 1,265,074 |
-| oref_v7 (OpenAPS/oref0) | 110 | 4,600,890 |
+| Trio | 29 | 2,205,663 |
+| AndroidAPS | 44 | 1,265,074 |
+| OpenAPS | 110 | 4,600,890 |
 | **Total** | **183** | **8,071,627** |
 
-Sensor cohort (`oref_phase2_sites_v2`, after ≥14d / ≥50% density filter):
-G6 = 9 users / 238,491 pts · G7 = 4 users / 133,917 pts (6 G7 tagged, 2 dropped).
+AID system ↔ source table: Trio = `oref_v5`, AndroidAPS = `oref_v6` (pre-DynISF era),
+OpenAPS = `oref_v7`.
+
+Sensor cohort (after ≥14d / ≥50% density filter): G6 = 9 users / 238,491 pts ·
+G7 = 4 users / 133,917 pts (6 G7 tagged, 2 dropped).
 
 ## Headline — median per user, all 183 users
 
@@ -52,8 +55,8 @@ source platforms (see `figs/table2_ukf_by_platform.jpg`).
 
 ## Sensor stratification
 
-The main tables (`oref_v5/v6/v7`) carry **no sensor field** (only `platform` =
-AID system), so the 183-user run cannot be split by sensor. Sensor identity
+The main cohorts (Trio / AndroidAPS / OpenAPS) carry **no sensor field** (only
+`platform` = AID system), so the 183-user run cannot be split by sensor. Sensor identity
 exists only in `oref_phase2_sites_v2` (9 G6 + 6 G7 users — the same cohort as
 paper 02). Re-running `phase2_run` + `phase2_analysis` on it
 (`reports_full/phase2/`) reproduces paper 02: G7 is the noisier sensor, and it

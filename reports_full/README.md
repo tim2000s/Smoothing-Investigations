@@ -20,6 +20,22 @@ the paper's conclusion holds at population scale.
   gitignored and reproducible from the command above.
 - Analysis: `per_step_modify`, `compare`, `cross_smoother` → CSVs + figs here.
 
+## Scale (analysed data points)
+
+10.9M raw DB rows reduce to **8,071,627 present readings** after resampling to the
+strict 5-minute grid and gap handling — these are the points actually run
+through each smoother.
+
+| Source | n users | n data points |
+|---|---:|---:|
+| oref_v5 (Trio) | 29 | 2,205,663 |
+| oref_v6 (AndroidAPS) | 44 | 1,265,074 |
+| oref_v7 (OpenAPS/oref0) | 110 | 4,600,890 |
+| **Total** | **183** | **8,071,627** |
+
+Sensor cohort (`oref_phase2_sites_v2`, after ≥14d / ≥50% density filter):
+G6 = 9 users / 238,491 pts · G7 = 4 users / 133,917 pts (6 G7 tagged, 2 dropped).
+
 ## Headline — median per user, all 183 users
 
 | Metric | AAPS Average | AAPS Exponential | Adaptive UKF |
